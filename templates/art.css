@@ -665,6 +665,7 @@ body {
 	background: #fff;
 	margin: 20px;
 	padding: 30px;
+	position: relative;
 }
 
 .board::before {
