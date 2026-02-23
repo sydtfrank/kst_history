@@ -13,23 +13,23 @@ $(document).ready(function () {
 		set_color('#ffafcc', '#ffc8dd', '#a2d2ff', '#bde0fe');
 	} else {
 		//史前時代
-		if ($(".body.epoch_1").length) {
+		if ($(".body_epoch_1").length) {
 			set_color('#fff3c7', '#efac00', '#abfbff', '#ffcfab');
 		}
 		//大航海時代
-		if ($(".body.epoch_2").length) {
+		if ($(".body_epoch_2").length) {
 			set_color('#3a9eff', '#a4f4ff', '#beabff', '#f9c2ff');
 		}
 		//清帝國時代
-		if ($(".body.epoch_3").length) {
+		if ($(".body_epoch_3").length) {
 			set_color('#4e5dff', '#ffeb6f', '#ffcf71', '#ffeed1');
 		}
 		//日治時代
-		if ($(".body.epoch_4").length) {
+		if ($(".body_epoch_4").length) {
 			set_color('#ffb1a1', '#ffeee5', '#d6fff6', '#ff5a63');
 		}
 		//中華民國
-		if ($(".body.epoch_5").length) {
+		if ($(".body_epoch_5").length) {
 			set_color('#bae7ff', '#a1ffe2', '#ffd4ea', '#fff332');
 		}
 	}
