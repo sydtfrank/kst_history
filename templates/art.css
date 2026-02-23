@@ -421,11 +421,13 @@ body {
 
 .timeline_box .icon_epoch .item {
 	display: inline-block;
+	width: 30px;
+	height: 30px;
 }
 
 .timeline_box .icon_epoch .item:nth-child(1) {
 	background: url(images/icon_epoch_1_01.svg) 50% 50% no-repeat;
-	background-size: 30px;
+	background-size: contain;
 }
 
 .timeline_box .btn {
