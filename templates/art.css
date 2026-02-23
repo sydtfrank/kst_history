@@ -429,10 +429,10 @@ body {
 }
 
 .timeline_box .icon_epoch .item:nth-child(1) {
-	width: 70px;
-	height: 70px;
-	top: 85px;
-	left: 60px;
+	width: 80px;
+	height: 80px;
+	top: 60px;
+	left: 220px;
 	background: url(images/icon_epoch_1_01.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
@@ -440,17 +440,17 @@ body {
 .timeline_box .icon_epoch .item:nth-child(2) {
 	width: 90px;
 	height: 90px;
-	top: 370px;
-	left: 220px;
+	top: 380px;
+	left: 60px;
 	background: url(images/icon_epoch_1_02.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
 
 .timeline_box .icon_epoch .item:nth-child(3) {
-	width: 80px;
-	height: 80px;
-	top: 105px;
-	left: 305px;
+	width: 100px;
+	height: 100px;
+	top: 415px;
+	left: 275px;
 	background: url(images/icon_epoch_1_03.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
