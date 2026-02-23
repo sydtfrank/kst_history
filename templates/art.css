@@ -75,7 +75,7 @@ body {
 	background: url(images/tab_bg_01.svg) 0 0 no-repeat;
 }
 
-.epoch_1 .menu_box .menu_list li.item_1 {
+.body_epoch_1 .menu_box .menu_list li.item_1 {
 	width: 40px;
 	height: 200px;
 	position: relative;
@@ -88,7 +88,7 @@ body {
 	background: url(images/tab_bg_02.svg) 0 0 no-repeat;
 }
 
-.epoch_2 .menu_box .menu_list li.item_2 {
+.body_epoch_2 .menu_box .menu_list li.item_2 {
 	width: 40px;
 	height: 200px;
 	position: relative;
@@ -101,7 +101,7 @@ body {
 	background: url(images/tab_bg_03.svg) 0 0 no-repeat;
 }
 
-.epoch_3 .menu_box .menu_list li.item_3 {
+.body_epoch_3 .menu_box .menu_list li.item_3 {
 	width: 40px;
 	height: 200px;
 	position: relative;
@@ -114,7 +114,7 @@ body {
 	background: url(images/tab_bg_04.svg) 0 0 no-repeat;
 }
 
-.epoch_4 .menu_box .menu_list li.item_4 {
+.body_epoch_4 .menu_box .menu_list li.item_4 {
 	width: 40px;
 	height: 200px;
 	position: relative;
@@ -127,7 +127,7 @@ body {
 	background: url(images/tab_bg_05.svg) 0 0 no-repeat;
 }
 
-.epoch_5 .menu_box .menu_list li.item_5 {
+.body_epoch_5 .menu_box .menu_list li.item_5 {
 	width: 40px;
 	height: 200px;
 	position: relative;
@@ -157,11 +157,11 @@ body {
 
 }
 
-.epoch_1 .menu_box .menu_list li.item_1 a span,
-.epoch_2 .menu_box .menu_list li.item_2 a span,
-.epoch_3 .menu_box .menu_list li.item_3 a span,
-.epoch_4 .menu_box .menu_list li.item_4 a span,
-.epoch_5 .menu_box .menu_list li.item_5 a span {
+.body_epoch_1 .menu_box .menu_list li.item_1 a span,
+.body_epoch_2 .menu_box .menu_list li.item_2 a span,
+.body_epoch_3 .menu_box .menu_list li.item_3 a span,
+.body_epoch_4 .menu_box .menu_list li.item_4 a span,
+.body_epoch_5 .menu_box .menu_list li.item_5 a span {
 	display: inline-block;
 }
 
@@ -227,23 +227,23 @@ body {
 	overflow: hidden;
 }
 
-.epoch_1 .menu_box .timeline_box .timeline-ring-out {
+.body_epoch_1 .menu_box .timeline_box .timeline-ring-out {
 	background: linear-gradient(to right, #ffffff 0%, #fff3c7 100%);
 }
 
-.epoch_2 .menu_box .timeline_box .timeline-ring-out {
+.body_epoch_2 .menu_box .timeline_box .timeline-ring-out {
 	background: linear-gradient(to right, #ffffff 0%, #3a9eff 100%);
 }
 
-.epoch_3 .menu_box .timeline_box .timeline-ring-out {
+.body_epoch_3 .menu_box .timeline_box .timeline-ring-out {
 	background: linear-gradient(to right, #ffffff 0%, #ffeb6f 100%);
 }
 
-.epoch_4 .menu_box .timeline_box .timeline-ring-out {
+.body_epoch_4 .menu_box .timeline_box .timeline-ring-out {
 	background: linear-gradient(to right, #ffffff 0%, #ffb1a1 100%);
 }
 
-.epoch_5 .menu_box .timeline_box .timeline-ring-out {
+.body_epoch_5 .menu_box .timeline_box .timeline-ring-out {
 	background: linear-gradient(to right, #ffffff 0%, #a1ffe2 100%);
 }
 
@@ -428,7 +428,7 @@ body {
 	position: absolute;
 }
 
-.timeline_box .icon_epoch .item:nth-child(1) {
+.body_epoch_1 .timeline_box .icon_epoch .item:nth-child(1) {
 	width: 80px;
 	height: 80px;
 	top: 60px;
@@ -437,7 +437,7 @@ body {
 	background-size: contain;
 }
 
-.timeline_box .icon_epoch .item:nth-child(2) {
+.body_epoch_1 .timeline_box .icon_epoch .item:nth-child(2) {
 	width: 90px;
 	height: 90px;
 	top: 380px;
@@ -446,12 +446,120 @@ body {
 	background-size: contain;
 }
 
-.timeline_box .icon_epoch .item:nth-child(3) {
+.body_epoch_1 .timeline_box .icon_epoch .item:nth-child(3) {
 	width: 100px;
 	height: 100px;
 	top: 415px;
 	left: 275px;
 	background: url(images/icon_epoch_1_03.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_2 .timeline_box .icon_epoch .item:nth-child(1) {
+	width: 80px;
+	height: 80px;
+	top: 60px;
+	left: 220px;
+	background: url(images/icon_epoch_2_01.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_2 .timeline_box .icon_epoch .item:nth-child(2) {
+	width: 90px;
+	height: 90px;
+	top: 380px;
+	left: 60px;
+	background: url(images/icon_epoch_2_02.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_2 .timeline_box .icon_epoch .item:nth-child(3) {
+	width: 100px;
+	height: 100px;
+	top: 415px;
+	left: 275px;
+	background: url(images/icon_epoch_2_03.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_3 .timeline_box .icon_epoch .item:nth-child(1) {
+	width: 80px;
+	height: 80px;
+	top: 60px;
+	left: 220px;
+	background: url(images/icon_epoch_3_01.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_3 .timeline_box .icon_epoch .item:nth-child(2) {
+	width: 90px;
+	height: 90px;
+	top: 380px;
+	left: 60px;
+	background: url(images/icon_epoch_3_02.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_3 .timeline_box .icon_epoch .item:nth-child(3) {
+	width: 100px;
+	height: 100px;
+	top: 415px;
+	left: 275px;
+	background: url(images/icon_epoch_3_03.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_4 .timeline_box .icon_epoch .item:nth-child(1) {
+	width: 80px;
+	height: 80px;
+	top: 60px;
+	left: 220px;
+	background: url(images/icon_epoch_4_01.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_4 .timeline_box .icon_epoch .item:nth-child(2) {
+	width: 90px;
+	height: 90px;
+	top: 380px;
+	left: 60px;
+	background: url(images/icon_epoch_4_02.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_4 .timeline_box .icon_epoch .item:nth-child(3) {
+	width: 100px;
+	height: 100px;
+	top: 415px;
+	left: 275px;
+	background: url(images/icon_epoch_4_03.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_5 .timeline_box .icon_epoch .item:nth-child(1) {
+	width: 80px;
+	height: 80px;
+	top: 60px;
+	left: 220px;
+	background: url(images/icon_epoch_5_01.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_5 .timeline_box .icon_epoch .item:nth-child(2) {
+	width: 90px;
+	height: 90px;
+	top: 380px;
+	left: 60px;
+	background: url(images/icon_epoch_5_02.svg) 50% 50% no-repeat;
+	background-size: contain;
+}
+
+.body_epoch_5 .timeline_box .icon_epoch .item:nth-child(3) {
+	width: 100px;
+	height: 100px;
+	top: 415px;
+	left: 275px;
+	background: url(images/icon_epoch_5_03.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
 
