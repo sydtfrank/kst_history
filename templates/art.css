@@ -1,0 +1,476 @@
+/* 本檔案為網頁設計師撰寫,非人請勿修改,以免未來維護困難,如果需修改可請找網頁設計師討論,感謝~ */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('font-awesome.min.css');
+
+
+::selection {
+	background: #ff8e09;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: #ff8e09;
+	color: #fff;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+	font-size: 15px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+#glcanvas,
+#tunnelCanvas {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+
+/* 主選單-外包 開始 */
+.menu_box {
+	display: flex;
+	position: absolute;
+	left: 0;
+	transition: left 0.5s;
+}
+
+.menu_box.close {
+	left: -510px;
+}
+
+/* 主選單-外包 結束 */
+
+
+
+/* 主選單 開始 */
+.menu_box .menu_list {
+	margin: 0;
+	padding: 0;
+	transform: translateX(-5px);
+}
+
+.menu_box .menu_list li {
+	list-style-type: none;
+	width: 40px;
+	height: 80px;
+}
+
+.menu_box .menu_list li.item_1 {
+	transform: translateY(calc(-20px * 0));
+	background: url(images/tab_bg_01.svg) 0 0 no-repeat;
+}
+
+.epoch_1 .menu_box .menu_list li.item_1 {
+	width: 40px;
+	height: 200px;
+	position: relative;
+	z-index: 1;
+	background: url(images/tab_bg_01_active.svg) 0 0 no-repeat;
+}
+
+.menu_box .menu_list li.item_2 {
+	transform: translateY(calc(-20px * 1));
+	background: url(images/tab_bg_02.svg) 0 0 no-repeat;
+}
+
+.epoch_2 .menu_box .menu_list li.item_2 {
+	width: 40px;
+	height: 200px;
+	position: relative;
+	z-index: 1;
+	background: url(images/tab_bg_02_active.svg) 0 0 no-repeat;
+}
+
+.menu_box .menu_list li.item_3 {
+	transform: translateY(calc(-20px * 2));
+	background: url(images/tab_bg_03.svg) 0 0 no-repeat;
+}
+
+.epoch_3 .menu_box .menu_list li.item_3 {
+	width: 40px;
+	height: 200px;
+	position: relative;
+	z-index: 1;
+	background: url(images/tab_bg_03_active.svg) 0 0 no-repeat;
+}
+
+.menu_box .menu_list li.item_4 {
+	transform: translateY(calc(-20px * 3));
+	background: url(images/tab_bg_04.svg) 0 0 no-repeat;
+}
+
+.epoch_4 .menu_box .menu_list li.item_4 {
+	width: 40px;
+	height: 200px;
+	position: relative;
+	z-index: 1;
+	background: url(images/tab_bg_04_active.svg) 0 0 no-repeat;
+}
+
+.menu_box .menu_list li.item_5 {
+	transform: translateY(calc(-20px * 4));
+	background: url(images/tab_bg_05.svg) 0 0 no-repeat;
+}
+
+.epoch_5 .menu_box .menu_list li.item_5 {
+	width: 40px;
+	height: 200px;
+	position: relative;
+	z-index: 1;
+	background: url(images/tab_bg_05_active.svg) 0 0 no-repeat;
+}
+
+.menu_box .menu_list li.item_switch {
+	transform: translateY(calc(-20px * 5));
+	background: url(images/tab_bg_switch.svg) 0 0 no-repeat;
+}
+
+.menu_box .menu_list li a {
+	text-decoration: none;
+	display: block;
+	min-height: 100px;
+	text-align: center;
+}
+
+.menu_box .menu_list li a span {
+	display: none;
+	padding: 60px 2px 0 2px;
+	line-height: 22px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #000;
+
+}
+
+.epoch_1 .menu_box .menu_list li.item_1 a span,
+.epoch_2 .menu_box .menu_list li.item_2 a span,
+.epoch_3 .menu_box .menu_list li.item_3 a span,
+.epoch_4 .menu_box .menu_list li.item_4 a span,
+.epoch_5 .menu_box .menu_list li.item_5 a span {
+	display: inline-block;
+}
+
+.menu_box .menu_list li.item_switch {
+	display: none;
+}
+
+.menu_box .menu_list li.item_switch a {
+	background: url(images/icon_menu_close.svg) 50% 20px no-repeat;
+	background-size: 30px;
+}
+
+.menu_box.close .menu_list li.item_switch a {
+	background: url(images/icon_menu_open.svg) 50% 20px no-repeat;
+	background-size: 30px;
+}
+
+.menu_box .menu_list li.item_1 a {
+	background: url(images/icon_menu_01.svg) 50% 20px no-repeat;
+	background-size: 30px;
+}
+
+.menu_box .menu_list li.item_2 a {
+	background: url(images/icon_menu_02.svg) 50% 20px no-repeat;
+	background-size: 30px;
+}
+
+.menu_box .menu_list li.item_3 a {
+	background: url(images/icon_menu_03.svg) 50% 20px no-repeat;
+	background-size: 30px;
+}
+
+.menu_box .menu_list li.item_4 a {
+	background: url(images/icon_menu_04.svg) 50% 20px no-repeat;
+	background-size: 30px;
+}
+
+.menu_box .menu_list li.item_5 a {
+	background: url(images/icon_menu_05.svg) 50% 20px no-repeat;
+	background-size: 30px;
+}
+
+@media(max-width:900px) {
+	.menu_box .menu_list li.item_switch {
+		display: block;
+	}
+}
+
+/* 主選單 結束 */
+
+/* 時間軸設計 開始 */
+.timeline_box {
+	--transition-speed: 0.5s;
+	--transition-timing: ease-in-out;
+	--ring-size: 1000px;
+	position: relative;
+}
+
+.timeline_box .timeline-ring-out {
+	width: 400px;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+}
+
+.epoch_1 .menu_box .timeline_box .timeline-ring-out {
+	background: linear-gradient(to right, #ffffff 0%, #fff3c7 100%);
+}
+
+.epoch_2 .menu_box .timeline_box .timeline-ring-out {
+	background: linear-gradient(to right, #ffffff 0%, #3a9eff 100%);
+}
+
+.epoch_3 .menu_box .timeline_box .timeline-ring-out {
+	background: linear-gradient(to right, #ffffff 0%, #ffeb6f 100%);
+}
+
+.epoch_4 .menu_box .timeline_box .timeline-ring-out {
+	background: linear-gradient(to right, #ffffff 0%, #ffb1a1 100%);
+}
+
+.epoch_5 .menu_box .timeline_box .timeline-ring-out {
+	background: linear-gradient(to right, #ffffff 0%, #a1ffe2 100%);
+}
+
+.timeline_box .timeline-ring-out::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 3px solid #000;
+	filter: url(#hand-drawn-filter);
+	border-radius: 2px 4px 3px 6px / 6px 3px 5px 2px;
+}
+
+.timeline_box .timeline-ring {
+	position: absolute;
+	width: var(--ring-size);
+	height: var(--ring-size);
+	/* 調整水平位置 */
+	left: calc(var(--ring-size) / -2 - 30px);
+	/* 調整垂直位置 */
+	top: -230px;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 50%;
+	transition: transform var(--transition-speed) var(--transition-timing);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.timeline_box .timeline-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 10px;
+	padding: 10px 20px;
+	background: #fff;
+	display: flex;
+}
+
+.timeline_box .timeline-top::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 3px solid #000;
+	filter: url(#hand-drawn-filter);
+	border-radius: 2px 4px 3px 6px / 6px 3px 5px 2px;
+}
+
+.timeline_box .timeline-top p {
+	margin: 0;
+	padding: 0;
+	flex: 1;
+	align-self: center;
+}
+
+.timeline_box .timeline-top p.title {
+	font-size: 30px;
+	font-weight: 900;
+}
+
+.timeline_box .timeline-top p.item_num {
+	font-size: 20px;
+	font-weight: 500;
+	text-align: right;
+}
+
+.timeline_box .timeline-node {
+	position: absolute;
+	right: 0;
+	/* 不可修改 */
+	width: 400px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	transform-origin: calc(-1 * (var(--ring-size) / 2 - 400px)) center;
+	transition: opacity 0.6s, filter 0.6s;
+	opacity: 0.2;
+	filter: blur(1px);
+	/*cursor: pointer;*/
+	user-select: none;
+}
+
+.timeline_box .timeline-node.active {
+	opacity: 1;
+	filter: blur(0);
+	z-index: 1;
+}
+
+.timeline_box .node-dot-container {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.timeline_box .node-dot {
+	width: 12px;
+	height: 12px;
+	background: #666;
+	border-radius: 50%;
+	transition: all 0.5s var(--transition-timing);
+	filter: url(#hand-drawn-filter);
+}
+
+.timeline_box .timeline-node.active .node-dot {
+	background: #000;
+}
+
+.timeline_box .node-title {
+	margin-left: 10px;
+	transition: transform var(--transition-speed) var(--transition-timing), color 0.4s;
+	transform-origin: left center;
+	background: #fff;
+	border-radius: 10px;
+	padding: 15px;
+	width: 100%;
+	/* 項目寬度 */
+	margin-right: 90px;
+
+}
+
+/* 這是真正承載「手繪邊框」的層 */
+.timeline_box .node-title::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	border: 3px solid #333;
+
+	/* 只對這個背景層套用濾鏡 */
+	filter: url(#hand-drawn-filter);
+
+	z-index: -1;
+	/* 確保在文字下方 */
+
+	/* 增加一點不對稱圓角，手繪感更強 */
+	border-radius: 10px;
+}
+
+.timeline_box .node-title span {
+	font-size: 20px;
+	font-weight: 300;
+	/*white-space: nowrap;*/
+}
+
+.timeline_box .timeline-node.active .node-title span {
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.timeline_box .controls {
+	position: absolute;
+	top: 220px;
+	left: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	z-index: 1000;
+}
+
+.timeline_box .icon_epoch {
+	background: #ff0;
+}
+
+.timeline_box .icon_epoch .item {
+	display: inline-block;
+}
+
+.timeline_box .icon_epoch .item:nth-child(1) {
+	background: url(images/icon_epoch_1_01.svg) 50% 50% no-repeat;
+	background-size: 30px;
+}
+
+.timeline_box .btn {
+	width: 40px;
+	height: 40px;
+	border: 3px solid #000;
+	border-radius: 50%;
+	background: #fff;
+	color: #000;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+	position: relative;
+	outline: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+	filter: url(#hand-drawn-filter);
+}
+
+.timeline_box .btn:hover:not(:disabled) {
+	background: #000;
+	color: #fff;
+	border-color: #000;
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline_box .btn svg {
+	width: 24px;
+	height: 24px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	pointer-events: none;
+}
+
+.timeline_box .btn:active:not(:disabled) {
+	transform: scale(0.95);
+}
+
+.timeline_box .btn:disabled {
+	opacity: 0.2;
+	cursor: not-allowed;
+	box-shadow: none;
+}
+
+/* 時間軸設計 結束 */

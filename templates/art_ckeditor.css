@@ -1,0 +1,727 @@
+/*
+這是ckeditor內容的css，後台前台都要讀入這檔。
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* 前端內容 開始 */
+.subhtml {
+	padding: 10px;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+/**/
+.subhtml hr {
+	border-top: 3px dashed #999;
+	margin: 20px 0;
+}
+
+/*預設套版*/
+.subhtml table,
+.subhtml table th,
+.subhtml table td {
+	border-collapse: collapse;
+	border: 1px solid #999 !important;
+	padding: 4px 10px;
+}
+
+.subhtml table th {
+	background-color: #e5e5e5;
+}
+
+.subhtml table td {}
+
+.subhtml table caption {
+	margin-bottom: 10px;
+}
+
+/**/
+.subhtml ul,
+.subhtml ol {
+	border: none;
+	padding: 0 20px 0 40px;
+}
+
+.subhtml ul,
+.subhtml ul li {
+	list-style-type: disc;
+}
+
+.subhtml ol,
+.subhtml ol li {
+	list-style-type: decimal;
+}
+
+/**/
+.subhtml div {
+	/* 應付左右齊的圖片問題 */
+	overflow: hidden;
+}
+
+/**/
+.subhtml p {
+	/* 應付左右齊的圖片問題 */
+	overflow: hidden;
+}
+
+/**/
+.subhtml img {
+	max-width: 100%;
+	height: auto !important;
+	/*margin:10px;手機版跑版，因為有用到max-width，以padding取代*/
+	padding: 10px;
+}
+
+/**/
+.subhtml a {
+	/*display:inline-block;取消，因為具有連結的左右齊圖片在段落會跑版*/
+	color: #EC00D5;
+}
+
+.subhtml a:hover {
+	color: #0D5EC0;
+}
+
+.subhtml a img {
+	/*
+	border:1px solid #EC00D5;
+	padding:4px;
+	*/
+}
+
+/**/
+/*
+.subhtml figure{
+	background:#fff;
+	border:2px dotted #999;
+	border-radius:10px;
+	padding:10px;
+	display:inline-block;
+}
+.subhtml figure figcaption{
+	display:block;
+	text-align:left;
+	word-break:break-all;
+}
+*/
+
+/* 自訂樣式(Styles)  --  表格無線框 */
+.subhtml table.art_table_1,
+.subhtml table.art_table_1 th,
+.subhtml table.art_table_1 td {
+	border-collapse: collapse;
+	border: none !important;
+	padding: 0;
+}
+
+.subhtml table.art_table_1 th {
+	background-color: transparent;
+}
+
+.subhtml table.art_table_1 caption {
+	/*margin-bottom:10px;*/
+}
+
+
+/* 自訂樣式(Styles)  --  表格綠系 */
+.subhtml table.art_table_2,
+.subhtml table.art_table_2 th,
+.subhtml table.art_table_2 td {
+	border-collapse: collapse;
+	border: 2px solid #85c840 !important;
+}
+
+.subhtml table.art_table_2 th {
+	padding: 4px 10px;
+	color: #fff;
+	font-weight: 400;
+	background: #85c840;
+}
+
+.subhtml table.art_table_2 tbody th {
+	background: #99d568;
+}
+
+.subhtml table.art_table_2 td {
+	padding: 6px 10px;
+	color: #333;
+	font-weight: 400;
+	background: #f3f8e4;
+}
+
+.subhtml table.art_table_2 tr:nth-child(even) td {
+	background: #e9f3cd;
+}
+
+.subhtml table.art_table_2 caption {
+	margin-bottom: 10px;
+}
+
+/* 自訂樣式(Styles)  --  表格橙系 */
+.subhtml table.art_table_3,
+.subhtml table.art_table_3 th,
+.subhtml table.art_table_3 td {
+	border-collapse: collapse;
+	border: 2px solid #fe9400 !important;
+}
+
+.subhtml table.art_table_3 th {
+	padding: 4px 10px;
+	color: #fff;
+	font-weight: 400;
+	background: #fe9400;
+}
+
+.subhtml table.art_table_3 tbody th {
+	background: #fdac33;
+}
+
+.subhtml table.art_table_3 td {
+	padding: 6px 10px;
+	color: #333;
+	font-weight: 400;
+	background: #fff0c8;
+}
+
+.subhtml table.art_table_3 tr:nth-child(even) td {
+	background: #ffe89a;
+}
+
+.subhtml table.art_table_3 caption {
+	margin-bottom: 10px;
+}
+
+
+/* 自訂樣式(Styles)  --  表格藍系 */
+.subhtml table.art_table_4,
+.subhtml table.art_table_4 th,
+.subhtml table.art_table_4 td {
+	border-collapse: collapse;
+	border: 2px solid #44bfff !important;
+}
+
+.subhtml table.art_table_4 th {
+	padding: 4px 10px;
+	color: #fff;
+	font-weight: 400;
+	background: #44bfff;
+}
+
+.subhtml table.art_table_4 tbody th {
+	background: #71c9ff;
+}
+
+.subhtml table.art_table_4 td {
+	padding: 6px 10px;
+	color: #333;
+	font-weight: 400;
+	background: #e4f6ff;
+}
+
+.subhtml table.art_table_4 tr:nth-child(even) td {
+	background: #cfeeff;
+}
+
+.subhtml table.art_table_4 caption {
+	margin-bottom: 10px;
+}
+
+
+/* 自訂樣式(Styles)  --  區塊粉紅 */
+.subhtml div.art_div_1 {
+	margin: 10px;
+	padding: 10px;
+	border-radius: 6px;
+	background: #fff5ff;
+	border: 1px solid #fdd4fd;
+}
+
+/* 自訂樣式(Styles)  --  區塊粉藍 */
+.subhtml div.art_div_2 {
+	margin: 10px;
+	padding: 10px;
+	border-radius: 6px;
+	background: #f4fcff;
+	border: 1px solid #b9e7f7;
+}
+
+/* 自訂樣式(Styles)  --  區塊粉綠 */
+.subhtml div.art_div_3 {
+	margin: 10px;
+	padding: 10px;
+	border-radius: 6px;
+	background: #f4fff4;
+	border: 1px solid #aedfaf;
+}
+
+/* 自訂樣式(Styles)  --  段落紫色 */
+.subhtml p.art_p_1 {
+	margin: 10px 0;
+	padding: 10px;
+	border: 2px solid #8741e7;
+	border-left-width: 6px;
+}
+
+/* 自訂樣式(Styles)  --  段落粉紅色 */
+.subhtml p.art_p_2 {
+	margin: 10px 0;
+	padding: 10px;
+	border: 2px solid #f02ea0;
+	border-left-width: 6px;
+}
+
+
+/* 自訂樣式(Styles)  --  圓角圖片 */
+.subhtml img.art_img_1 {
+	border-radius: 20px;
+}
+
+/* 自訂樣式(Styles)  --  黑白圖片 */
+.subhtml img.art_img_2 {
+	-webkit-filter: grayscale(1);
+}
+
+/* 自訂樣式(Styles)  --  圖片(靠左) */
+/*<img style>優先，自訂樣樣式無效
+.subhtml img.art_img_1{
+	float:left;
+	margin:10px 10px 10px 0;
+}
+*/
+/* 自訂樣式(Styles)  --  圖片(靠右) */
+/*<img style>優先，自訂樣樣式無效
+.subhtml img.art_img_2{
+	float:right;
+	margin:10px 0 10px 10px;
+}
+*/
+
+/* 自訂樣式-段落 */
+.subhtml .art_cke_p_01 {
+	background-color: #fff9c4;
+	border-left: 5px solid #ffab91;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.subhtml .art_cke_p_02 {
+	font-family: "Comic Sans MS", "Marker Felt", cursive;
+	color: #5d4037;
+}
+
+/* 自訂樣式-區塊 */
+.subhtml .art_cke_div_01 {
+	border: 2px dashed #f48fb1;
+	background-color: #fce4ec;
+	border-radius: 20px;
+	padding: 15px;
+	margin: 10px 0;
+	box-shadow: 3px 3px 0px #f8bbd0;
+}
+
+.subhtml .art_cke_div_02 {
+	position: relative;
+	background: #e1f5fe;
+	border-radius: .4em;
+	padding: 15px;
+	margin: 10px 0;
+	border: 2px solid #b3e5fc;
+}
+
+/* 自訂樣式-圖片 */
+.subhtml .art_cke_img_01 {
+	background: white;
+	padding: 10px 10px 30px 10px;
+	border: 1px solid #ddd;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transform: rotate(-2deg);
+	transition: transform 0.3s;
+}
+
+.subhtml .art_cke_img_01:hover {
+	transform: rotate(0deg);
+}
+
+.subhtml .art_cke_img_02 {
+	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+	border: 4px solid #fff59d;
+}
+
+/* 自訂樣式-表格綠系 */
+.subhtml .art_cke_table_01,
+.subhtml .art_cke_table_01 th,
+.subhtml .art_cke_table_01 td {
+	border-collapse: collapse;
+	border: 2px solid #85c840 !important;
+}
+
+.subhtml .art_cke_table_01 th {
+	padding: 4px 10px;
+	color: #fff;
+	font-weight: 400;
+	background: #85c840;
+}
+
+.subhtml .art_cke_table_01 tbody th {
+	background: #99d568;
+}
+
+.subhtml .art_cke_table_01 td {
+	padding: 6px 10px;
+	color: #333;
+	font-weight: 400;
+	background: #f3f8e4;
+}
+
+.subhtml .art_cke_table_01 tr:nth-child(even) td {
+	background: #e9f3cd;
+}
+
+.subhtml .art_cke_table_01 caption {
+	margin-bottom: 10px;
+}
+
+/* 自訂樣式-表格橙系 */
+.subhtml .art_cke_table_02,
+.subhtml .art_cke_table_02 th,
+.subhtml .art_cke_table_02 td {
+	border-collapse: collapse;
+	border: 2px solid #fe9400 !important;
+}
+
+.subhtml .art_cke_table_02 th {
+	padding: 4px 10px;
+	color: #fff;
+	font-weight: 400;
+	background: #fe9400;
+}
+
+.subhtml .art_cke_table_02 tbody th {
+	background: #fdac33;
+}
+
+.subhtml .art_cke_table_02 td {
+	padding: 6px 10px;
+	color: #333;
+	font-weight: 400;
+	background: #fff0c8;
+}
+
+.subhtml .art_cke_table_02 tr:nth-child(even) td {
+	background: #ffe89a;
+}
+
+.subhtml .art_cke_table_02 caption {
+	margin-bottom: 10px;
+}
+
+/* 自訂樣式-表格藍系 */
+.subhtml .art_cke_table_03,
+.subhtml .art_cke_table_03 th,
+.subhtml .art_cke_table_03 td {
+	border-collapse: collapse;
+	border: 2px solid #44bfff !important;
+}
+
+.subhtml .art_cke_table_03 th {
+	padding: 4px 10px;
+	color: #fff;
+	font-weight: 400;
+	background: #44bfff;
+}
+
+.subhtml .art_cke_table_03 tbody th {
+	background: #71c9ff;
+}
+
+.subhtml .art_cke_table_03 td {
+	padding: 6px 10px;
+	color: #333;
+	font-weight: 400;
+	background: #e4f6ff;
+}
+
+.subhtml .art_cke_table_03 tr:nth-child(even) td {
+	background: #cfeeff;
+}
+
+.subhtml .art_cke_table_03 caption {
+	margin-bottom: 10px;
+}
+
+
+.subhtml .art_cke_h3_01 {
+	font-size: 40px;
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: #89aeb4;
+}
+
+.subhtml .art_cke_span_01_y,
+.subhtml .art_cke_span_01_o,
+.subhtml .art_cke_span_01_r,
+.subhtml .art_cke_span_01_b {
+	padding: 2px 6px;
+	margin: 0 2px;
+	border-radius: 8px;
+	color: #333;
+	display: inline;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+.subhtml .art_cke_span_01_y {
+	background-color: #ffeb66;
+}
+
+.subhtml .art_cke_span_01_o {
+	background-color: #ffad85;
+}
+
+.subhtml .art_cke_span_01_r {
+	background-color: #ffb6d6;
+}
+
+.subhtml .art_cke_span_01_b {
+	background-color: #5eecff;
+}
+
+
+.subhtml .art_cke_span_02_y,
+.subhtml .art_cke_span_02_o,
+.subhtml .art_cke_span_02_r,
+.subhtml .art_cke_span_02_b {
+	padding: 0 2px;
+	display: inline;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+.subhtml .art_cke_span_02_y {
+	background: linear-gradient(to bottom, transparent 50%, #ffeb66 50%);
+}
+
+.subhtml .art_cke_span_02_o {
+	background: linear-gradient(to bottom, transparent 50%, #ffad85 50%);
+}
+
+.subhtml .art_cke_span_02_r {
+	background: linear-gradient(to bottom, transparent 50%, #ffb6d6 50%);
+}
+
+.subhtml .art_cke_span_02_b {
+	background: linear-gradient(to bottom, transparent 50%, #5eecff 50%);
+}
+
+.subhtml .art_cke_span_03_y,
+.subhtml .art_cke_span_03_o,
+.subhtml .art_cke_span_03_r,
+.subhtml .art_cke_span_03_b {
+	text-decoration: none;
+	padding-bottom: 8px;
+	display: inline-block;
+}
+
+.subhtml .art_cke_span_03_y {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 10'%3E%3Cpath fill='none' stroke='%23ffeb66' stroke-width='2' stroke-linecap='round' d='M0 5 C 5 5, 5 1, 10 5 S 15 9, 20 5'/%3E%3C/svg%3E") repeat-x 0 100%;
+	background-size: 15px 8px;
+}
+
+.subhtml .art_cke_span_03_o {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 10'%3E%3Cpath fill='none' stroke='%23ffad85' stroke-width='2' stroke-linecap='round' d='M0 5 C 5 5, 5 1, 10 5 S 15 9, 20 5'/%3E%3C/svg%3E") repeat-x 0 100%;
+	background-size: 15px 8px;
+}
+
+.subhtml .art_cke_span_03_r {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 10'%3E%3Cpath fill='none' stroke='%23ffb6d6' stroke-width='2' stroke-linecap='round' d='M0 5 C 5 5, 5 1, 10 5 S 15 9, 20 5'/%3E%3C/svg%3E") repeat-x 0 100%;
+	background-size: 15px 8px;
+}
+
+.subhtml .art_cke_span_03_b {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 10'%3E%3Cpath fill='none' stroke='%235eecff' stroke-width='2' stroke-linecap='round' d='M0 5 C 5 5, 5 1, 10 5 S 15 9, 20 5'/%3E%3C/svg%3E") repeat-x 0 100%;
+	background-size: 15px 8px;
+}
+
+.subhtml .art_cke_span_04_y,
+.subhtml .art_cke_span_04_o,
+.subhtml .art_cke_span_04_r,
+.subhtml .art_cke_span_04_b {
+	padding-bottom: 1px;
+	margin-bottom: 5px;
+	display: inline-block;
+	line-height: 1.2;
+}
+
+.subhtml .art_cke_span_04_y {
+	border-bottom: 2px solid #ffeb66;
+	box-shadow: 0 4px 0 0 white, 0 7px 0 0 #ffeb66;
+}
+
+.subhtml .art_cke_span_04_o {
+	border-bottom: 2px solid #ffad85;
+	box-shadow: 0 4px 0 0 white, 0 7px 0 0 #ffad85;
+}
+
+.subhtml .art_cke_span_04_r {
+	border-bottom: 2px solid #ffb6d6;
+	box-shadow: 0 4px 0 0 white, 0 7px 0 0 #ffb6d6;
+}
+
+.subhtml .art_cke_span_04_b {
+	border-bottom: 2px solid #5eecff;
+	box-shadow: 0 4px 0 0 white, 0 7px 0 0 #5eecff;
+}
+
+
+/* 前端內容 結束 */
+
+
+
+
+/* 覆蓋CKE原有的css 開始 */
+/* 虛線設計 */
+.cke_show_blocks h6:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks h5:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks h4:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks h3:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks h2:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks h1:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks blockquote:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks address:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks pre:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks div:not([contenteditable=false]):not(.cke_show_blocks_off),
+.cke_show_blocks p:not([contenteditable=false]):not(.cke_show_blocks_off) {
+	border: 1px dotted #999 !important;
+}
+
+/*
+.cke_show_borders table.cke_show_border, 
+.cke_show_borders table.cke_show_border > tr > td, 
+.cke_show_borders table.cke_show_border > tr > th, 
+.cke_show_borders table.cke_show_border > tbody > tr > td, 
+.cke_show_borders table.cke_show_border > tbody > tr > th, 
+.cke_show_borders table.cke_show_border > thead > tr > td, 
+.cke_show_borders table.cke_show_border > thead > tr > th, 
+.cke_show_borders table.cke_show_border > tfoot > tr > td, 
+.cke_show_borders table.cke_show_border > tfoot > tr > th{
+	border:2px dotted #0f0 !important;
+	border-collapse:separate;
+	border-spacing:10px;
+}
+*/
+/* 覆蓋CKE原有的css 結束 */
+
+
+
+
+/* CKE編輯器下拉式選單 開始 */
+/* 下拉式選單-共用 */
+.cke_panel_grouptitle {
+	/*display:none;*/
+}
+
+/* 下拉式選單-格式 */
+.cke_panel_listItem p,
+.cke_panel_listItem div,
+.cke_panel_listItem h1,
+.cke_panel_listItem h2,
+.cke_panel_listItem h3,
+.cke_panel_listItem h4,
+.cke_panel_listItem h5,
+.cke_panel_listItem h6 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/* 下拉式選單-字級 */
+/*「(預設)」項目*/
+.cke_panel_listItem a {
+	font-size: 14px;
+}
+
+/*「12px、13px、14px、15px...」項目*/
+.cke_panel_listItem span {
+	font-size: 14px;
+}
+
+/* 下拉式選單-樣式 */
+
+/* CKE編輯器下拉式選單 結束 */
+
+
+
+
+/* CKE編輯器內容 開始 */
+body.cke_editable {
+	background-color: #fff;
+}
+
+/**/
+.cke_editable div,
+.cke_editable table,
+.cke_editable ul,
+.cke_editable ol,
+.cke_editable p,
+.cke_editable h1,
+.cke_editable h2,
+.cke_editable h3,
+.cke_editable h4,
+.cke_editable h5,
+.cke_editable h6 {
+	margin: 10px 0;
+}
+
+/**/
+/*
+.cke_editable table,
+.cke_editable table th,
+.cke_editable table td{
+	border:1px solid #999 !important;
+}
+.cke_editable table{
+	border-collapse:separate;
+	border-spacing:2px;
+}
+.cke_editable table th,
+.cke_editable table td{
+	padding: 5px;
+}
+*/
+/* 自訂樣式(Styles)  --  表格無線框 */
+.cke_editable table.art_table_1,
+.cke_editable table.art_table_1 th,
+.cke_editable table.art_table_1 td {
+	border: 1px dashed #999 !important;
+	padding: 10px;
+}
+
+/* 自訂樣式(Styles)  --  段落紫色 */
+.cke_editable.cke_show_blocks p.art_p_1 {
+	border: 2px solid #8741e7 !important;
+	border-left-width: 6px !important;
+}
+
+/* 自訂樣式(Styles)  --  段落粉紅色 */
+.cke_editable.cke_show_blocks p.art_p_2 {
+	border: 2px solid #f02ea0 !important;
+	border-left-width: 6px !important;
+}
+
+/**/
+.cke_editable ul,
+.cke_editable ol {
+	border: 1px dashed #999;
+	padding: 0 20px 0 40px;
+}
+
+/* CKE編輯器內容 結束 */
