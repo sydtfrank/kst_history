@@ -40,13 +40,35 @@ body {
 	z-index: -1;
 }
 
+/* 大版面 開始 */
+.wrapper {
+	display: flex;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.wrapper .box_L {
+	background: #f0f;
+	width: 400px;
+}
+
+.wrapper .box_R {
+	flex: 1;
+	background: #0f0;
+}
+
+/* 大版面 結束 */
+
 
 /* 主選單-外包 開始 */
 .menu_box {
+	/*
 	display: flex;
 	position: absolute;
 	left: 0;
 	transition: left 0.5s;
+	*/
 }
 
 .menu_box.close {

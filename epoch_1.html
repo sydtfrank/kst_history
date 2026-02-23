@@ -18,76 +18,83 @@
 -->
 
 <body class="body_epoch_1">
-    
+
     <canvas id="glcanvas"></canvas>
     <!--
     <canvas id="tunnelCanvas"></canvas>
     -->
 
 
-    <div>
-        <h1>上方物件</h1>
-    </div>
-
-
-    <div class="menu_box">
-        <div class="timeline_box">
-            <div class="timeline-ring-out">
-                <div class="timeline-ring" id="timelineRing"></div>
-                <div class="timeline-top">
-                    <p class="title">大航海時代</p>
-                    <p class="item_num">0/0</p>
+    <div class="wrapper">
+        <section class="box_L">
+            <div class="menu_box">
+                <div class="timeline_box">
+                    <div class="timeline-ring-out">
+                        <div class="timeline-ring" id="timelineRing"></div>
+                        <div class="timeline-top">
+                            <p class="title">大航海時代</p>
+                            <p class="item_num">0/0</p>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="btn" id="prevBtn" aria-label="上一個">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m18 15-6-6-6 6" stroke-width="3" />
+                            </svg>
+                        </button>
+                        <button class="btn" id="nextBtn" aria-label="下一個">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m6 9 6 6 6-6" stroke-width="3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="icon_epoch">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
                 </div>
+                <ul class="menu_list">
+                    <li class="item_1">
+                        <a href="#">
+                            <span>史前時代</span>
+                        </a>
+                    </li>
+                    <li class="item_2">
+                        <a href="#">
+                            <span>大航海時代</span>
+                        </a>
+                    </li>
+                    <li class="item_3">
+                        <a href="#">
+                            <span>清帝國時代</span>
+                        </a>
+                    </li>
+                    <li class="item_4">
+                        <a href="#">
+                            <span>日治時代</span>
+                        </a>
+                    </li>
+                    <li class="item_5">
+                        <a href="#">
+                            <span>中華民國</span>
+                        </a>
+                    </li>
+                    <li class="item_switch">
+                        <a href="javascript:void(0);" onclick="menu_switch();"> </a>
+                    </li>
+                </ul>
             </div>
-            <div class="controls">
-                <button class="btn" id="prevBtn" aria-label="上一個">
-                    <svg viewBox="0 0 24 24">
-                        <path d="m18 15-6-6-6 6" stroke-width="3" />
-                    </svg>
-                </button>
-                <button class="btn" id="nextBtn" aria-label="下一個">
-                    <svg viewBox="0 0 24 24">
-                        <path d="m6 9 6 6 6-6" stroke-width="3" />
-                    </svg>
-                </button>
-            </div>
-            <div class="icon_epoch">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-        </div>
-        <ul class="menu_list">
-            <li class="item_1">
-                <a href="#">
-                    <span>史前時代</span>
-                </a>
-            </li>
-            <li class="item_2">
-                <a href="#">
-                    <span>大航海時代</span>
-                </a>
-            </li>
-            <li class="item_3">
-                <a href="#">
-                    <span>清帝國時代</span>
-                </a>
-            </li>
-            <li class="item_4">
-                <a href="#">
-                    <span>日治時代</span>
-                </a>
-            </li>
-            <li class="item_5">
-                <a href="#">
-                    <span>中華民國</span>
-                </a>
-            </li>
-            <li class="item_switch">
-                <a href="javascript:void(0);" onclick="menu_switch();"> </a>
-            </li>
-        </ul>
+        </section>
+
+        <section class="box_R">
+
+
+        </section>
     </div>
+
+
+
     <div>
         <h1>下方物件</h1>
     </div>
