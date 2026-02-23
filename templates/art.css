@@ -416,35 +416,37 @@ body {
 }
 
 .timeline_box .icon_epoch {
-	background: #ff0;
 	position: absolute;
 	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .timeline_box .icon_epoch .item {
 	display: inline-block;
-	width: 60px;
-	height: 60px;
+	width: 70px;
+	height: 70px;
 	position: absolute;
 }
 
 .timeline_box .icon_epoch .item:nth-child(1) {
-	top: 0;
-	left: 0;
+	top: 85px;
+	left: 60px;
 	background: url(images/icon_epoch_1_01.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
 
 .timeline_box .icon_epoch .item:nth-child(2) {
-	top: 100%;
-	left: 0;
+	top: 370px;
+	left: 220px;
 	background: url(images/icon_epoch_1_02.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
 
 .timeline_box .icon_epoch .item:nth-child(3) {
-	top: 0;
-	left: 100%;
+	top: 105px;
+	left: 305px;
 	background: url(images/icon_epoch_1_03.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
