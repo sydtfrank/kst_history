@@ -67,6 +67,10 @@ body {
 	.wrapper {
 		display: block;
 	}
+
+	.wrapper .box_L {
+		z-index: 1;
+	}
 }
 
 /* 大版面 結束 */
@@ -85,6 +89,12 @@ body {
 .logo_box a img {
 	width: 100%;
 	max-width: 300px;
+}
+
+@media(max-width:1300px) {
+	.logo_box {
+		display: none;
+	}
 }
 
 /* LOGO區 結束 */
@@ -257,7 +267,7 @@ body {
 	background-size: 30px;
 }
 
-@media(max-width:900px) {
+@media(max-width:1300px) {
 	.menu_box .menu_list li.item_switch {
 		display: block;
 	}
@@ -687,6 +697,12 @@ body {
 
 .board .subhtml {
 	position: relative;
+}
+
+@media(max-width:1300px) {
+	.board {
+		padding: 30px 60px;
+	}
 }
 
 /* 白板 結束 */
