@@ -51,6 +51,7 @@ body {
 .wrapper .box_L {
 	background: #f0f;
 	width: 450px;
+	align-self: center;
 	position: sticky;
 	top: 10px;
 }
