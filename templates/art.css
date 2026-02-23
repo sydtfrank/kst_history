@@ -44,7 +44,7 @@ body {
 .wrapper {
 	display: flex;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
 }
 
@@ -58,9 +58,15 @@ body {
 	background: #0f0;
 }
 
+@media(max-width:1300px) {
+	.wrapper {
+		display: block;
+	}
+}
+
 /* 大版面 結束 */
 
-/* LOGO 開始 */
+/* LOGO區 開始 */
 .logo_box {
 	margin: 0 0 20px 0;
 	text-align: center;
@@ -76,20 +82,23 @@ body {
 	max-width: 300px;
 }
 
-/* LOGO 結束 */
+/* LOGO區 結束 */
 
 /* 主選單-外包 開始 */
 .menu_box {
 	display: flex;
-	/*
-	position: absolute;
-	left: 0;
-	transition: left 0.5s;
-	*/
 }
 
 .menu_box.close {
 	left: -390px;
+}
+
+@media(max-width:1300px) {
+	.menu_box {
+		position: absolute;
+		left: 0;
+		transition: left 0.5s;
+	}
 }
 
 /* 主選單-外包 結束 */
@@ -648,3 +657,27 @@ body {
 }
 
 /* 時間軸設計 結束 */
+
+
+
+/* 白板 開始 */
+.board {
+	background: #fff;
+	margin: 20px;
+	padding: 30px;
+}
+
+.board::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	border: 3px solid #333;
+	filter: url(#hand-drawn-filter);
+	border-radius: 10px;
+}
+
+/* 白板 結束 */
