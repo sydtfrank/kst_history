@@ -104,14 +104,14 @@ body {
 	display: flex;
 }
 
-.menu_box.close {
-	left: -390px;
+.menu_box.open {
+	left: 0;
 }
 
 @media(max-width:1300px) {
 	.menu_box {
 		position: absolute;
-		left: 0;
+		left: -390px;
 		transition: left 0.5s;
 	}
 }
@@ -233,12 +233,12 @@ body {
 }
 
 .menu_box .menu_list li.item_switch a {
-	background: url(images/icon_menu_close.svg) 50% 20px no-repeat;
+	background: url(images/icon_menu_open.svg) 50% 20px no-repeat;
 	background-size: 30px;
 }
 
-.menu_box.close .menu_list li.item_switch a {
-	background: url(images/icon_menu_open.svg) 50% 20px no-repeat;
+.menu_box.open .menu_list li.item_switch a {
+	background: url(images/icon_menu_close.svg) 50% 20px no-repeat;
 	background-size: 30px;
 }
 

@@ -39,7 +39,7 @@ $(document).ready(function () {
 
 /* 主選單 開始 */
 function menu_switch() {
-	$(".menu_box").toggleClass("close");
+	$(".menu_box").toggleClass("open");
 }
 /* 主選單 結束 */
 
