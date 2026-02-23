@@ -695,8 +695,14 @@ body {
 	border-radius: 20px;
 }
 
-.board .subhtml {
+.board .subhtml,
+.board .links_box {
 	position: relative;
+}
+
+.board .prev_btn,
+.board .next_btn {
+	position: absolute;
 }
 
 @media(max-width:1300px) {
