@@ -48,28 +48,19 @@ body {
 	margin: 0 auto;
 }
 
-/*
+
 .wrapper .box_L {
 	background: #f0f;
 	width: 450px;
-	align-self: center;
+	align-self: flex-start;
 	position: sticky;
 	top: 10px;
-	
 }
-*/
-.wrapper .box_L {
-    width: 450px;
-    background: #f0f;
-	position: fixed;
-	top: 50%;
-	transform: translateY(-50%);
-}
+
 
 .wrapper .box_R {
 	flex: 1;
 	background: #0f0;
-	margin-left: 450px;
 }
 
 @media(max-width:1300px) {
