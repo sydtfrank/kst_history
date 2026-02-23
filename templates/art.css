@@ -48,12 +48,28 @@ body {
 	margin: 0 auto;
 }
 
+/*
 .wrapper .box_L {
 	background: #f0f;
 	width: 450px;
 	align-self: center;
 	position: sticky;
 	top: 10px;
+	
+}
+*/
+.wrapper .box_L {
+    width: 450px;
+    background: #f0f;
+    
+    /* 核心設定：黏在視窗高度 50% 的位置 */
+    position: sticky;
+    top: 50vh; 
+    transform: translateY(-50%); 
+    
+    /* 必須維持 flex-start，讓父層有高度差供它滑動 */
+    align-self: flex-start; 
+    z-index: 10;
 }
 
 .wrapper .box_R {
