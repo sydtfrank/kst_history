@@ -50,7 +50,7 @@ body {
 
 .wrapper .box_L {
 	background: #f0f;
-	width: 400px;
+	width: 450px;
 }
 
 .wrapper .box_R {
@@ -60,13 +60,32 @@ body {
 
 /* 大版面 結束 */
 
+/* LOGO 開始 */
+.logo_box {
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+
+.logo_box a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.logo_box a img {
+	width: 100%;
+	max-width: 300px;
+}
+
+/* LOGO 結束 */
 
 /* 主選單-外包 開始 */
 .menu_box {
 	display: flex;
+	/*
 	position: absolute;
 	left: 0;
 	transition: left 0.5s;
+	*/
 }
 
 .menu_box.close {
