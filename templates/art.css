@@ -387,8 +387,8 @@ body {
 	/* 只對這個背景層套用濾鏡 */
 	filter: url(#hand-drawn-filter);
 
-	z-index: -1;
 	/* 確保在文字下方 */
+	z-index: -1;
 
 	/* 增加一點不對稱圓角，手繪感更強 */
 	border-radius: 10px;
