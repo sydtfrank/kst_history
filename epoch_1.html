@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>歷史時光機</title>
+    <link rel="stylesheet" href="templates/art_ckeditor.css">
+    <link rel="stylesheet" href="templates/art.css">
+</head>
+<!--
+    epoch_1 代表 史前時代
+    epoch_2 代表 大航海時代
+    epoch_3 代表 清帝國時代
+    epoch_4 代表 日治時代
+    epoch_5 代表 中華民國
+-->
+<body class="epoch_1">
+
+    <canvas id="glcanvas"></canvas>
+    <canvas id="tunnelCanvas"></canvas>
+
+
+    <div>
+        <h1>上方物件</h1>
+    </div>
+
+
+    <div class="menu_box">
+        <div class="timeline_box">
+            <div class="timeline-ring-out">
+                <div class="timeline-ring" id="timelineRing"></div>
+                <div class="timeline-top">
+                    <p class="title">大航海時代</p>
+                    <p class="item_num">0/0</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="btn" id="prevBtn" aria-label="上一個">
+                    <svg viewBox="0 0 24 24">
+                        <path d="m18 15-6-6-6 6" stroke-width="3" />
+                    </svg>
+                </button>
+                <button class="btn" id="nextBtn" aria-label="下一個">
+                    <svg viewBox="0 0 24 24">
+                        <path d="m6 9 6 6 6-6" stroke-width="3" />
+                    </svg>
+                </button>
+            </div>
+            <div class="icon_epoch">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+        <ul class="menu_list">
+            <li class="item_1">
+                <a href="#">
+                    <span>史前時代</span>
+                </a>
+            </li>
+            <li class="item_2">
+                <a href="#">
+                    <span>大航海時代</span>
+                </a>
+            </li>
+            <li class="item_3">
+                <a href="#">
+                    <span>清帝國時代</span>
+                </a>
+            </li>
+            <li class="item_4">
+                <a href="#">
+                    <span>日治時代</span>
+                </a>
+            </li>
+            <li class="item_5">
+                <a href="#">
+                    <span>中華民國</span>
+                </a>
+            </li>
+            <li class="item_switch">
+                <a href="javascript:void(0);" onclick="menu_switch();"> </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h1>下方物件</h1>
+    </div>
+
+
+    <svg style="display: none;">
+        <defs>
+            <filter id="hand-drawn-filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+
+    <script src="templates/jquery-3.7.1.min.js"></script>
+    <script src="templates/gl_canvas.js"></script>
+    <script src="templates/tunnel_canvas.js"></script>
+    <script src="templates/art.js"></script>
+
+    <script>
+        const timeline_data = [
+            { year: "2020", title: "新石器時代 ®圓山、卑南文化(晚期)", description: "啟動全球數位化戰略，將核心業務雲端化，奠定企業未來十年的競爭力基礎。" },
+            { year: "2021", title: "荷蘭人入侵澎湖，被明被沈有容勸退", description: "全面導入機器學習演算法，優化全球供應鏈與物流系統，整體營運效率提升達 40%。" },
+            { year: "2022", title: "清帝國將臺灣納為領土後最初劃為福建省的一「府」，府下設諸羅(今臺南市北部以北)", description: "承諾達成碳中和願景，開發新一代綠色能源監控平台，成功減少 30% 能源浪費。" },
+            { year: "2023", title: "全球佈局擴展", description: "橫跨三大洲建立五個研發中心，招募全球頂尖科技人才，強化區域性技術支援。" },
+            { year: "2024", title: "虛擬協作空間", description: "自主研發沈浸式辦公系統，打破地理邊界，讓全球團隊在同一個虛擬空間高效協作。" },
+            { year: "2025", title: "量子運算整合", description: "首度將量子運算技術應用於大數據處理，引領產業進入超高速運算的新紀元。" },
+            { year: "2026", title: "智慧城市參與", description: "與多國政府合作導入智慧城市平台，整合交通、能源與公共服務數據。" },
+            { year: "2027", title: "資安防護升級", description: "建置零信任資安架構，全面強化資料防護與隱私治理標準。" },
+            { year: "2028", title: "人機協作時代", description: "導入 AI 助理與自動化流程，提升員工工作效率與決策精準度。" },
+            { year: "2029", title: "全球資料中樞", description: "建構跨國分散式資料中心，實現即時同步與高可用性服務。" },
+            { year: "2030", title: "碳中和實現", description: "正式達成企業全面碳中和，成為產業永續發展標竿。" },
+            { year: "2031", title: "智慧醫療突破", description: "AI 輔助診斷系統成功應用於臨床，加速疾病判讀與治療決策。" },
+            { year: "2032", title: "教育科技深化", description: "推出個人化學習平台，結合 AI 分析學習行為，提升教育成效。" },
+            { year: "2033", title: "自動化營運體系", description: "企業營運流程高度自動化，降低人工作業風險與成本。" },
+            { year: "2034", title: "沉浸式體驗革新", description: "整合 AR / VR 技術，打造全新沉浸式客戶互動體驗。" },
+            { year: "2035", title: "全球策略聯盟", description: "與多家國際科技龍頭建立策略夥伴關係，共同拓展新市場。" },
+            { year: "2036", title: "智慧能源網絡", description: "建立跨區域智慧能源管理系統，提升能源調度與使用效率。" },
+            { year: "2037", title: "資料民主化", description: "推動企業內部資料開放文化，讓決策更即時且透明。" },
+            { year: "2038", title: "下一代 AI 架構", description: "研發新世代 AI 架構，大幅降低能耗並提升運算效能。" },
+            { year: "2039", title: "跨域創新平台", description: "整合科技、設計與人文領域，催生跨產業創新應用。" },
+            { year: "2040", title: "未來企業典範", description: "以高度智慧化、永續化與人本導向，成為未來企業營運典範。" }
+        ];
+        $(document).ready(function () {
+            init_timelineRing(timeline_data);
+        });
+    </script>
+
+</body>
+
+</html>
