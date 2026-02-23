@@ -63,12 +63,10 @@ body {
 
 /* 主選單-外包 開始 */
 .menu_box {
-	/*
 	display: flex;
 	position: absolute;
 	left: 0;
 	transition: left 0.5s;
-	*/
 }
 
 .menu_box.close {
