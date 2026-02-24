@@ -730,20 +730,17 @@ body {
 }
 
 .links_box a:hover {
-	color: #fff;
-	background-color: #333;
 	transform: translateY(-3px);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .links_box a.type_game {
 	background: url(images/icon_game.svg) 10px 50% no-repeat;
-	background-size: contain;
+	background-size: 30px;
 }
 
 .links_box a.type_ext {
 	background: url(images/icon_ext.svg) 10px 50% no-repeat;
-	background-size: contain;
+	background-size: 30px;
 }
 
 /* 補充連結區 結束 */
