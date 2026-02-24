@@ -715,6 +715,7 @@ body {
 /* 白板 結束 */
 
 
+/* 補充連結區 開始 */
 .links_box a {
 	text-decoration: none;
 	color: #333;
@@ -723,7 +724,16 @@ body {
 	border: 2px solid #333;
 	border-radius: 99px;
 	margin: 0 10px 10px 0;
-	padding: 5px 10px 5px 30px;
+	padding: 8px 15px 8px 50px;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+
+.links_box a:hover {
+	color: #fff;
+	background-color: #333;
+	transform: translateY(-3px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .links_box a.type_game {
@@ -732,6 +742,8 @@ body {
 }
 
 .links_box a.type_ext {
-	background: url(images/icon_game.svg) 10px 50% no-repeat;
+	background: url(images/icon_ext.svg) 10px 50% no-repeat;
 	background-size: contain;
 }
+
+/* 補充連結區 結束 */
