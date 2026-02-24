@@ -674,7 +674,6 @@ body {
 /* 時間軸設計 結束 */
 
 
-
 /* 白板 開始 */
 .board {
 	margin: 20px;
@@ -700,9 +699,11 @@ body {
 	position: relative;
 }
 
+
 .board .prev_btn,
 .board .next_btn {
 	position: absolute;
+
 }
 
 @media(max-width:1300px) {
@@ -712,3 +713,25 @@ body {
 }
 
 /* 白板 結束 */
+
+
+.links_box a {
+	text-decoration: none;
+	color: #333;
+	font-size: 16px;
+	font-weight: 700;
+	border: 2px solid #333;
+	border-radius: 99px;
+	margin: 0 10px 10px 0;
+	padding: 5px 10px 5px 30px;
+}
+
+.links_box a.type_game {
+	background: url(images/icon_game.svg) 10px 50% no-repeat;
+	background-size: contain;
+}
+
+.links_box a.type_ext {
+	background: url(images/icon_game.svg) 10px 50% no-repeat;
+	background-size: contain;
+}
