@@ -216,8 +216,9 @@ body {
 	display: none;
 	padding: 60px 2px 0 2px;
 	line-height: 22px;
+	font-family: SweiMarkerSansCJKtc-Regular;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 600;
 	color: #000;
 
 }
@@ -374,6 +375,7 @@ body {
 	font-family: SweiMarkerSansCJKtc-Regular;
 	font-size: 30px;
 	font-weight: 600;
+	letter-spacing: 1px;
 }
 
 .timeline_box .timeline-top p.item_num {
