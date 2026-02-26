@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>歷史時光機</title>
+    <link rel="stylesheet" href="templates/art_ckeditor.css">
+    <link rel="stylesheet" href="templates/art.css">
+</head>
+<!--
+    body_epoch_1 代表 史前時代
+    body_epoch_2 代表 大航海時代
+    body_epoch_3 代表 清帝國時代
+    body_epoch_4 代表 日治時代
+    body_epoch_5 代表 中華民國
+-->
+
+<body class="body_epoch_4">
+
+    <canvas id="glcanvas"></canvas>
+    <!--
+    <canvas id="tunnelCanvas"></canvas>
+    -->
+
+
+    <div class="wrapper">
+        <div class="box_L">
+            <!-- LOGO區 開始 -->
+            <div class="logo_box">
+                <a href="/">
+                    <img src="templates/images/logo.svg">
+                </a>
+            </div>
+            <!-- LOGO區 結束 -->
+
+            <!-- 主選單 開始 -->
+            <div class="menu_box">
+                <div class="timeline_box">
+                    <div class="timeline-ring-out">
+                        <div class="timeline-ring" id="timelineRing"></div>
+                        <div class="timeline-top">
+                            <p class="title">日治時代</p>
+                            <p class="item_num">0/0</p>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="c_btn" id="prevBtn" aria-label="上一個">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m18 15-6-6-6 6" stroke-width="3" />
+                            </svg>
+                        </button>
+                        <button class="c_btn" id="nextBtn" aria-label="下一個">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m6 9 6 6 6-6" stroke-width="3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="icon_epoch">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+                <ul class="menu_list">
+                    <li class="item_1">
+                        <a href="epoch_1.html">
+                            <span>史前時代</span>
+                        </a>
+                    </li>
+                    <li class="item_2">
+                        <a href="epoch_2.html">
+                            <span>大航海時代</span>
+                        </a>
+                    </li>
+                    <li class="item_3">
+                        <a href="epoch_3.html">
+                            <span>清帝國時代</span>
+                        </a>
+                    </li>
+                    <li class="item_4">
+                        <a href="epoch_4.html">
+                            <span>日治時代</span>
+                        </a>
+                    </li>
+                    <li class="item_5">
+                        <a href="epoch_5.html">
+                            <span>中華民國</span>
+                        </a>
+                    </li>
+                    <li class="item_switch">
+                        <a href="javascript:void(0);" onclick="menu_switch();"> </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 主選單 結束 -->
+        </div>
+
+        <div class="box_R">
+            <!-- 白板 開始 -->
+            <div class="board">
+                <!-- 功能區 開始 -->
+                <div class="func_box">
+                    <button class="c_btn" id="prev_btn" aria-label="上一個">
+                        <svg viewBox="0 0 24 24">
+                            <path d="m15 18-6-6 6-6" stroke-width="3" />
+                        </svg>
+                    </button>
+                    <button class="c_btn" id="next_btn" aria-label="下一個">
+                        <svg viewBox="0 0 24 24">
+                            <path d="m9 6 6 6-6 6" stroke-width="3" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- 功能區 結束 -->
+
+
+                <!-- 內容 開始 -->
+                <section>
+                    <div class="c_year">1111</div>
+                    <div class="c_title">2222</div>
+                    333333
+                </section>
+
+                <section>
+                    <div class="c_year">1111</div>
+                    <div class="c_title">2222</div>
+                    333333
+                </section>
+
+                <section>
+                    <div class="c_year">1111</div>
+                    <div class="c_title">2222</div>
+                    333333
+                </section>
+                <!-- 內容 結束 -->
+
+
+                <!-- 補充連結區 開始 -->
+                <div class="links_box">
+                    <a target="_blank" class="type_game" href="#">猜一猜遊戲</a>
+                    <a target="_blank" class="type_game" href="#">知識遊戲</a>
+                    <a target="_blank" class="type_ext" href="#">王老師講解</a>
+                    <a target="_blank" class="type_ext" href="#">家長過來看一下</a>
+                </div>
+                <!-- 補充連結區 結束 -->
+            </div>
+            <!-- 白板 結束 -->
+
+
+        </div>
+    </div>
+
+    <div class="footer_box"></div>
+
+
+    <svg style="display: none;">
+        <defs>
+            <filter id="hand-drawn-filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+
+    <script src="templates/jquery-3.7.1.min.js"></script>
+    <script src="templates/gl_canvas.js"></script>
+    <script src="templates/tunnel_canvas.js"></script>
+    <script src="templates/art.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const timeline_data = [];
+
+            $('.board section').each(function (index) {
+                const yearText = $(this).find('.c_year').text();
+                const titleText = $(this).find('.c_title').text();
+
+                timeline_data.push({
+                    year: yearText,
+                    title: titleText
+                });
+            });
+
+            if (timeline_data.length > 0) {
+                init_timelineRing(timeline_data);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
