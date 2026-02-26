@@ -797,8 +797,9 @@ body {
 .footer_box {
 	position: relative;
 	width: 100%;
-	background: url(images/ctrl_box.svg) 50% 50% no-repeat;
+	background: url(images/ctrl_box.svg) 50% 0 no-repeat;
 	background-size: 1300px;
+	height: 270px;
 }
 
 .footer_box a {
