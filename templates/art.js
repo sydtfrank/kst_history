@@ -82,7 +82,7 @@ function init_timelineRing(arg_data) {
 
 	updateUI(arg_data);
 
-	$('.timeline_box #prevBtn').on('click', function (e) {
+	$('#prevBtn,#prev_btn').on('click', function (e) {
 		e.preventDefault();
 		if (currentIndex > 0) {
 			currentIndex--;
@@ -90,13 +90,15 @@ function init_timelineRing(arg_data) {
 		}
 	});
 
-	$('.timeline_box #nextBtn').on('click', function (e) {
+	$('#nextBtn,#next_btn').on('click', function (e) {
 		e.preventDefault();
 		if (currentIndex < total - 1) {
 			currentIndex++;
 			updateUI(arg_data);
 		}
 	});
+
+
 
 
 }

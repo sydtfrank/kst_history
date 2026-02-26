@@ -626,7 +626,7 @@ body {
 	background-size: contain;
 }
 
-.timeline_box .btn {
+.timeline_box .c_btn {
 	width: 40px;
 	height: 40px;
 	border: 3px solid #000;
@@ -644,7 +644,7 @@ body {
 	filter: url(#hand-drawn-filter);
 }
 
-.timeline_box .btn:hover:not(:disabled) {
+.timeline_box .c_btn:hover:not(:disabled) {
 	background: #000;
 	color: #fff;
 	border-color: #000;
@@ -652,7 +652,7 @@ body {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.timeline_box .btn svg {
+.timeline_box .c_btn svg {
 	width: 24px;
 	height: 24px;
 	fill: none;
@@ -661,11 +661,11 @@ body {
 	pointer-events: none;
 }
 
-.timeline_box .btn:active:not(:disabled) {
+.timeline_box .c_btn:active:not(:disabled) {
 	transform: scale(0.95);
 }
 
-.timeline_box .btn:disabled {
+.timeline_box .c_btn:disabled {
 	opacity: 0.2;
 	cursor: not-allowed;
 	box-shadow: none;
@@ -700,11 +700,6 @@ body {
 }
 
 
-.board .prev_btn,
-.board .next_btn {
-	position: absolute;
-
-}
 
 @media(max-width:1300px) {
 	.board {
