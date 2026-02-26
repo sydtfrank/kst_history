@@ -719,6 +719,10 @@ body {
 
 
 /* 補充連結區 開始 */
+.links_box {
+	padding: 0 5px;
+}
+
 .links_box a {
 	text-decoration: none;
 	color: #333;
