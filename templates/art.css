@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('font-awesome.min.css');
 
+@font-face {
+	font-family: SweiMarkerSansCJKtc-Regular;
+	src: url(https://cdn.jsdelivr.net/gh/max32002/swei-marker-sans@2.0/WebFont/CJK%20TC/SweiMarkerSansCJKtc-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/swei-marker-sans@2.0/WebFont/CJK%20TC/SweiMarkerSansCJKtc-Regular.woff) format("woff");
+}
 
 ::selection {
 	background: #ff8e09;
@@ -716,6 +720,27 @@ body {
 
 
 /* 白板 結束 */
+
+
+/* 年份文字 開始 */
+.c_year {
+	font-family: SweiMarkerSansCJKtc-Regular;
+	font-size: 20px;
+	font-weight: 700px;
+	margin: 0 0 10px 0;
+}
+
+/* 年份文字 結束 */
+
+/* 標題文字 開始 */
+.c_title {
+	font-family: SweiMarkerSansCJKtc-Regular;
+	font-size: 30px;
+	font-weight: 700px;
+	margin: 0 0 30px 0;
+}
+
+/* 標題文字 結束 */
 
 
 /* 補充連結區 開始 */
