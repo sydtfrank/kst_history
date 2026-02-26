@@ -500,7 +500,7 @@ body {
 .body_epoch_1 .timeline_box .icon_epoch .item:nth-child(1) {
 	width: 80px;
 	height: 80px;
-	top: 60px;
+	top: 50px;
 	left: 220px;
 	background: url(images/icon_epoch_1_01.svg) 50% 50% no-repeat;
 	background-size: contain;
@@ -702,6 +702,12 @@ body {
 	border: 3px solid #333;
 	filter: url(#hand-drawn-filter);
 	border-radius: 20px;
+}
+
+.board section {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
 .board .c_year,

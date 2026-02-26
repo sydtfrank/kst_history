@@ -70,13 +70,6 @@ function init_timelineRing(arg_data) {
                     </div>
                 `);
 
-		/*
-		$node.on('click', () => {
-			currentIndex = i;
-			updateUI(arg_data);
-		});
-		*/
-
 		$ring.append($node);
 	});
 
@@ -134,6 +127,15 @@ function updateUI(arg_data) {
 			$node.css({ 'filter': 'none', 'opacity': 1 });
 		}
 	});
+
+	// --- 切換右側內容區 (Sections) ---
+    const $sections = $('.board section');
+    $sections.stop().hide().css('opacity', 0);
+    const $currentSection = $sections.eq(currentIndex);
+    $currentSection.show();
+    setTimeout(() => {
+        $currentSection.css('opacity', 1);
+    }, 10);
 
 	// 按鈕狀態更新
 	$('#prevBtn,#prev_btn').prop('disabled', currentIndex === 0);
