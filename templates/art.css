@@ -469,8 +469,10 @@ body {
 }
 
 .timeline_box .timeline-node.active .node-title span {
+	font-family: SweiMarkerSansCJKtc-Regular;
 	font-weight: 600;
 	font-size: 20px;
+	letter-spacing: 1px;
 }
 
 .timeline_box .controls {
