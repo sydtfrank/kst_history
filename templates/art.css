@@ -527,7 +527,7 @@ body {
 .body_epoch_2 .timeline_box .icon_epoch .item:nth-child(1) {
 	width: 80px;
 	height: 80px;
-	top: 60px;
+	top: 45px;
 	left: 220px;
 	background: url(images/icon_epoch_2_01.svg) 50% 50% no-repeat;
 	background-size: contain;
@@ -554,7 +554,7 @@ body {
 .body_epoch_3 .timeline_box .icon_epoch .item:nth-child(1) {
 	width: 80px;
 	height: 80px;
-	top: 60px;
+	top: 50px;
 	left: 220px;
 	background: url(images/icon_epoch_3_01.svg) 50% 50% no-repeat;
 	background-size: contain;
@@ -608,7 +608,7 @@ body {
 .body_epoch_5 .timeline_box .icon_epoch .item:nth-child(1) {
 	width: 80px;
 	height: 80px;
-	top: 60px;
+	top: 40px;
 	left: 220px;
 	background: url(images/icon_epoch_5_01.svg) 50% 50% no-repeat;
 	background-size: contain;
