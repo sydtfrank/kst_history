@@ -798,7 +798,7 @@ body {
 	position: relative;
 	width: 100%;
 	max-width: 1400px;
-	margin: -100px auto 0 auto;
+	margin: -150px auto 0 auto;
 	background: url(images/ctrl_box.svg) 50% 50% no-repeat;
 	background-size:contain;
 	aspect-ratio: 5/1;
