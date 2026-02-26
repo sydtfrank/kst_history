@@ -714,11 +714,6 @@ body {
 	}
 }
 
-@media(max-width:600px) {
-	.board {
-		padding: 10px 10px;
-	}
-}
 
 /* 白板 結束 */
 
