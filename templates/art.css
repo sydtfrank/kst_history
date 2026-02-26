@@ -463,16 +463,14 @@ body {
 }
 
 .timeline_box .node-title span {
+	font-family: SweiMarkerSansCJKtc-Regular;
 	font-size: 20px;
 	font-weight: 300;
-	/*white-space: nowrap;*/
+	letter-spacing: 1px;
 }
 
 .timeline_box .timeline-node.active .node-title span {
-	font-family: SweiMarkerSansCJKtc-Regular;
 	font-weight: 600;
-	font-size: 20px;
-	letter-spacing: 1px;
 }
 
 .timeline_box .controls {
@@ -794,3 +792,26 @@ body {
 }
 
 /* 功能區 結束 */
+
+/* 頁尾 開始 */
+.footer_box {
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	background: url(images/ctrl_box.svg) 50% 50% no-repeat;
+	background-size: contain;
+	position: fixed;
+	bottom: 0;
+}
+
+.footer_box a {
+	text-decoration: none;
+	display: inline-block;
+	width: 300px;
+	height: 50px;
+	background: url(images/kst_logo.png) 50% 50% no-repeat;
+	background-size: contain;
+
+}
+
+/* 頁尾 結束 */
