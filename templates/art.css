@@ -50,7 +50,6 @@ body {
 
 
 .wrapper .box_L {
-	background: #f0f;
 	width: 450px;
 	align-self: flex-start;
 	position: sticky;
@@ -60,7 +59,6 @@ body {
 
 .wrapper .box_R {
 	flex: 1;
-	background: #0f0;
 }
 
 @media(max-width:1300px) {
@@ -625,11 +623,13 @@ body {
 	background: url(images/icon_epoch_5_03.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
+
 /* 時間軸設計 結束 */
 
 
 /* 上一個下一個按鈕 開始 */
 .c_btn {
+	position: relative;
 	width: 40px;
 	height: 40px;
 	border: 3px solid #000;
@@ -641,7 +641,6 @@ body {
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s;
-	position: relative;
 	outline: none;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 	filter: url(#hand-drawn-filter);
@@ -673,6 +672,12 @@ body {
 	cursor: not-allowed;
 	box-shadow: none;
 }
+
+.c_btn#prev_btn,
+.c_btn#next_btn {
+	position: absolute;
+}
+
 /* 上一個下一個按鈕 結束 */
 
 
