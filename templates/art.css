@@ -786,7 +786,7 @@ body {
 /* 功能區 開始 */
 .func_box {
 	display: flex;
-	justify-content: center;
+	justify-content: right;
 	gap: 15px;
 	margin-top: 20px;
 }
