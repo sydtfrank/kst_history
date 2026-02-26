@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>歷史時光機</title>
+    <link rel="stylesheet" href="templates/art_ckeditor.css">
+    <link rel="stylesheet" href="templates/art.css">
+</head>
+<!--
+    body_epoch_1 代表 史前時代
+    body_epoch_2 代表 大航海時代
+    body_epoch_3 代表 清帝國時代
+    body_epoch_4 代表 日治時代
+    body_epoch_5 代表 中華民國
+-->
+
+<body class="body_epoch_1">
+
+    <canvas id="glcanvas"></canvas>
+    <!--
+    <canvas id="tunnelCanvas"></canvas>
+    -->
+
+
+    <div class="wrapper">
+        <div class="box_L">
+            <!-- LOGO區 開始 -->
+            <div class="logo_box">
+                <a href="/">
+                    <img src="templates/images/logo.svg">
+                </a>
+            </div>
+            <!-- LOGO區 結束 -->
+
+            <!-- 主選單 開始 -->
+            <div class="menu_box">
+                <div class="timeline_box">
+                    <div class="timeline-ring-out">
+                        <div class="timeline-ring" id="timelineRing"></div>
+                        <div class="timeline-top">
+                            <p class="title">大航海時代</p>
+                            <p class="item_num">0/0</p>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="c_btn" id="prevBtn" aria-label="上一個">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m18 15-6-6-6 6" stroke-width="3" />
+                            </svg>
+                        </button>
+                        <button class="c_btn" id="nextBtn" aria-label="下一個">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m6 9 6 6 6-6" stroke-width="3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="icon_epoch">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+                <ul class="menu_list">
+                    <li class="item_1">
+                        <a href="epoch_1.html">
+                            <span>史前時代</span>
+                        </a>
+                    </li>
+                    <li class="item_2">
+                        <a href="epoch_2.html">
+                            <span>大航海時代</span>
+                        </a>
+                    </li>
+                    <li class="item_3">
+                        <a href="epoch_3.html">
+                            <span>清帝國時代</span>
+                        </a>
+                    </li>
+                    <li class="item_4">
+                        <a href="epoch_4.html">
+                            <span>日治時代</span>
+                        </a>
+                    </li>
+                    <li class="item_5">
+                        <a href="epoch_5.html">
+                            <span>中華民國</span>
+                        </a>
+                    </li>
+                    <li class="item_switch">
+                        <a href="javascript:void(0);" onclick="menu_switch();"> </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 主選單 結束 -->
+        </div>
+
+        <div class="box_R">
+            <!-- 白板 開始 -->
+            <div class="board">
+                <!-- 功能區 開始 -->
+                <div class="func_box">
+                    <button class="c_btn" id="prev_btn" aria-label="上一個">
+                        <svg viewBox="0 0 24 24">
+                            <path d="m15 18-6-6 6-6" stroke-width="3" />
+                        </svg>
+                    </button>
+                    <button class="c_btn" id="next_btn" aria-label="下一個">
+                        <svg viewBox="0 0 24 24">
+                            <path d="m9 6 6 6-6 6" stroke-width="3" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- 功能區 結束 -->
+
+
+                <!-- 內容 開始 -->
+                <section>
+                    <div class="c_year">西元1604年</div>
+                    <div class="c_title">荷蘭人入侵澎湖，被明被沈有容勸退</div>
+                    <div class="subhtml">
+                        <p>西元1604年8月7日，荷蘭人司令官韋麻郎(Wijbrand van
+                            Waerwijck)率艦隊抵達澎湖，當時無軍駐守，韋麻郎在當地搭造房舍，有了久居的打算。</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>福建巡撫徐學聚聽聞此事，感覺事態嚴重，下令嚴加防守，便命將領沈有容校閱水師，再率戰船五十艘直抵澎湖。沈有容態度堅決，聲稱澎湖乃大明國土，外人不得強占，迫使韋麻郎只得和部眾從澎湖撤離。
+                        </p>
+
+                        <p>&nbsp;</p>
+
+                        <p>「沈有容諭退紅毛番韋麻郎等」碑紀念明將沈有容勸退荷蘭人的事蹟，現今存放於澎湖馬公市天后宮。</p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1624年</div>
+                    <div class="c_title">荷蘭占領臺灣南部</div>
+                    <div class="subhtml">
+                        <p>西元1624年，荷蘭人來到臺灣後，在大員營建熱蘭遮城(Zeelandia)，成為荷蘭在臺灣殖民統治的行政中心與商館所在地。熱蘭遮城周圍，有許多船隻往返，來自中國、日本、東南亞各地的貨物都在此匯集，建構起大員作為東亞重要轉口貿易港的地位。
+                        </p>
+
+                        <p>&nbsp;</p>
+
+                        <p>荷蘭人在沿海的沙洲建立熱蘭遮城作為根據地後，再往臺灣內陸移動，在赤崁地區設立普羅民遮街，用來貿易及取得糧食。郭懷一事件後，荷蘭人為了防範赤崁地區再爆發類似的漢人起事，便修築堡壘防禦，即為「普羅民遮城」，堡壘遺址位於現今的赤崁樓內。
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1626年</div>
+                    <div class="c_title">西班牙占領臺灣北部</div>
+                    <div class="subhtml">
+                        <p>西元1626年，西班牙艦隊先在三貂角登陸，並進占雞籠港，隨後在社寮島(今基隆和平島)舉行占領儀式。為了防範荷蘭人入侵，西班牙人築聖薩爾瓦多(San
+                            Salvador)城，並建有炮臺加強防禦；後來又占領淡水，建聖多明哥(San
+                            Domingo)城。之後，西班牙人除了新闢直達雞籠(今基隆)的陸路外，並沿著淡水河各支流招撫各社原住民，宣示統治，形成荷蘭、西班牙分占臺灣南北的態勢。</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>西班牙人占據臺灣北部的原因，一方面固然是為對抗荷蘭，另一方面亦是要誘致中、日的商賈到臺灣北部，重開已經斷絕的對日貿易，同時又想向中、日兩國傳布其教義。
+                        </p>
+
+                        <p>&nbsp;</p>
+
+                        <p>
+                            但西班牙占領臺灣北部之後，中國船隻前來貿易者遠比預期少，而日本國內在西元1633∼1635年之間，逐步厲行鎖國和禁教，斷絕了西班牙對日貿易與傳教的期望。西班牙人因對日貿易受挫，減少駐臺守軍。
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1629年</div>
+                    <div class="c_title">麻豆社事件爆發</div>
+                    <div class="subhtml">
+                        <p>在十七世紀初，麻豆曾是臺南地區原住民的重要聚居地。當荷蘭人剛到大員之際，與麻豆社的關係非常緊張。</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>西元1629年，荷蘭派遣士兵前往麻豆社調查海盜的藏匿蹤跡，荷蘭士兵回程時，原住民協助士兵渡河，卻趁機將其溺斃，荷蘭士兵幾乎全軍覆沒。</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>這個事件發生6年後，荷蘭人才展開報復。</p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1635年</div>
+                    <div class="c_title">荷蘭攻打麻豆社</div>
+                    <div class="subhtml">
+                        <p>西元1635年11月23日，荷蘭長官率領475名荷蘭士兵以及新港社原住民，討伐麻豆社。戰事1天就結束，荷蘭人殺死26名社民，燒毀近三千棟房子，麻豆社的村落被破壞焚毀，社民不敵被迫投降。
+                        </p>
+
+                        <p>&nbsp;</p>
+
+                        <p>12月19日，麻豆社正式與荷蘭簽訂條約、投降，從此接受荷蘭人統治。</p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1642年</div>
+                    <div class="c_title">荷蘭驅逐西班牙，占臺灣北部</div>
+                    <div class="subhtml">
+                        <p>西班牙人東來的主要目的為通商傳教，占領北臺灣的目的亦是要突破荷蘭封鎖，使貿易與傳教活動更為順利，但因西班牙人無力將荷人趕出臺灣，且日本又實施鎖國政策，禁止與西班牙貿易，加上臺灣原住民伺機反抗，使西班牙萌發棄臺念頭。
+                        </p>
+
+                        <p>&nbsp;</p>
+
+                        <p>西元1642年，荷蘭人將西班牙人驅逐，占領西班牙人的聖多明哥城後，在附近重建城堡。由於漢人多稱荷蘭人為「紅毛」，所以也將此建築稱為「紅毛樓」，今人則多稱為「紅毛城」。</p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1652年</div>
+                    <div class="c_title">郭懷一事件爆發</div>
+                    <div class="subhtml">
+                        <p>郭懷一是移墾臺南赤崁一帶的漢人領袖。由於漢人難以承擔荷蘭聯合東印度公司的繁重稅金，他率領反抗者攻打普羅民遮，但荷蘭軍隊以優勢的武器，和成功動員原住民，使反抗軍漸趨弱勢，此事件短短14天內就被平定。
+                        </p>
+
+                        <p>&nbsp;</p>
+
+                        <p>這起事件在很大程度上動搖了荷蘭人統治的根基，為了防止漢人再度作亂，他們第二年在普羅民遮增建了一座城堡，取名為「普羅民遮城」。</p>
+
+                        <p>&nbsp;</p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1662年</div>
+                    <div class="c_title">鄭成功驅逐荷蘭人，占領臺灣</div>
+                    <div class="subhtml">
+                        <p>鄭成功跟隨其父鄭芝龍在福建擁立唐王，繼續與清廷對抗。唐王十分器重鄭成功，賜國姓朱，又賜名成功，因此人稱鄭成功為「國姓爺」。桂王則封鄭成功為延平郡王。</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>不過，鄭成功來臺短短不到半年即生病去世，其子鄭經繼位。</p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1665年</div>
+                    <div class="c_title">陳永華建臺南孔廟</div>
+                    <div class="subhtml">
+                        <p>陳永華15歲考取秀才，後來隨鄭成功居廈門，擔任幕僚。鄭成功東征臺灣時，奉命留守廈門，輔佐世子鄭經。他建議並規畫鄭氏的行政制度、文教事業、經濟貿易等，因此被稱為「鄭氏諸葛」。</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>鄭經在陳永華的協助下，提倡文教並設立孔廟，在承天府的卓仔埔(今臺南市南門路)興建臺灣第一座孔廟，廟中的明倫堂是教育的場所；同時實施科舉制度，作為選才任官的依據。</p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="c_year">西元1683年</div>
+                    <div class="c_title">施琅攻取臺灣</div>
+                    <div class="subhtml">
+                        <p>施琅是福建泉州人，原為鄭芝龍部將，曾隨其降清。不久又加入鄭成功的抗清部隊，是鄭軍重要將領。</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>但因施琅曾擅自處死鄭成功手下曾德，得罪了鄭成功，加上施琅兄弟仗恃其軍功，在軍中略顯跋扈，使得鄭成功對其萌生殺意。施琅雖逃過一劫，但其父、弟卻被處死，施琅乃再度投降清廷。</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>西元1683年，施琅率軍攻澎湖、平臺灣，滅鄭氏。</p>
+                    </div>
+                </section>
+
+                <!-- 內容 結束 -->
+
+
+                <!-- 補充連結區 開始 -->
+                <div class="links_box">
+                    <a target="_blank" class="type_game" href="#">猜一猜遊戲</a>
+                    <a target="_blank" class="type_game" href="#">知識遊戲</a>
+                    <a target="_blank" class="type_ext" href="#">王老師講解</a>
+                    <a target="_blank" class="type_ext" href="#">家長過來看一下</a>
+                </div>
+                <!-- 補充連結區 結束 -->
+            </div>
+            <!-- 白板 結束 -->
+
+
+        </div>
+    </div>
+
+    <div class="footer_box"></div>
+
+
+    <svg style="display: none;">
+        <defs>
+            <filter id="hand-drawn-filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+
+    <script src="templates/jquery-3.7.1.min.js"></script>
+    <script src="templates/gl_canvas.js"></script>
+    <script src="templates/tunnel_canvas.js"></script>
+    <script src="templates/art.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const timeline_data = [];
+
+            $('.board section').each(function (index) {
+                const yearText = $(this).find('.c_year').text();
+                const titleText = $(this).find('.c_title').text();
+
+                timeline_data.push({
+                    year: yearText,
+                    title: titleText
+                });
+            });
+
+            if (timeline_data.length > 0) {
+                init_timelineRing(timeline_data);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
