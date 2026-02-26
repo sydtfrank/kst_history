@@ -745,7 +745,10 @@ body {
 
 /* 功能區 開始 */
 .func_box {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 20px;
 }
 
 /* 功能區 結束 */
