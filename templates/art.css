@@ -625,8 +625,11 @@ body {
 	background: url(images/icon_epoch_5_03.svg) 50% 50% no-repeat;
 	background-size: contain;
 }
+/* 時間軸設計 結束 */
 
-.timeline_box .c_btn {
+
+/* 上一個下一個按鈕 開始 */
+.c_btn {
 	width: 40px;
 	height: 40px;
 	border: 3px solid #000;
@@ -644,7 +647,7 @@ body {
 	filter: url(#hand-drawn-filter);
 }
 
-.timeline_box .c_btn:hover:not(:disabled) {
+.c_btn:hover:not(:disabled) {
 	background: #000;
 	color: #fff;
 	border-color: #000;
@@ -652,7 +655,7 @@ body {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.timeline_box .c_btn svg {
+.c_btn svg {
 	width: 24px;
 	height: 24px;
 	fill: none;
@@ -661,17 +664,16 @@ body {
 	pointer-events: none;
 }
 
-.timeline_box .c_btn:active:not(:disabled) {
+.c_btn:active:not(:disabled) {
 	transform: scale(0.95);
 }
 
-.timeline_box .c_btn:disabled {
+.c_btn:disabled {
 	opacity: 0.2;
 	cursor: not-allowed;
 	box-shadow: none;
 }
-
-/* 時間軸設計 結束 */
+/* 上一個下一個按鈕 結束 */
 
 
 /* 白板 開始 */
