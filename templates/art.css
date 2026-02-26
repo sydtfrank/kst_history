@@ -673,11 +673,6 @@ body {
 	box-shadow: none;
 }
 
-.c_btn#prev_btn,
-.c_btn#next_btn {
-	position: absolute;
-}
-
 /* 上一個下一個按鈕 結束 */
 
 
@@ -746,3 +741,11 @@ body {
 }
 
 /* 補充連結區 結束 */
+
+
+/* 功能區 開始 */
+.func_box {
+	text-align: center;
+}
+
+/* 功能區 結束 */
