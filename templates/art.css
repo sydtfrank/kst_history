@@ -798,9 +798,17 @@ body {
 	width: 100%;
 	max-width: 1800px;
 	margin: -100px auto 0 auto;
-	background: url(images/ctrl_box.svg) 50% 50% no-repeat;
-	background-size:contain;
+	background: url(images/ctrl_box.svg) 100% 0 no-repeat;
+	background-size: contain;
 	aspect-ratio: 6/1;
+}
+
+@media(max-width:600px) {
+	.footer_box {
+		background-size: cover;
+		aspect-ratio: auto;
+		height: 100px;
+	}
 }
 
 /* 頁尾 結束 */
