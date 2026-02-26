@@ -113,6 +113,7 @@ body {
 @media(max-width:1300px) {
 	.menu_box {
 		position: absolute;
+		top: 40px;
 		left: -400px;
 		transition: left 0.5s;
 	}
