@@ -700,6 +700,8 @@ body {
 	border-radius: 20px;
 }
 
+.board .c_year,
+.board .c_title,
 .board .subhtml,
 .board .links_box {
 	position: relative;
