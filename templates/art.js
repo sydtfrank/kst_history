@@ -136,8 +136,8 @@ function updateUI(arg_data) {
 	});
 
 	// 按鈕狀態更新
-	$('.timeline_box #prevBtn').prop('disabled', currentIndex === 0);
-	$('.timeline_box #nextBtn').prop('disabled', currentIndex === total - 1);
+	$('#prevBtn,#prev_btn').prop('disabled', currentIndex === 0);
+	$('#nextBtn,#next_btn').prop('disabled', currentIndex === total - 1);
 
 }
 
