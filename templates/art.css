@@ -795,13 +795,10 @@ body {
 
 /* 頁尾 開始 */
 .footer_box {
+	position: relative;
 	width: 100%;
-	max-width: 1300px;
-	margin: 0 auto;
 	background: url(images/ctrl_box.svg) 50% 50% no-repeat;
-	background-size: contain;
-	position: fixed;
-	bottom: 0;
+	background-size: 1300px;
 }
 
 .footer_box a {
@@ -811,7 +808,10 @@ body {
 	height: 50px;
 	background: url(images/kst_logo.png) 50% 50% no-repeat;
 	background-size: contain;
-
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-300px);
 }
 
 /* 頁尾 結束 */
