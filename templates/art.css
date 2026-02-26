@@ -788,6 +788,7 @@ body {
 	display: flex;
 	justify-content: right;
 	gap: 15px;
+	margin: 0 0 10px 0;
 }
 
 /* 功能區 結束 */
