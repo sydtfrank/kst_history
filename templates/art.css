@@ -73,7 +73,7 @@ body {
 .fly_box img {
 	width: 100%;
 	max-width: 500px;
-	transform: rotate(-40deg);
+	transform: rotate(-30deg);
 }
 
 /* 飛船區 結束 */
@@ -99,6 +99,7 @@ body {
 }
 
 .home_menu_box .menu_list{
+	position: relative;
 	background: #e3e4ec;
 }
 .home_menu_box .menu_list::before {
