@@ -94,15 +94,44 @@ body {
 /* 飛船區 開始 */
 .fly_box img {
 	width: 100%;
-	transform: rotate(0deg) scale(1.4);
+	transform: rotate(-15deg) scale(1.4);
+	animation: floating 3s ease-in-out infinite;
 }
 
 @media(max-width:1000px) {
 	.fly_box img {
 		transform: rotate(-15deg) scale(1.1);
+		animation: floating-mobile 3s ease-in-out infinite;
 	}
 }
+/* 1. 定義動畫：命名為 floating */
+@keyframes floating {
+    0% {
+        /* 起始位置：維持原本的旋轉與縮放 */
+        transform: rotate(-15deg) scale(1.4) translateY(0px);
+    }
+    50% {
+        /* 中間點：向上移動 20px (數值越大飛得越高) */
+        transform: rotate(-15deg) scale(1.4) translateY(-20px);
+    }
+    100% {
+        /* 回到原位 */
+        transform: rotate(-15deg) scale(1.4) translateY(0px);
+    }
+}
 
+/* 針對 RWD 的動畫設定 (縮放比例不同) */
+@keyframes floating-mobile {
+    0% {
+        transform: rotate(-15deg) scale(1.1) translateY(0px);
+    }
+    50% {
+        transform: rotate(-15deg) scale(1.1) translateY(-15px);
+    }
+    100% {
+        transform: rotate(-15deg) scale(1.1) translateY(0px);
+    }
+}
 /* 飛船區 結束 */
 
 
