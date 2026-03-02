@@ -99,7 +99,7 @@ body {
 
 @media(max-width:1000px) {
 	.fly_box img {
-		transform: rotate(-15deg) scale(1);
+		transform: rotate(-15deg) scale(1.1);
 	}
 }
 
@@ -119,7 +119,7 @@ body {
 
 @media(max-width:1000px) {
 	.home_logo_box {
-		margin: 50px 0 50px 0;
+		margin: 10px 0 10px 0;
 	}
 }
 
@@ -202,8 +202,16 @@ body {
 }
 
 @media(max-width:600px) {
+	.home_menu_box {
+		margin: 30px 0 0 0;
+	}
+
 	.home_menu_box .home_func_box {
 		width: 30px;
+	}
+
+	.home_menu_box .menu_list li {
+		padding: 10px 10px 10px 20px;
 	}
 
 	.home_menu_box .menu_list li a span {
