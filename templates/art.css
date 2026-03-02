@@ -78,6 +78,16 @@ body {
 	}
 }
 
+@media(max-width:600px) {
+	.home_wrapper .box_L {
+		padding: 90px 20px 20px 20px;
+	}
+
+	.home_wrapper .box_R {
+		padding: 20px 20px;
+	}
+}
+
 /* 首頁-大版面 結束 */
 
 
@@ -191,8 +201,14 @@ body {
 	letter-spacing: 15px;
 }
 
-@media(max-width:1000px) {
-	/**/
+@media(max-width:600px) {
+	.home_menu_box .home_func_box {
+		width: 30px;
+	}
+
+	.home_menu_box .menu_list li a span {
+		letter-spacing: 2px;
+	}
 }
 
 /* 首頁-選單 結束 */
