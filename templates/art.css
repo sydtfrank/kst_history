@@ -103,7 +103,6 @@ body {
 .home_menu_box .menu_list {
 	position: relative;
 	max-width: 400px;
-	background: #e3e4ec;
 	padding: 20px;
 }
 
@@ -117,16 +116,24 @@ body {
 	border: 3px solid #000;
 	filter: url(#hand-drawn-filter);
 	border-radius: 40px 0 0 0;
+	background: #e3e4ec;
 }
 
 .home_menu_box .menu_list li {
-	position: relative;
 	list-style-type: none;
 	margin: 5px 0;
 	padding: 5px 10px;
 }
 
-.home_menu_box .menu_list li::before {
+.home_menu_box .menu_list li a {
+	text-decoration: none;
+	display: block;
+	position: relative;
+	text-align: left;
+	display: block;
+}
+
+.home_menu_box .menu_list li a::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -138,13 +145,8 @@ body {
 	border-radius: 2px 4px 3px 6px / 6px 3px 5px 2px;
 }
 
-.home_menu_box .menu_list li a {
-	text-decoration: none;
-	text-align: left;
-	display: block;
-}
-
-.home_menu_box .menu_list li a span{
+.home_menu_box .menu_list li a span {
+	display: inline-block;
 	padding: 5px 10px;
 	line-height: 22px;
 	font-family: SweiMarkerSansCJKtc-Regular;
@@ -159,11 +161,12 @@ body {
 /* 首頁-頁尾 開始 */
 .home_footer_box {
 	text-align: center;
+	padding: 10px;
 }
 
 .home_footer_box img {
 	width: 100%;
-	max-width: 250px;
+	max-width: 200px;
 }
 
 /* 首頁-頁尾 結束 */
