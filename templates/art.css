@@ -94,23 +94,14 @@ body {
 
 /* 首頁-選單 開始 */
 .home_menu_box {
+	position: relative;
 	display: flex;
 	margin: 50px 0 0 0;
 	justify-self: right;
 	width: 450px;
 }
 
-.home_menu_box .home_func_box {
-	width: 80px;
-}
-
-.home_menu_box .menu_list {
-	flex: 1;
-	position: relative;
-	padding: 20px;
-}
-
-.home_menu_box .menu_list::before {
+.home_menu_box::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -121,6 +112,15 @@ body {
 	filter: url(#hand-drawn-filter);
 	border-radius: 40px 0 0 0;
 	background: #e3e4ec;
+}
+
+.home_menu_box .home_func_box {
+	width: 60px;
+}
+
+.home_menu_box .menu_list {
+	flex: 1;
+	padding: 20px;
 }
 
 .home_menu_box .menu_list li {
