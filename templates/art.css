@@ -69,11 +69,12 @@ body {
 	}
 
 	.home_wrapper .box_L {
-		padding: 60px 20px 20px 20px;
+		padding: 90px 20px 20px 20px;
 	}
 
 	.home_wrapper .box_R {
 		padding: 20px 40px;
+		justify-self: center;
 	}
 }
 
@@ -103,6 +104,13 @@ body {
 
 .home_logo_box img {
 	width: 100%;
+	max-width: 600px;
+}
+
+@media(max-width:1000px) {
+	.home_logo_box {
+		margin: 50px 0 50px 0;
+	}
 }
 
 /* 首頁-LOGO區 結束 */
@@ -113,7 +121,8 @@ body {
 	display: flex;
 	margin: 50px 0 0 0;
 	justify-self: right;
-	width: 450px;
+	width: 100%;
+	max-width: 450px;
 	padding: 20px;
 }
 
