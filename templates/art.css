@@ -101,6 +101,7 @@ body {
 .home_menu_box .menu_list{
 	position: relative;
 	background: #e3e4ec;
+	padding: 20px;
 }
 .home_menu_box .menu_list::before {
 	content: "";
@@ -118,8 +119,10 @@ body {
 .home_menu_box .menu_list li {
 	position: relative;
 	list-style-type: none;
-	width: 40px;
-	height: 80px;
+	margin: 5px 0;
+	padding: 5px 10px;
+	font-size: 20px;
+	font-weight: 600;
 }
 
 .home_menu_box .menu_list li::before {
