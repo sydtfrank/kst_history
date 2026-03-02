@@ -92,25 +92,16 @@ body {
 
 
 /* 飛船區 開始 */
-.fly_box {
-	position: relative;
-	width: 1770px;
-	height: 655px;
-	transform: scale(0.5);
+.fly_box img {
+	width: 100%;
+	transform: rotate(0deg) scale(1.4);
 }
 
-.fly_box .img_fly_w_L {
-	position: absolute;
-	top: 10px;
-	left: 10px;
+@media(max-width:1000px) {
+	.fly_box img {
+		transform: rotate(-15deg) scale(1.1);
+	}
 }
-
-.fly_box .img_fly_w_R {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-}
-
 
 /* 飛船區 結束 */
 
