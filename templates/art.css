@@ -44,6 +44,107 @@ body {
 	z-index: -1;
 }
 
+
+/* 背景小物件 開始 */
+#bg_obj {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+}
+
+#bg_obj .obj_item {
+	position: absolute;
+	/* 起點在中心 */
+	top: 50%;
+	left: 40%;
+	width: 80px;
+	height: 80px;
+	/* 修正中心偏誤 */
+	margin-top: -40px;
+	margin-left: -40px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0;
+	pointer-events: none;
+	animation: scatter 8s linear infinite;
+}
+
+#bg_obj .obj_item:nth-child(1) {
+	background-image: url(images/icon_epoch_1_01.svg);
+	animation-delay: 0s;
+	/* 左上 */
+	--target-x: -600%;
+	--target-y: -600%;
+}
+
+#bg_obj .obj_item:nth-child(2) {
+	background-image: url(images/icon_epoch_2_01.svg);
+	animation-delay: 0.7s;
+	/* 右上 */
+	--target-x: 600%;
+	--target-y: -450%;
+}
+
+#bg_obj .obj_item:nth-child(3) {
+	background-image: url(images/icon_epoch_3_01.svg);
+	animation-delay: 1.4s;
+	/* 右下 */
+	--target-x: 550%;
+	--target-y: 600%;
+}
+
+#bg_obj .obj_item:nth-child(4) {
+	background-image: url(images/icon_epoch_4_01.svg);
+	animation-delay: 2.1s;
+	/* 左下 */
+	--target-x: -600%;
+	--target-y: 500%;
+}
+
+#bg_obj .obj_item:nth-child(5) {
+	background-image: url(images/icon_epoch_5_01.svg);
+	animation-delay: 2.8s;
+	/* 左中 */
+	--target-x: -700%;
+	--target-y: -250%;
+}
+
+#bg_obj .obj_item:nth-child(6) {
+	background-image: url(images/icon_obj_c.svg);
+	animation-delay: 3.5s;
+	/* 右中 */
+	--target-x: 700%;
+	--target-y: 300%;
+}
+
+/* 核心動畫 */
+@keyframes scatter {
+	0% {
+		/* 起始點：縮小、無旋轉 */
+		transform: translate(0, 0) scale(0) rotate(0deg);
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 0.8;
+	}
+
+	90% {
+		opacity: 0.8;
+	}
+
+	100% {
+		transform: translate(var(--target-x), var(--target-y)) scale(2) rotate(var(--rotation, 360deg));
+		opacity: 0;
+	}
+}
+
+/* 背景小物件 結束 */
+
 /* 首頁-大版面 開始 */
 .home_wrapper {
 	display: flex;
@@ -104,34 +205,40 @@ body {
 		animation: floating-mobile 3s ease-in-out infinite;
 	}
 }
+
 /* 1. 定義動畫：命名為 floating */
 @keyframes floating {
-    0% {
-        /* 起始位置：維持原本的旋轉與縮放 */
-        transform: rotate(-15deg) scale(1.4) translateY(0px);
-    }
-    50% {
-        /* 中間點：向上移動 20px (數值越大飛得越高) */
-        transform: rotate(-15deg) scale(1.4) translateY(-20px);
-    }
-    100% {
-        /* 回到原位 */
-        transform: rotate(-15deg) scale(1.4) translateY(0px);
-    }
+	0% {
+		/* 起始位置：維持原本的旋轉與縮放 */
+		transform: rotate(-15deg) scale(1.4) translateY(0px);
+	}
+
+	50% {
+		/* 中間點：向上移動 20px (數值越大飛得越高) */
+		transform: rotate(-15deg) scale(1.4) translateY(-20px);
+	}
+
+	100% {
+		/* 回到原位 */
+		transform: rotate(-15deg) scale(1.4) translateY(0px);
+	}
 }
 
 /* 針對 RWD 的動畫設定 (縮放比例不同) */
 @keyframes floating-mobile {
-    0% {
-        transform: rotate(-15deg) scale(1.1) translateY(0px);
-    }
-    50% {
-        transform: rotate(-15deg) scale(1.1) translateY(-15px);
-    }
-    100% {
-        transform: rotate(-15deg) scale(1.1) translateY(0px);
-    }
+	0% {
+		transform: rotate(-15deg) scale(1.1) translateY(0px);
+	}
+
+	50% {
+		transform: rotate(-15deg) scale(1.1) translateY(-15px);
+	}
+
+	100% {
+		transform: rotate(-15deg) scale(1.1) translateY(0px);
+	}
 }
+
 /* 飛船區 結束 */
 
 
@@ -176,6 +283,10 @@ body {
 	filter: url(#hand-drawn-filter);
 	border-radius: 40px 0 0 0;
 	background: #e3e4ec;
+}
+
+.home_menu_box img {
+	position: relative;
 }
 
 .home_menu_box .home_func_box {
