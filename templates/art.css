@@ -74,7 +74,7 @@ body {
 /* 飛船區 開始 */
 .fly_box img {
 	width: 100%;
-	transform: rotate(-15deg);
+	transform: rotate(-15deg) scale(1.2);
 }
 
 /* 飛船區 結束 */
