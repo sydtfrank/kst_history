@@ -110,11 +110,13 @@ body {
 	right: 0;
 	bottom: 0;
 	border: 3px solid #000;
+	border-radius: 20px 0 0 0;
 	filter: url(#hand-drawn-filter);
 	border-radius: 2px 4px 3px 6px / 6px 3px 5px 2px;
 }
 
 .home_menu_box .menu_list li {
+	position: relative;
 	list-style-type: none;
 	width: 40px;
 	height: 80px;
