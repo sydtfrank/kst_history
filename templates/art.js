@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 	if ($(".body_home").length) {
 		//首頁
-		set_color('#ffafcc', '#ffc8dd', '#a2d2ff', '#bde0fe');
+		set_color('#ffafcc', '#fff3c7', '#a2d2ff', '#ffb1a1');
 	} else {
 		//史前時代
 		if ($(".body_epoch_1").length) {
