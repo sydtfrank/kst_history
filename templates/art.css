@@ -44,7 +44,110 @@ body {
 	z-index: -1;
 }
 
-/* 大版面 開始 */
+/* 首頁-大版面 開始 */
+.home_wrapper {
+	display: flex;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+
+.home_wrapper .box_L,
+.home_wrapper .box_R {
+	flex: 1;
+	align-self: center;
+}
+
+
+@media(max-width:1300px) {
+	.home_wrapper {
+		display: block;
+	}
+}
+
+/* 首頁-大版面 結束 */
+
+
+/* 飛船區 開始 */
+.fly_box img {
+	width: 100%;
+	max-width: 500px;
+	transform: rotate(-40deg);
+}
+
+/* 飛船區 結束 */
+
+
+/* 首頁-LOGO區 開始 */
+.home_logo_box {
+	margin: 0 0 50px 0;
+	text-align: right;
+}
+
+.home_logo_box img {
+	width: 100%;
+	max-width: 300px;
+}
+
+/* 首頁-LOGO區 結束 */
+
+/* 首頁-選單 開始 */
+.home_menu_box {
+	margin: 50px 0 0 0;
+	text-align: right;
+}
+
+.home_menu_box .menu_list{
+	background: #e3e4ec;
+}
+.home_menu_box .menu_list::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 3px solid #000;
+	filter: url(#hand-drawn-filter);
+	border-radius: 2px 4px 3px 6px / 6px 3px 5px 2px;
+}
+
+.home_menu_box .menu_list li {
+	list-style-type: none;
+	width: 40px;
+	height: 80px;
+}
+
+.home_menu_box .menu_list li::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 3px solid #000;
+	filter: url(#hand-drawn-filter);
+	border-radius: 2px 4px 3px 6px / 6px 3px 5px 2px;
+}
+
+/* 首頁-選單 結束 */
+
+
+/* 首頁-頁尾 開始 */
+.home_footer_box {
+	text-align: center;
+}
+
+.home_footer_box img {
+	width: 100%;
+	max-width: 250px;
+}
+
+/* 首頁-頁尾 結束 */
+
+
+/* 內頁-大版面 開始 */
 .wrapper {
 	display: flex;
 	width: 100%;
@@ -75,7 +178,7 @@ body {
 	}
 }
 
-/* 大版面 結束 */
+/* 內頁-大版面 結束 */
 
 /* LOGO區 開始 */
 .logo_box {
