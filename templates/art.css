@@ -48,7 +48,7 @@ body {
 .home_wrapper {
 	display: flex;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1500px;
 	margin: 0 auto;
 	height: 100vh;
 }
@@ -94,7 +94,7 @@ body {
 /* 飛船區 開始 */
 .fly_box img {
 	width: 100%;
-	transform: rotate(-15deg) scale(1.4);
+	transform: rotate(0deg) scale(1.4);
 }
 
 @media(max-width:1000px) {
