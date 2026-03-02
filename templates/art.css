@@ -142,7 +142,10 @@ body {
 	text-decoration: none;
 	text-align: left;
 	display: block;
-	padding: 60px 2px 0 2px;
+}
+
+.home_menu_box .menu_list li a span{
+	padding: 5px 10px;
 	line-height: 22px;
 	font-family: SweiMarkerSansCJKtc-Regular;
 	font-size: 20px;
