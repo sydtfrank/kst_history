@@ -74,7 +74,6 @@ body {
 /* 飛船區 開始 */
 .fly_box img {
 	width: 100%;
-	max-width: 500px;
 	transform: rotate(-15deg);
 }
 
@@ -89,21 +88,21 @@ body {
 
 .home_logo_box img {
 	width: 100%;
-	max-width: 300px;
 }
 
 /* 首頁-LOGO區 結束 */
 
 /* 首頁-選單 開始 */
 .home_menu_box {
+	display: flex;
 	margin: 50px 0 0 0;
 	justify-self: right;
-	width: 300px;
+	width: 450px;
 }
 
 .home_menu_box .menu_list {
+	flex: 1;
 	position: relative;
-	max-width: 400px;
 	padding: 20px;
 }
 
@@ -148,13 +147,21 @@ body {
 
 .home_menu_box .menu_list li a span {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 10px 20px 8px 20px;
 	line-height: 22px;
 	font-family: SweiMarkerSansCJKtc-Regular;
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: 900;
 	color: #000;
-	letter-spacing: 2px;
+	letter-spacing: 15px;
+}
+
+.home_menu_box .home_func_box {
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	background: #f0f;
 }
 
 /* 首頁-選單 結束 */
