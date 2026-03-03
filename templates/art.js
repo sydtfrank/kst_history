@@ -1,11 +1,11 @@
 /* 本檔案為網頁設計師撰寫,非人請勿修改,以免未來維護困難,如果需修改可請找網頁設計師討論,感謝~ */
-$(document).ready(function () {
+$(document).ready(function() {
 
 });
 
 
 /* 背景色控制 開始 */
-$(document).ready(function () {
+$(document).ready(function() {
     init_bg_work();
 
     if ($(".body_home").length) {
@@ -93,23 +93,23 @@ function init_timelineRing(arg_data) {
     }
 
     // 滑鼠按下
-    $handle.on('mousedown', function (e) {
+    $handle.on('mousedown', function(e) {
         isDragging = true;
         $('body').css('cursor', 'grabbing');
         e.preventDefault();
     });
 
     // 觸控開始 (手機版)
-    $handle.on('touchstart', function (e) {
+    $handle.on('touchstart', function(e) {
         isDragging = true;
         e.preventDefault();
     });
 
     // 全域監聽移動與放開，確保滑鼠離開星星也能繼續拖
-    $(window).on('mousemove', function (e) {
+    $(window).on('mousemove', function(e) {
         if (!isDragging) return;
         handleDrag(e.pageY);
-    }).on('mouseup', function () {
+    }).on('mouseup', function() {
         if (isDragging) {
             isDragging = false;
             $('body').css('cursor', 'default');
@@ -117,16 +117,16 @@ function init_timelineRing(arg_data) {
     });
 
     // 觸控移動與結束 (手機版)
-    $(window).on('touchmove', function (e) {
+    $(window).on('touchmove', function(e) {
         if (!isDragging) return;
         const touch = e.originalEvent.touches[0];
         handleDrag(touch.pageY);
-    }).on('touchend', function () {
+    }).on('touchend', function() {
         isDragging = false;
     });
 
     // 點擊軌道直接跳轉
-    $track.on('click', function (e) {
+    $track.on('click', function(e) {
         if (e.target === $handle[0] || $handle.has(e.target).length > 0) return;
         handleDrag(e.pageY);
     });
@@ -135,7 +135,7 @@ function init_timelineRing(arg_data) {
 
     updateUI(arg_data);
 
-    $('#prevBtn,#prev_btn').on('click', function (e) {
+    $('#prevBtn,#prev_btn').on('click', function(e) {
         e.preventDefault();
         if (currentIndex > 0) {
             currentIndex--;
@@ -143,7 +143,7 @@ function init_timelineRing(arg_data) {
         }
     });
 
-    $('#nextBtn,#next_btn').on('click', function (e) {
+    $('#nextBtn,#next_btn').on('click', function(e) {
         e.preventDefault();
         if (currentIndex < total - 1) {
             currentIndex++;
@@ -171,7 +171,7 @@ function init_timelineRing(arg_data) {
         $handle.css('top', `${handlePos}%`);
 
         // 更新節點
-        $('.timeline-node').each(function (i) {
+        $('.timeline-node').each(function(i) {
             const $node = $(this);
             const $title = $node.find('.node-title');
             const isActive = (i === currentIndex);
@@ -214,7 +214,7 @@ function init_timelineRing(arg_data) {
 
 
 /* 首頁-選單 開始 */
-$(document).ready(function () {
+$(document).ready(function() {
     let selectedIndex = 0;
     const $items = $('#menuContainer .menu_item');
     const totalItems = $items.length;
@@ -231,7 +231,7 @@ $(document).ready(function () {
 
     function updateUI(smoothStar = true) {
         // 1. 更新項目狀態與層級
-        $items.each(function (index) {
+        $items.each(function(index) {
             const $item = $(this);
             const distance = Math.abs(index - selectedIndex);
             $item.removeClass('active far');
@@ -282,26 +282,26 @@ $(document).ready(function () {
     }
 
     // ... 以下事件監聽 (mousedown, mousemove, click 等) 保持不變 ...
-    $track.on('mousedown touchstart', function (e) {
+    $track.on('mousedown touchstart', function(e) {
         isDragging = true;
         handleTrackInteraction(e);
         e.preventDefault();
     });
 
-    $(document).on('mousemove touchmove', function (e) {
+    $(document).on('mousemove touchmove', function(e) {
         if (isDragging) {
             handleTrackInteraction(e);
         }
     });
 
-    $(document).on('mouseup touchend', function () {
+    $(document).on('mouseup touchend', function() {
         if (isDragging) {
             isDragging = false;
             updateUI(true);
         }
     });
 
-    $items.on('click', function () {
+    $items.on('click', function() {
         const index = parseInt($(this).data('index'));
         const link = $(this).data('link');
 
@@ -332,3 +332,20 @@ function updateBoardHeight() {
 window.addEventListener('load', updateBoardHeight);
 window.addEventListener('resize', updateBoardHeight);
 /* 頁尾高度 結束 */
+
+
+/* 多張圖片預載 開始 */
+const preloadImages = (urls) => {
+    urls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+    });
+};
+preloadImages([
+    'images/tab_bg_01_active.svg',
+    'images/tab_bg_02_active.svg',
+    'images/tab_bg_03_active.svg',
+    'images/tab_bg_04_active.svg',
+    'images/tab_bg_05_active.svg'
+]);
+/* 多張圖片預載 結束 */
