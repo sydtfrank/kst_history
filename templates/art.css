@@ -884,7 +884,6 @@ body {
 }
 
 .timeline_box .node-title {
-    margin-left: 10px;
     transition: transform var(--transition-speed) var(--transition-timing), color 0.4s;
     transform-origin: left center;
     background: #fff;
@@ -892,11 +891,9 @@ body {
     padding: 15px;
     width: 100%;
     /* 項目寬度 */
-    margin-right: 90px;
+    margin-left: 10px;
+    margin-right: 90px; 
 }
-
-
-/* 這是真正承載「手繪邊框」的層 */
 
 .timeline_box .node-title::before {
     content: "";
@@ -939,7 +936,7 @@ body {
 .timeline_box .ctrl_func_box {
     position: absolute;
     top: 160px;
-    left: 70px;
+    left: 20px;
     z-index: 1000;
 }
 
