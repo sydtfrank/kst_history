@@ -80,8 +80,8 @@ body.grabbing .star_handle {
     width: 80px;
     height: 80px;
     /* 修正中心偏誤 */
-    margin-top: -40px;
-    margin-left: -40px;
+    margin-top: -140px;
+    margin-left: -340px;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
@@ -90,7 +90,7 @@ body.grabbing .star_handle {
 }
 
 #bg_obj .obj_item:nth-child(1) {
-    background-image: url(images/icon_epoch_1_01.svg);
+    background-image: url(images/icon_obj_01.svg);
     animation-delay: 0s;
     /* 左上 */
     --target-x: -600%;
@@ -98,7 +98,7 @@ body.grabbing .star_handle {
 }
 
 #bg_obj .obj_item:nth-child(2) {
-    background-image: url(images/icon_epoch_2_01.svg);
+    background-image: url(images/icon_obj_02.svg);
     animation-delay: 0.7s;
     /* 右上 */
     --target-x: 600%;
@@ -106,7 +106,7 @@ body.grabbing .star_handle {
 }
 
 #bg_obj .obj_item:nth-child(3) {
-    background-image: url(images/icon_epoch_3_01.svg);
+    background-image: url(images/icon_obj_03.svg);
     animation-delay: 1.4s;
     /* 右下 */
     --target-x: 550%;
@@ -114,7 +114,7 @@ body.grabbing .star_handle {
 }
 
 #bg_obj .obj_item:nth-child(4) {
-    background-image: url(images/icon_epoch_4_01.svg);
+    background-image: url(images/icon_obj_04.svg);
     animation-delay: 2.1s;
     /* 左下 */
     --target-x: -600%;
@@ -122,7 +122,7 @@ body.grabbing .star_handle {
 }
 
 #bg_obj .obj_item:nth-child(5) {
-    background-image: url(images/icon_epoch_5_01.svg);
+    background-image: url(images/icon_obj_05.svg);
     animation-delay: 2.8s;
     /* 左中 */
     --target-x: -700%;
@@ -130,13 +130,102 @@ body.grabbing .star_handle {
 }
 
 #bg_obj .obj_item:nth-child(6) {
-    background-image: url(images/icon_epoch_1_02.svg);
+    background-image: url(images/icon_obj_06.svg);
     animation-delay: 3.5s;
     /* 右中 */
     --target-x: 700%;
     --target-y: 300%;
 }
 
+
+#bg_obj .obj_item:nth-child(7) {
+    background-image: url(images/icon_obj_07.svg);
+    animation-delay: 1s;
+    /* 左上 */
+    --target-x: -330%;
+    --target-y: -480%;
+}
+
+#bg_obj .obj_item:nth-child(8) {
+    background-image: url(images/icon_obj_08.svg);
+    animation-delay: 1.7s;
+    /* 右上 */
+    --target-x: 430%;
+    --target-y: -300%;
+}
+
+#bg_obj .obj_item:nth-child(9) {
+    background-image: url(images/icon_obj_9.svg);
+    animation-delay: 2.4s;
+    /* 右下 */
+    --target-x: 330%;
+    --target-y: 320%;
+}
+
+#bg_obj .obj_item:nth-child(10) {
+    background-image: url(images/icon_obj_10.svg);
+    animation-delay: 3.1s;
+    /* 左下 */
+    --target-x: -420%;
+    --target-y: 370%;
+}
+
+#bg_obj .obj_item:nth-child(11) {
+    background-image: url(images/icon_obj_11.svg);
+    animation-delay: 3.8s;
+    /* 左中 */
+    --target-x: -410%;
+    --target-y: -60%;
+}
+
+#bg_obj .obj_item:nth-child(12) {
+    background-image: url(images/icon_obj_12.svg);
+    animation-delay: 4.5s;
+    /* 右中 */
+    --target-x: 510%;
+    --target-y: 190%;
+}
+
+
+#bg_obj .obj_item:nth-child(13) {
+    background-image: url(images/icon_obj_13.svg);
+    animation-delay: 2.1s;
+    /* 左上 */
+    --target-x: -760%;
+    --target-y: -60%;
+}
+
+#bg_obj .obj_item:nth-child(14) {
+    background-image: url(images/icon_obj_14.svg);
+    animation-delay: 0.8s;
+    /* 右上 */
+    --target-x: 100%;
+    --target-y: -350%;
+}
+
+#bg_obj .obj_item:nth-child(15) {
+    background-image: url(images/icon_obj_15.svg);
+    animation-delay: 1.5s;
+    /* 右下 */
+    --target-x: 450%;
+    --target-y: 500%;
+}
+
+#bg_obj .obj_item:nth-child(16) {
+    background-image: url(images/icon_obj_16.svg);
+    animation-delay: 2.2s;
+    /* 左下 */
+    --target-x: -400%;
+    --target-y: 300%;
+}
+
+#bg_obj .obj_item:nth-child(17) {
+    background-image: url(images/icon_obj_17.svg);
+    animation-delay: 2.9s;
+    /* 左中 */
+    --target-x: -200%;
+    --target-y: -150%;
+}
 
 /* 核心動畫 */
 
@@ -212,13 +301,13 @@ body.grabbing .star_handle {
 
 .fly_box img {
     width: 100%;
-    transform: rotate(-15deg) scale(1.4);
+    transform: rotate(-15deg) scale(1.8);
     animation: floating 3s ease-in-out infinite;
 }
 
 @media(max-width:1300px) {
     .fly_box img {
-        transform: rotate(-15deg) scale(1.1);
+        transform: rotate(-15deg) scale(1);
         animation: floating-mobile 3s ease-in-out infinite;
     }
 }
@@ -229,15 +318,15 @@ body.grabbing .star_handle {
 @keyframes floating {
     0% {
         /* 起始位置：維持原本的旋轉與縮放 */
-        transform: rotate(-15deg) scale(1.4) translate(50px, 40px);
+        transform: rotate(-15deg) scale(1.8) translate(50px, 40px);
     }
     50% {
         /* 中間點：向上移動 20px (數值越大飛得越高) */
-        transform: rotate(-15deg) scale(1.4) translate(50px, 20px);
+        transform: rotate(-15deg) scale(1.8) translate(50px, 20px);
     }
     100% {
         /* 回到原位 */
-        transform: rotate(-15deg) scale(1.4) translate(50px, 40px);
+        transform: rotate(-15deg) scale(1.8) translate(50px, 40px);
     }
 }
 
@@ -269,7 +358,7 @@ body.grabbing .star_handle {
 
 .home_logo_box img {
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
 }
 
 @media(max-width:1300px) {
@@ -380,7 +469,7 @@ body.grabbing .star_handle {
 
 .home_menu_box .menu_list_wrapper {
     flex: 1;
-    height: 240px;
+    height: 280px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -400,7 +489,7 @@ body.grabbing .star_handle {
     position: relative;
     cursor: pointer;
     transition: all 0.5s;
-    margin-top: -12px;
+    margin-top: -22px;
 }
 
 .home_menu_box .menu_list_wrapper .menu_list_container .menu_item:first-child {
@@ -409,7 +498,7 @@ body.grabbing .star_handle {
 
 .home_menu_box .menu_list_wrapper .menu_list_container .menu_item_inner {
     width: 100%;
-    padding: 15px 10px;
+    padding: 10px 10px;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -431,8 +520,7 @@ body.grabbing .star_handle {
 }
 
 .home_menu_box .menu_list_wrapper .menu_list_container .menu_item span {
-    font-family: 'SweiMarkerSansCJKtc-Regular', sans-serif;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 900;
     color: #666;
     letter-spacing: 6px;
