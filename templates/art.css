@@ -1382,6 +1382,7 @@ body.grabbing .star_handle {
     padding: 8px 15px 8px 50px;
     display: inline-block;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .links_box a:hover {
