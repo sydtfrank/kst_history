@@ -342,10 +342,10 @@ const preloadImages = (urls) => {
     });
 };
 preloadImages([
-    '/images/tab_bg_01_active.svg',
-    '/images/tab_bg_02_active.svg',
-    '/images/tab_bg_03_active.svg',
-    '/images/tab_bg_04_active.svg',
-    '/images/tab_bg_05_active.svg'
+    'templates/images/tab_bg_01_active.svg',
+    'templates/images/tab_bg_02_active.svg',
+    'templates/images/tab_bg_03_active.svg',
+    'templates/images/tab_bg_04_active.svg',
+    'templates/images/tab_bg_05_active.svg'
 ]);
 /* 多張圖片預載 結束 */
