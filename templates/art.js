@@ -69,6 +69,16 @@ function init_timelineRing(arg_data) {
                     </div>
                 `);
 
+            // --- 新增點擊事件開始 ---
+            $node.on('click', function() {
+                // 如果點擊的不是當前項，則切換
+                if (currentIndex !== i) {
+                    currentIndex = i;
+                    updateUI(arg_data);
+                }
+            });
+            // --- 新增點擊事件結束 ---
+
         $ring.append($node);
     });
 
