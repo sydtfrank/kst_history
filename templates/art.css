@@ -9,6 +9,13 @@
 	src: url(https://cdn.jsdelivr.net/gh/max32002/swei-marker-sans@2.0/WebFont/CJK%20TC/SweiMarkerSansCJKtc-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/swei-marker-sans@2.0/WebFont/CJK%20TC/SweiMarkerSansCJKtc-Regular.woff) format("woff");
 }
 
+:root {
+	--primary-bg: #e3e4ec;
+	--active-bg: #ffffff;
+	--inactive-bg: #d0d3df;
+	--footer-height: 0;
+}
+
 ::selection {
 	background: #ff8e09;
 	color: #fff;
@@ -114,7 +121,7 @@ body {
 }
 
 #bg_obj .obj_item:nth-child(6) {
-	background-image: url(images/icon_obj_c.svg);
+	background-image: url(images/icon_epoch_1_02.svg);
 	animation-delay: 3.5s;
 	/* 右中 */
 	--target-x: 700%;
@@ -151,7 +158,8 @@ body {
 	width: 100%;
 	max-width: 1500px;
 	margin: 0 auto;
-	height: 100vh;
+	/* v_01 */
+	height: calc(100vh - 50px);
 }
 
 
@@ -163,7 +171,7 @@ body {
 }
 
 
-@media(max-width:1000px) {
+@media(max-width:1300px) {
 	.home_wrapper {
 		display: block;
 		height: auto;
@@ -174,6 +182,7 @@ body {
 	}
 
 	.home_wrapper .box_R {
+		width: 100%;
 		padding: 20px 40px;
 		justify-self: center;
 	}
@@ -199,7 +208,7 @@ body {
 	animation: floating 3s ease-in-out infinite;
 }
 
-@media(max-width:1000px) {
+@media(max-width:1300px) {
 	.fly_box img {
 		transform: rotate(-15deg) scale(1.1);
 		animation: floating-mobile 3s ease-in-out infinite;
@@ -210,32 +219,32 @@ body {
 @keyframes floating {
 	0% {
 		/* 起始位置：維持原本的旋轉與縮放 */
-		transform: rotate(-15deg) scale(1.4) translateY(0px);
+		transform: rotate(-15deg) scale(1.4) translate(50px, 40px);
 	}
 
 	50% {
 		/* 中間點：向上移動 20px (數值越大飛得越高) */
-		transform: rotate(-15deg) scale(1.4) translateY(-20px);
+		transform: rotate(-15deg) scale(1.4) translate(50px, 20px);
 	}
 
 	100% {
 		/* 回到原位 */
-		transform: rotate(-15deg) scale(1.4) translateY(0px);
+		transform: rotate(-15deg) scale(1.4) translate(50px, 40px);
 	}
 }
 
 /* 針對 RWD 的動畫設定 (縮放比例不同) */
 @keyframes floating-mobile {
 	0% {
-		transform: rotate(-15deg) scale(1.1) translateY(0px);
+		transform: rotate(-15deg) scale(1) translateY(0px);
 	}
 
 	50% {
-		transform: rotate(-15deg) scale(1.1) translateY(-15px);
+		transform: rotate(-15deg) scale(1) translateY(-15px);
 	}
 
 	100% {
-		transform: rotate(-15deg) scale(1.1) translateY(0px);
+		transform: rotate(-15deg) scale(1) translateY(0px);
 	}
 }
 
@@ -244,7 +253,7 @@ body {
 
 /* 首頁-LOGO區 開始 */
 .home_logo_box {
-	margin: 0 0 50px 0;
+	margin: 0 0 90px 0;
 	text-align: right;
 }
 
@@ -253,9 +262,10 @@ body {
 	max-width: 600px;
 }
 
-@media(max-width:1000px) {
+@media(max-width:1300px) {
 	.home_logo_box {
-		margin: 10px 0 10px 0;
+		margin: 100px 0 50px 0;
+		text-align: center;
 	}
 }
 
@@ -265,11 +275,11 @@ body {
 .home_menu_box {
 	position: relative;
 	display: flex;
-	margin: 50px 0 0 0;
-	justify-self: right;
 	width: 100%;
-	max-width: 450px;
-	padding: 20px;
+	max-width: 480px;
+	padding: 25px 30px 25px 10px;
+	z-index: 1;
+	margin-left: auto;
 }
 
 .home_menu_box::before {
@@ -279,83 +289,170 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	background: var(--primary-bg);
 	border: 3px solid #000;
-	filter: url(#hand-drawn-filter);
 	border-radius: 40px 0 0 0;
-	background: #e3e4ec;
+	filter: url(#hand-drawn-filter);
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+	z-index: -1;
 }
 
-.home_menu_box img {
-	position: relative;
+@media(max-width:1300px) {
+	.home_menu_box {
+		margin-left: 0;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
+/* 選單-左側功能區 */
 .home_menu_box .home_func_box {
-	width: 50px;
+	width: 60px;
 	display: flex;
 	flex-direction: column;
-	align-self: center;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+}
+
+.home_menu_box .home_func_box .star-track {
+	position: relative;
+	width: 26px;
+	height: 220px;
+	background: #fff;
+	border: 2px solid #000;
+	border-radius: 2px;
+	cursor: pointer;
+	filter: url(#hand-drawn-filter);
+}
+
+.home_menu_box .home_func_box .star-track::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	bottom: 10px;
+	width: 4px;
+	background: #000;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.home_menu_box .home_func_box .star-handle {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	top: 0%;
+	cursor: grab;
+	z-index: 20;
+}
+
+.home_menu_box .home_func_box .star-handle:active {
+	cursor: grabbing;
+}
+
+.home_menu_box .home_func_box .star-handle img {
+	width: 48px;
+	height: 48px;
+	display: block;
+	filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.2));
+}
+
+/* 選單-右側選單列表 */
+.home_menu_box .menu_list_wrapper {
+	flex: 1;
+	height: 240px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
 	align-items: center;
 }
 
-.home_menu_box .home_func_box button {
-	margin: 10px 0;
+.home_menu_box .menu_list_wrapper .menu_list_container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.5s ease-in-out;
 }
 
-.home_menu_box .menu_list {
-	flex: 1;
-}
-
-.home_menu_box .menu_list li {
-	list-style-type: none;
-	margin: 0;
-	padding: 10px 20px;
-}
-
-.home_menu_box .menu_list li a {
-	text-decoration: none;
-	display: block;
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item {
+	width: 100%;
 	position: relative;
-	text-align: left;
-	display: block;
+	cursor: pointer;
+	transition: all 0.5s;
+	margin-top: -12px;
 }
 
-.home_menu_box .menu_list li a::before {
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item:first-child {
+	margin-top: 0;
+}
+
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item_inner {
+	width: 100%;
+	padding: 15px 10px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item_inner::after {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	border: 3px solid #000;
-	filter: url(#hand-drawn-filter);
+	background: var(--inactive-bg);
+	border: 3px solid #999;
 	border-radius: 2px 4px 3px 6px / 6px 3px 5px 2px;
+	filter: url(#hand-drawn-filter);
+	z-index: -1;
+	transition: all 0.4s;
 }
 
-.home_menu_box .menu_list li a span {
-	display: inline-block;
-	padding: 12px 20px 8px 20px;
-	font-family: SweiMarkerSansCJKtc-Regular;
-	font-size: 30px;
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item span {
+	font-family: 'SweiMarkerSansCJKtc-Regular', sans-serif;
+	font-size: 24px;
 	font-weight: 900;
-	color: #000;
-	letter-spacing: 15px;
+	color: #666;
+	letter-spacing: 6px;
+	transition: all 0.4s;
+	display: block;
+	pointer-events: none;
 }
 
-@media(max-width:600px) {
-	.home_menu_box {
-		margin: 30px 0 0 0;
-	}
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item.active {
+	z-index: 100;
+}
 
-	.home_menu_box .home_func_box {
-		width: 30px;
-	}
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item.active .menu_item_inner::after {
+	background: var(--active-bg);
+	border-color: #000;
+	box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
 
-	.home_menu_box .menu_list li {
-		padding: 10px 10px 10px 20px;
-	}
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item.active span {
+	color: #000;
+	letter-spacing: 10px;
+}
 
-	.home_menu_box .menu_list li a span {
+/* 距離太遠的項目透明度 */
+.home_menu_box .menu_list_wrapper .menu_list_container .menu_item.far {
+	opacity: 0.3;
+	filter: blur(1px);
+}
+
+@media (max-width: 480px) {
+	.home_menu_box .menu_list_wrapper .menu_list_container .menu_item span {
+		font-size: 20px;
 		letter-spacing: 2px;
+	}
+
+	.home_menu_box .menu_list_wrapper .menu_list_container .menu_item.active span {
+		letter-spacing: 4px;
 	}
 }
 
@@ -365,7 +462,8 @@ body {
 /* 首頁-頁尾 開始 */
 .home_footer_box {
 	text-align: center;
-	padding: 10px;
+	/* v_01 */
+	height: 50px;
 }
 
 .home_footer_box img {
@@ -816,6 +914,62 @@ body {
 	z-index: 1000;
 }
 
+.timeline_box .ctrl_func_box {
+	position: absolute;
+	top: 160px;
+	left: 70px;
+	z-index: 1000;
+}
+
+.timeline_box .ctrl_func_box .star_track {
+	position: relative;
+	width: 26px;
+	height: 220px;
+	background: #fff;
+	border: 2px solid #000;
+	border-radius: 2px;
+	cursor: pointer;
+	filter: url(#hand-drawn-filter);
+}
+
+.timeline_box .ctrl_func_box .star_track::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	bottom: 10px;
+	width: 4px;
+	background: #000;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.timeline_box .ctrl_func_box .star_handle {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	top: 0%;
+	cursor: grab;
+	z-index: 20;
+}
+
+.timeline_box .ctrl_func_box .star_handle:active {
+	cursor: grabbing;
+}
+
+.timeline_box .ctrl_func_box .star_handle img {
+	width: 48px;
+	height: 48px;
+	display: block;
+	filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.2));
+}
+
+/* 當 body 有 grabbing class 時（拖拉中），取消過渡讓星星跟手 */
+body.grabbing .star_handle {
+	transition: none !important;
+}
+
 .timeline_box .icon_epoch {
 	position: absolute;
 	top: 0;
@@ -1021,6 +1175,9 @@ body {
 	margin: 20px;
 	padding: 30px 30px 100px 30px;
 	position: relative;
+	height: calc(100vh - var(--footer-height));
+	background: #fff;
+	border-radius: 20px;
 }
 
 .board::before {
@@ -1030,7 +1187,6 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #fff;
 	border: 3px solid #333;
 	filter: url(#hand-drawn-filter);
 	border-radius: 20px;
@@ -1040,15 +1196,9 @@ body {
 	display: none;
 	opacity: 0;
 	transition: opacity 0.3s;
+	overflow-y: auto;
+	height: calc(100% - 100px);
 }
-
-.board .c_year,
-.board .c_title,
-.board .subhtml,
-.board .links_box {
-	position: relative;
-}
-
 
 @media(max-width:1300px) {
 	.board {
@@ -1135,10 +1285,12 @@ body {
 
 /* 頁尾 開始 */
 .footer_box {
-	position: relative;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	width: 100%;
 	max-width: 1800px;
-	margin: -100px auto 0 auto;
 	background: url(images/ctrl_box.svg) 100% 0 no-repeat;
 	background-size: contain;
 	aspect-ratio: 6/1;
