@@ -46,6 +46,10 @@ body {
     color: #333;
 }
 
+body.grabbing .star_handle {
+    transition: none !important;
+}
+
 #glcanvas,
 #tunnelCanvas {
     position: fixed;
@@ -927,7 +931,7 @@ body {
     position: absolute;
     top: 220px;
     left: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 15px;
     z-index: 1000;
@@ -984,11 +988,13 @@ body {
     filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.2));
 }
 
-
-/* 當 body 有 grabbing class 時（拖拉中），取消過渡讓星星跟手 */
-
-body.grabbing .star_handle {
-    transition: none !important;
+@media(max-width:600px) {
+    .timeline_box .controls {
+        display: flex;
+    }
+    .timeline_box .ctrl_func_box {
+        display:none;
+    }
 }
 
 .timeline_box .icon_epoch {
