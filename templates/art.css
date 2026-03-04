@@ -75,13 +75,13 @@ body.grabbing .star_handle {
 #bg_obj .obj_item {
     position: absolute;
     /* 起點在中心 */
-    top: 50%;
-    left: 40%;
+    top: 35%;
+    left: 25%;
     width: 80px;
     height: 80px;
     /* 修正中心偏誤 */
-    margin-top: -140px;
-    margin-left: -340px;
+    margin-top: -40px;
+    margin-left: -40px;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
