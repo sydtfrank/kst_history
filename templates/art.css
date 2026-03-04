@@ -166,7 +166,7 @@ body.grabbing .star_handle {
 }
 
 #bg_obj .obj_item:nth-child(9) {
-    background-image: url(images/icon_obj_9.svg);
+    background-image: url(images/icon_obj_09.svg);
     animation-delay: 2.4s;
     /* 右下 */
     --target-x: 330%;
