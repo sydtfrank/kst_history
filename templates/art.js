@@ -1,5 +1,5 @@
 /* 本檔案為網頁設計師撰寫,非人請勿修改,以免未來維護困難,如果需修改可請找網頁設計師討論,感謝~ */
-$(document).ready(function () {});
+$(document).ready(function () { });
 
 /* 背景色控制 開始 */
 $(document).ready(function () {
