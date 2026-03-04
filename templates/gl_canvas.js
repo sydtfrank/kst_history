@@ -79,9 +79,9 @@ void main() {
   
   // 使用傳入的顏色
   vec3 col = u_color1;
-  col = mix(col, u_color2, smoothstep(0.2, 0.25, n));
-  col = mix(col, u_color3, smoothstep(0.45, 0.5, n));
-  col = mix(col, u_color4, smoothstep(0.7, 0.75, n));
+  col = mix(col, u_color2, smoothstep(0.1, 0.7, n));
+  col = mix(col, u_color3, smoothstep(0.2, 0.8, n));
+  col = mix(col, u_color4, smoothstep(0.3, 0.9, n));
 
   gl_FragColor = vec4(col, 1.0);
 }
