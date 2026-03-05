@@ -103,7 +103,6 @@ body.grabbing .star_handle {
 #bg_obj .obj_item:nth-child(1) {
     background-image: url(images/icon_obj_01.svg);
     animation-delay: 0s;
-    /* 左上 */
     --target-x: -600%;
     --target-y: -600%;
 }
@@ -111,7 +110,6 @@ body.grabbing .star_handle {
 #bg_obj .obj_item:nth-child(2) {
     background-image: url(images/icon_obj_02.svg);
     animation-delay: 0.7s;
-    /* 右上 */
     --target-x: 600%;
     --target-y: -450%;
 }
@@ -119,23 +117,20 @@ body.grabbing .star_handle {
 #bg_obj .obj_item:nth-child(3) {
     background-image: url(images/icon_obj_03.svg);
     animation-delay: 1.4s;
-    /* 右下 */
-    --target-x: 550%;
+    --target-x: 450%;
     --target-y: 600%;
 }
 
 #bg_obj .obj_item:nth-child(4) {
     background-image: url(images/icon_obj_04.svg);
     animation-delay: 2.1s;
-    /* 左下 */
-    --target-x: -600%;
-    --target-y: 500%;
+    --target-x: 0%;
+    --target-y: 700%;
 }
 
 #bg_obj .obj_item:nth-child(5) {
     background-image: url(images/icon_obj_05.svg);
     animation-delay: 2.8s;
-    /* 左中 */
     --target-x: -700%;
     --target-y: -250%;
 }
@@ -143,7 +138,6 @@ body.grabbing .star_handle {
 #bg_obj .obj_item:nth-child(6) {
     background-image: url(images/icon_obj_06.svg);
     animation-delay: 3.5s;
-    /* 右中 */
     --target-x: 700%;
     --target-y: 300%;
 }
@@ -152,7 +146,6 @@ body.grabbing .star_handle {
 #bg_obj .obj_item:nth-child(7) {
     background-image: url(images/icon_obj_07.svg);
     animation-delay: 1s;
-    /* 左上 */
     --target-x: -330%;
     --target-y: -480%;
 }
@@ -168,23 +161,20 @@ body.grabbing .star_handle {
 #bg_obj .obj_item:nth-child(9) {
     background-image: url(images/icon_obj_09.svg);
     animation-delay: 2.4s;
-    /* 右下 */
-    --target-x: 330%;
-    --target-y: 320%;
+    --target-x: 830%;
+    --target-y: 820%;
 }
 
 #bg_obj .obj_item:nth-child(10) {
     background-image: url(images/icon_obj_10.svg);
     animation-delay: 3.1s;
-    /* 左下 */
-    --target-x: -420%;
-    --target-y: 370%;
+    --target-x: -520%;
+    --target-y: 570%;
 }
 
 #bg_obj .obj_item:nth-child(11) {
     background-image: url(images/icon_obj_11.svg);
     animation-delay: 3.8s;
-    /* 左中 */
     --target-x: -410%;
     --target-y: -60%;
 }
@@ -192,16 +182,14 @@ body.grabbing .star_handle {
 #bg_obj .obj_item:nth-child(12) {
     background-image: url(images/icon_obj_12.svg);
     animation-delay: 4.5s;
-    /* 右中 */
-    --target-x: 510%;
-    --target-y: 190%;
+    --target-x: 300%;
+    --target-y: 700%;
 }
 
 
 #bg_obj .obj_item:nth-child(13) {
     background-image: url(images/icon_obj_13.svg);
     animation-delay: 2.1s;
-    /* 左上 */
     --target-x: -760%;
     --target-y: -60%;
 }
@@ -209,31 +197,27 @@ body.grabbing .star_handle {
 #bg_obj .obj_item:nth-child(14) {
     background-image: url(images/icon_obj_14.svg);
     animation-delay: 0.8s;
-    /* 右上 */
     --target-x: 100%;
     --target-y: -350%;
 }
 
 #bg_obj .obj_item:nth-child(15) {
     background-image: url(images/icon_obj_15.svg);
-    animation-delay: 1.5s;
-    /* 右下 */
-    --target-x: 450%;
-    --target-y: 500%;
+    animation-delay: 2.5s;
+    --target-x: 900%;
+    --target-y: 0%;
 }
 
 #bg_obj .obj_item:nth-child(16) {
     background-image: url(images/icon_obj_16.svg);
     animation-delay: 2.2s;
-    /* 左下 */
-    --target-x: -400%;
+    --target-x: -900%;
     --target-y: 300%;
 }
 
 #bg_obj .obj_item:nth-child(17) {
     background-image: url(images/icon_obj_17.svg);
     animation-delay: 2.9s;
-    /* 左中 */
     --target-x: -200%;
     --target-y: -150%;
 }
