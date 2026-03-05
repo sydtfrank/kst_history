@@ -7,27 +7,27 @@ $(document).ready(function () {
 
   if ($(".body_home").length) {
     //首頁
-    set_color("#ffafcc", "#fff3c7", "#a2d2ff", "#ffb1a1");
+    set_color("#FFFDE5","#74CAD7","#DAD1E4","#FBA9B0","#FAC5B5");
   } else {
     //史前時代
     if ($(".body_epoch_1").length) {
-      set_color("#fff3c7", "#efac00", "#abfbff", "#ffcfab");
+      set_color("#FFFEF2","#CBFFBD","#D6F1FF","#F0FFE5","#C7FFE6");
     }
     //大航海時代
     if ($(".body_epoch_2").length) {
-      set_color("#3a9eff", "#a4f4ff", "#beabff", "#f9c2ff");
+      set_color("#AEC5FF","#E8EDFF","#AEF9FF","#D1FFF2","#D7CFFF");
     }
     //清帝國時代
     if ($(".body_epoch_3").length) {
-      set_color("#4e5dff", "#ffeb6f", "#ffcf71", "#ffeed1");
+      set_color("#FFFEC9","#A6BCFF","#FFE6B0","#FFC8B3","#FFD4E5");
     }
     //日治時代
     if ($(".body_epoch_4").length) {
-      set_color("#ffb1a1", "#ffeee5", "#d6fff6", "#ff5a63");
+      set_color("#FFFFFF","#FC8DAD","#EDEDED","#FFC880","#DDA8C1");
     }
     //中華民國
     if ($(".body_epoch_5").length) {
-      set_color("#bae7ff", "#a1ffe2", "#ffd4ea", "#fff332");
+      set_color("#F98FB8","#E9DEF9","#83DDDD","#FCF295","#629FF9");
     }
   }
 });

@@ -23,6 +23,7 @@ uniform vec3 u_color1;
 uniform vec3 u_color2;
 uniform vec3 u_color3;
 uniform vec3 u_color4;
+uniform vec3 u_color5;
 
 /* Simplex Noise 函數保持不變... */
 vec3 mod289(vec3 x){return x - floor(x * (1.0 / 289.0)) * 289.0;}
@@ -77,11 +78,12 @@ void main() {
   float n = snoise(vec3(st * 0.6 + vec2(u_time * 0.05), u_time * 0.15));
   n = (n + 1.0) * 0.5;
   
-  // 使用傳入的顏色
+
   vec3 col = u_color1;
-  col = mix(col, u_color2, smoothstep(0.1, 0.7, n));
-  col = mix(col, u_color3, smoothstep(0.2, 0.8, n));
-  col = mix(col, u_color4, smoothstep(0.3, 0.9, n));
+  col = mix(col, u_color2, smoothstep(0.0, 0.25, n));
+  col = mix(col, u_color3, smoothstep(0.25, 0.5, n));
+  col = mix(col, u_color4, smoothstep(0.5, 0.75, n));
+  col = mix(col, u_color5, smoothstep(0.75, 1.0, n));
 
   gl_FragColor = vec4(col, 1.0);
 }
@@ -104,7 +106,8 @@ void main() {
         gl.getUniformLocation(program, "u_color1"),
         gl.getUniformLocation(program, "u_color2"),
         gl.getUniformLocation(program, "u_color3"),
-        gl.getUniformLocation(program, "u_color4")
+        gl.getUniformLocation(program, "u_color4"),
+        gl.getUniformLocation(program, "u_color5")
     ];
 
     const buffer = gl.createBuffer();
@@ -141,10 +144,10 @@ void main() {
  * 設定並更新 WebGL 顏色
  * @param {string} h1 - 十六進位顏色碼 (例如 #ffafcc)
  */
-function set_color(h1, h2, h3, h4) {
+function set_color(h1, h2, h3, h4, h5) {
     if (!gl || !program) return;
-    
-    const colors = [h1, h2, h3, h4];
+
+    const colors = [h1, h2, h3, h4, h5];
     gl.useProgram(program);
 
     colors.forEach((hex, index) => {
