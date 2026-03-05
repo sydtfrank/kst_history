@@ -204,7 +204,7 @@ function init_timelineRing(arg_data) {
     const $sections = $(".board section");
     $sections.stop().hide().css("opacity", 0);
     const $currentSection = $sections.eq(currentIndex);
-    $currentSection.show();
+    $currentSection.css("display", "flex");
     setTimeout(() => {
       $currentSection.css("opacity", 1);
     }, 10);

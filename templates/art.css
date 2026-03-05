@@ -1301,6 +1301,8 @@ body.grabbing .star_handle {
     height: calc((100vh - var(--footer-height)) + 50px);
     background: #fff;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .board::before {
@@ -1316,11 +1318,35 @@ body.grabbing .star_handle {
 }
 
 .board section {
+    flex: 1;
+    min-height: 0;
     display: none;
+    flex-direction: column;
     opacity: 0;
     transition: opacity 0.3s;
+}
+
+.board section .c_year {
+    font-family: SweiMarkerSansCJKtc-Regular;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+
+.board section .c_title {
+    font-family: SweiMarkerSansCJKtc-Regular;
+    font-size: 34px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+
+.board section .subhtml {
+    flex: 1;
     overflow-y: auto;
-    height: calc(100% - 100px);
+    min-height: 0;
+    padding-right: 10px;
 }
 
 @media(max-width:1300px) {
@@ -1339,30 +1365,7 @@ body.grabbing .star_handle {
 /* 白板 結束 */
 
 
-/* 年份文字 開始 */
 
-.c_year {
-    font-family: SweiMarkerSansCJKtc-Regular;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0 0 10px 0;
-}
-
-
-/* 年份文字 結束 */
-
-
-/* 標題文字 開始 */
-
-.c_title {
-    font-family: SweiMarkerSansCJKtc-Regular;
-    font-size: 40px;
-    font-weight: 600;
-    margin: 0 0 30px 0;
-}
-
-
-/* 標題文字 結束 */
 
 
 /* 補充連結區 開始 */
