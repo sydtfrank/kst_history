@@ -1401,7 +1401,7 @@ body.grabbing .star_handle {
 }
 
 .links_box a.type_mov_p {
-    background: url(images/icon_mov.svg) 10px 50% no-repeat;
+    background: url(images/icon_mov_p.svg) 10px 50% no-repeat;
     background-size: 30px;
 }
 
