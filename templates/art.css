@@ -1315,6 +1315,7 @@ body.grabbing .star_handle {
     border: 3px solid #333;
     filter: url(#hand-drawn-filter);
     border-radius: 20px;
+    pointer-events: none;
 }
 
 .board section {
