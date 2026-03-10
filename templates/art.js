@@ -273,9 +273,8 @@ $(document).ready(function () {
     let offsetY = clientY - rect.top;
 
     offsetY = Math.max(0, Math.min(offsetY, rect.height));
-    const percent = offsetY / rect.height; // 這是滑鼠在軌道上的真實比例 (0~1)
+    const percent = offsetY / rect.height;
 
-    // 計算對應的 Index
     const newIndex = Math.round(percent * (totalItems - 1));
 
     if (newIndex !== selectedIndex) {

@@ -602,7 +602,7 @@ body.grabbing .star_handle {
     flex: 1;
 }
 
-@media(max-width:1300px) {
+@media(max-width:1000px) {
     .wrapper {
         display: block;
     }
