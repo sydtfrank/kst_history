@@ -619,7 +619,7 @@ body.grabbing .star_handle {
 /* LOGO區 開始 */
 
 .logo_box {
-    margin: 40px 0 20px 0;
+    margin: 10px 0 10px 0;
     text-align: center;
 }
 
@@ -630,7 +630,7 @@ body.grabbing .star_handle {
 
 .logo_box a img {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 @media(max-width:1100px) {
@@ -1295,11 +1295,11 @@ body.grabbing .star_handle {
 /* 白板 開始 */
 
 .board {
-    margin: 20px;
-    padding: 30px 30px 100px 30px;
+    margin: 10px;
+    padding: 20px 20px 100px 20px;
     position: relative;
     /*height: calc((100vh - var(--footer-height)) + 50px);*/
-    height: calc(100vh - 70px);
+    height: calc(100vh - 120px);
     background: #fff;
     border-radius: 20px;
     display: flex;
@@ -1340,7 +1340,7 @@ body.grabbing .star_handle {
     font-family: SweiMarkerSansCJKtc-Regular;
     font-size: 34px;
     font-weight: 600;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 
@@ -1424,7 +1424,9 @@ body.grabbing .star_handle {
     display: flex;
     justify-content: right;
     gap: 15px;
-    margin: 0 0 10px 0;
+    position: absolute;
+    right: 30px;
+    bottom: 60px;
 }
 
 
@@ -1435,7 +1437,7 @@ body.grabbing .star_handle {
 
 .footer_box {
     position: fixed;
-    bottom: 0;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
