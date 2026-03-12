@@ -1299,7 +1299,7 @@ body.grabbing .star_handle {
     padding: 30px 30px 100px 30px;
     position: relative;
     /*height: calc((100vh - var(--footer-height)) + 50px);*/
-    height: auto;
+    height: calc(100vh - 70px);
     background: #fff;
     border-radius: 20px;
     display: flex;
