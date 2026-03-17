@@ -376,6 +376,6 @@ function loadAsset(type, url) {
   }
 }
 
-loadAsset('css', 'art.css');
-loadAsset('js', 'art.js');
+loadAsset('css', 'templates/art.css');
+loadAsset('js', 'templates/art.js');
 /* 快取處理 結束 */
