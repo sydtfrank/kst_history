@@ -7,27 +7,27 @@ $(document).ready(function () {
 
   if ($(".body_home").length) {
     //首頁
-    set_color("#FFFDE5","#74CAD7","#DAD1E4","#FBA9B0","#FAC5B5");
+    set_color("#FFFDE5", "#74CAD7", "#DAD1E4", "#FBA9B0", "#FAC5B5");
   } else {
     //史前時代
     if ($(".body_epoch_1").length) {
-      set_color("#FFFEF2","#CBFFBD","#D6F1FF","#F0FFE5","#C7FFE6");
+      set_color("#FFFEF2", "#CBFFBD", "#D6F1FF", "#F0FFE5", "#C7FFE6");
     }
     //大航海時代
     if ($(".body_epoch_2").length) {
-      set_color("#AEC5FF","#E8EDFF","#AEF9FF","#D1FFF2","#D7CFFF");
+      set_color("#AEC5FF", "#E8EDFF", "#AEF9FF", "#D1FFF2", "#D7CFFF");
     }
     //清帝國時代
     if ($(".body_epoch_3").length) {
-      set_color("#FFFEC9","#A6BCFF","#FFE6B0","#FFC8B3","#FFD4E5");
+      set_color("#FFFEC9", "#A6BCFF", "#FFE6B0", "#FFC8B3", "#FFD4E5");
     }
     //日治時代
     if ($(".body_epoch_4").length) {
-      set_color("#FFFFFF","#FC8DAD","#EDEDED","#FFC880","#DDA8C1");
+      set_color("#FFFFFF", "#FC8DAD", "#EDEDED", "#FFC880", "#DDA8C1");
     }
     //中華民國
     if ($(".body_epoch_5").length) {
-      set_color("#F98FB8","#E9DEF9","#83DDDD","#FCF295","#629FF9");
+      set_color("#F98FB8", "#E9DEF9", "#83DDDD", "#FCF295", "#629FF9");
     }
   }
 });
@@ -357,3 +357,25 @@ preloadImages([
   "templates/images/tab_bg_05_active.svg",
 ]);
 /* 多張圖片預載 結束 */
+
+
+/* 快取處理 開始 */
+function loadAsset(type, url) {
+  const timestamp = new Date().getTime();
+  const versionedUrl = `${url}?t=${timestamp}`;
+
+  if (type === 'css') {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = versionedUrl;
+    document.head.appendChild(link);
+  } else if (type === 'js') {
+    const script = document.createElement('script');
+    script.src = versionedUrl;
+    document.body.appendChild(script);
+  }
+}
+
+loadAsset('css', 'art.css');
+loadAsset('js', 'art.js');
+/* 快取處理 結束 */
