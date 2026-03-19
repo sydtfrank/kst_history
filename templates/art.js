@@ -1,4 +1,3 @@
-/* 本檔案為網頁設計師撰寫,非人請勿修改,以免未來維護困難,如果需修改可請找網頁設計師討論,感謝~ */
 $(document).ready(function () { });
 
 /* 背景色控制 開始 */
@@ -38,6 +37,76 @@ function menu_switch() {
   $(".menu_box").toggleClass("open");
 }
 /* 主選單 結束 */
+
+
+/* 按鈕控制.subhtml捲動 開始 */
+function updateBtnState($target) {
+  if (!$target || $target.length === 0) {
+    $target = $('.board section:visible .subhtml');
+  }
+  if ($target.length === 0) return;
+
+  const scrollTop = $target.scrollTop();
+  const scrollHeight = $target[0].scrollHeight;
+  const innerHeight = $target.innerHeight();
+
+  $('#scroll_prev').prop('disabled', scrollTop <= 0);
+  $('#scroll_next').prop('disabled', scrollTop + innerHeight >= scrollHeight - 1);
+}
+
+/* 按鈕控制.subhtml捲動 開始 */
+$(document).ready(function () {
+  const scrollDistance = 100;
+  const scrollSpeed = 200;
+  let isUpdating = false; 
+
+  // 優化 2: 使用 requestAnimationFrame 進行節流
+  $(document).on('scroll', '.subhtml', function () {
+    if (!isUpdating) {
+      isUpdating = true;
+      requestAnimationFrame(() => {
+          updateBtnState($(this));
+          isUpdating = false; // 記得在這裡重置狀態
+      });
+    }
+  });
+
+  // 下一個
+  $('#scroll_next').on('click', function () {
+    const $target = $('.board section:visible .subhtml');
+    if (!$target.length) return;
+
+    const currentPos = $target.scrollTop();
+    $target.stop().animate({
+      scrollTop: currentPos + scrollDistance
+    }, {
+      duration: scrollSpeed,
+      complete: function () {
+        updateBtnState($target);
+      }
+    });
+  });
+
+  // 上一個
+  $('#scroll_prev').on('click', function () {
+    const $target = $('.board section:visible .subhtml');
+    if (!$target.length) return;
+
+    const currentPos = $target.scrollTop();
+    $target.stop().animate({
+      scrollTop: currentPos - scrollDistance
+    }, {
+      duration: scrollSpeed,
+      complete: function () {
+        updateBtnState($target);
+      }
+    });
+  });
+
+  // 初次執行
+  setTimeout(() => updateBtnState(), 100);
+});
+/* 按鈕控制.subhtml捲動 結束 */
 
 /* 時間軸設計 開始 */
 function init_timelineRing(arg_data) {
@@ -143,7 +212,6 @@ function init_timelineRing(arg_data) {
   // --- 拖拉事件結束 ---
 
   updateUI(arg_data);
-
   $("#prevBtn,#prev_btn").on("click", function (e) {
     e.preventDefault();
     if (currentIndex > 0) {
@@ -212,6 +280,7 @@ function init_timelineRing(arg_data) {
     // 按鈕狀態更新
     $("#prevBtn,#prev_btn").prop("disabled", currentIndex === 0);
     $("#nextBtn,#next_btn").prop("disabled", currentIndex === total - 1);
+    updateBtnState();
   }
 }
 
@@ -342,13 +411,18 @@ window.addEventListener("load", updateBoardHeight);
 window.addEventListener("resize", updateBoardHeight);
 /* 頁尾高度 結束 */
 
+
+
+
+
 /* 多張圖片預載 開始 */
-const preloadImages = (urls) => {
+var preloadImages = (urls) => {
   urls.forEach((url) => {
     const img = new Image();
     img.src = url;
   });
 };
+
 preloadImages([
   "templates/images/tab_bg_01_active.svg",
   "templates/images/tab_bg_02_active.svg",
@@ -375,7 +449,8 @@ function loadAsset(type, url) {
     document.body.appendChild(script);
   }
 }
-
+/*
 loadAsset('css', 'templates/art.css');
 loadAsset('js', 'templates/art.js');
+*/
 /* 快取處理 結束 */

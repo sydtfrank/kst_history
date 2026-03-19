@@ -15,6 +15,9 @@
     --active-bg: #ffffff;
     --inactive-bg: #d0d3df;
     --footer-height: 0;
+    --footer-h_L: 300px;
+    --footer-h_M: 200px;
+    --footer-h_S: 100px;
 }
 
 ::selection {
@@ -40,7 +43,7 @@ html {
 body {
     font-family: 'Roboto', 'Noto Sans TC', sans-serif;
     font-size: 15px;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -318,37 +321,30 @@ body.grabbing .star_handle {
 
 @keyframes floating {
     0% {
-        /* 起始位置：維持原本的旋轉與縮放 */
-        transform: rotate(-15deg) scale(1.8) translate(50px, 40px);
+        transform: rotate(-15deg) scale(1.3) translate(50px, 40px);
     }
 
     50% {
-        /* 中間點：向上移動 20px (數值越大飛得越高) */
-        transform: rotate(-15deg) scale(1.8) translate(50px, 20px);
+        transform: rotate(-15deg) scale(1.3) translate(50px, 20px);
     }
 
     100% {
-        /* 回到原位 */
-        transform: rotate(-15deg) scale(1.8) translate(50px, 40px);
+        transform: rotate(-15deg) scale(1.3) translate(50px, 40px);
     }
 }
 
 
 /* 針對 RWD 的動畫設定 (縮放比例不同) */
-
-@keyframes floating {
+@keyframes floating-mobile {
     0% {
-        /* 起始位置：維持原本的旋轉與縮放 */
         transform: rotate(-15deg) scale(1.3) translate(-20px, 40px);
     }
 
     50% {
-        /* 中間點：向上移動 20px (數值越大飛得越高) */
         transform: rotate(-15deg) scale(1.3) translate(-20px, 20px);
     }
 
     100% {
-        /* 回到原位 */
         transform: rotate(-15deg) scale(1.3) translate(-20px, 40px);
     }
 }
@@ -1301,10 +1297,11 @@ body.grabbing .star_handle {
 
 .board {
     margin: 10px;
-    padding: 20px 20px 200px 20px;
+    padding: 30px 30px 100px 30px;
     position: relative;
     /*height: calc((100vh - var(--footer-height)) + 50px);*/
-    height: calc(100vh - 120px);
+    /*height: calc(100vh - 120px);*/
+    height: calc(100vh - (var(--footer-h_L) / 2));
     background: #fff;
     border-radius: 20px;
     display: flex;
@@ -1348,23 +1345,48 @@ body.grabbing .star_handle {
     margin: 0 0 10px 0;
 }
 
-
-.board section .subhtml {
+.board section .c_view {
+    position: relative;
     flex: 1;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     min-height: 0;
-    padding-right: 10px;
+    margin: 0 0 10px 0;
+    padding: 10px;
 }
 
-@media(max-width:1100px) {
+.board section .c_view::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #999;
+    border-radius: 10px;
+    filter: url(#hand-drawn-filter);
+    pointer-events: none;
+}
+
+.board section .c_view .subhtml {
+    flex: 1;
+    overflow-y: scroll;
+    min-height: 0;
+    padding: 20px;
+    z-index: 1;
+}
+
+@media(max-width:1300px) {
     .board {
-        padding: 30px 60px 100px 60px;
+        padding: 30px 30px 55px 30px;
+        height: calc(100vh - (var(--footer-h_M) / 2));
     }
 }
 
 @media(max-width:800px) {
     .board {
-        padding: 20px 25px 100px 25px;
+        padding: 30px 30px 100px 30px;
+        height: calc(100vh - (var(--footer-h_S) / 2));
     }
 }
 
@@ -1377,7 +1399,6 @@ body.grabbing .star_handle {
 /* 補充連結區 開始 */
 
 .links_box {
-    margin: 20px 0 0 0;
     padding: 0 5px;
 }
 
@@ -1431,9 +1452,14 @@ body.grabbing .star_handle {
     gap: 15px;
     position: absolute;
     right: 30px;
-    bottom: 60px;
+    bottom: 40px;
 }
-
+@media(max-width:1300px) {
+.func_box {
+    right: 20px;
+    bottom: 20px;
+}
+}
 
 /* 功能區 結束 */
 
@@ -1442,22 +1468,29 @@ body.grabbing .star_handle {
 
 .footer_box {
     position: fixed;
-    bottom: -5px;
+    bottom: -80px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1800px;
-    background: url(images/ctrl_box.svg) 100% 0 no-repeat;
+    max-width: 2000px;
+    background: url(images/ctrl_box.svg) 50% 0 no-repeat;
     background-size: contain;
-    aspect-ratio: 6/1;
     pointer-events: none;
+    height: var(--footer-h_L);
+}
+
+@media(max-width:1300px) {
+    .footer_box {
+        bottom: -50px;
+        height: var(--footer-h_M);
+    }
 }
 
 @media(max-width:600px) {
     .footer_box {
         background-size: cover;
         aspect-ratio: auto;
-        height: 100px;
+        height: var(--footer-h_S);
     }
 }
 
@@ -1467,10 +1500,12 @@ body.grabbing .star_handle {
 
 
 /* 感應點擊的區塊問題 開始 */
-.timeline-node, 
-.menu_item, 
-.c_btn, 
-.star_handle {
+.timeline-node,
+.menu_item,
+.c_btn,
+.star_handle,
+.menu_box .menu_list li {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 /* 感應點擊的區塊問題 結束 */
