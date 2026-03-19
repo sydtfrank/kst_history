@@ -646,6 +646,8 @@ body.grabbing .star_handle {
 /* 主選單-外包 開始 */
 
 .menu_box {
+    position: absolute;
+    left: 20px;
     display: flex;
 }
 
@@ -657,7 +659,8 @@ body.grabbing .star_handle {
     .menu_box {
         position: absolute;
         top: 40px;
-        left: -400px;
+        /* v_02 */
+        left: -380px;
         transition: left 0.5s;
     }
 }
@@ -677,7 +680,7 @@ body.grabbing .star_handle {
 .menu_box .menu_list li {
     list-style-type: none;
     width: 40px;
-    height: 80px;
+    height: 70px;
 }
 
 .menu_box .menu_list li.item_1 {
@@ -687,7 +690,7 @@ body.grabbing .star_handle {
 
 .body_epoch_1 .menu_box .menu_list li.item_1 {
     width: 40px;
-    height: 200px;
+    height: 170px;
     position: relative;
     z-index: 1;
     background: url(images/tab_bg_01_active.svg) 0 0 no-repeat;
@@ -700,7 +703,7 @@ body.grabbing .star_handle {
 
 .body_epoch_2 .menu_box .menu_list li.item_2 {
     width: 40px;
-    height: 200px;
+    height: 170px;
     position: relative;
     z-index: 1;
     background: url(images/tab_bg_02_active.svg) 0 0 no-repeat;
@@ -713,7 +716,7 @@ body.grabbing .star_handle {
 
 .body_epoch_3 .menu_box .menu_list li.item_3 {
     width: 40px;
-    height: 200px;
+    height: 170px;
     position: relative;
     z-index: 1;
     background: url(images/tab_bg_03_active.svg) 0 0 no-repeat;
@@ -726,7 +729,7 @@ body.grabbing .star_handle {
 
 .body_epoch_4 .menu_box .menu_list li.item_4 {
     width: 40px;
-    height: 200px;
+    height: 170px;
     position: relative;
     z-index: 1;
     background: url(images/tab_bg_04_active.svg) 0 0 no-repeat;
@@ -739,7 +742,7 @@ body.grabbing .star_handle {
 
 .body_epoch_5 .menu_box .menu_list li.item_5 {
     width: 40px;
-    height: 200px;
+    height: 170px;
     position: relative;
     z-index: 1;
     background: url(images/tab_bg_05_active.svg) 0 0 no-repeat;
@@ -759,7 +762,7 @@ body.grabbing .star_handle {
 
 .menu_box .menu_list li a span {
     display: none;
-    padding: 60px 2px 0 2px;
+    padding: 50px 2px 0 2px;
     line-height: 22px;
     font-family: SweiMarkerSansCJKtc-Regular;
     font-size: 20px;
@@ -781,37 +784,37 @@ body.grabbing .star_handle {
 
 .menu_box .menu_list li.item_switch a {
     background: url(images/icon_menu_open.svg) 50% 20px no-repeat;
-    background-size: 30px;
+    background-size: 25px;
 }
 
 .menu_box.open .menu_list li.item_switch a {
     background: url(images/icon_menu_close.svg) 50% 20px no-repeat;
-    background-size: 30px;
+    background-size: 25px;
 }
 
 .menu_box .menu_list li.item_1 a {
     background: url(images/icon_menu_01.svg) 50% 20px no-repeat;
-    background-size: 30px;
+    background-size: 25px;
 }
 
 .menu_box .menu_list li.item_2 a {
     background: url(images/icon_menu_02.svg) 50% 20px no-repeat;
-    background-size: 30px;
+    background-size: 25px;
 }
 
 .menu_box .menu_list li.item_3 a {
     background: url(images/icon_menu_03.svg) 50% 20px no-repeat;
-    background-size: 30px;
+    background-size: 25px;
 }
 
 .menu_box .menu_list li.item_4 a {
     background: url(images/icon_menu_04.svg) 50% 20px no-repeat;
-    background-size: 30px;
+    background-size: 25px;
 }
 
 .menu_box .menu_list li.item_5 a {
     background: url(images/icon_menu_05.svg) 50% 20px no-repeat;
-    background-size: 30px;
+    background-size: 25px;
 }
 
 @media(max-width:1100px) {
@@ -829,13 +832,14 @@ body.grabbing .star_handle {
 .timeline_box {
     --transition-speed: 0.5s;
     --transition-timing: ease-in-out;
-    --ring-size: 1000px;
+    --ring-size: 900px;
     position: relative;
 }
 
 .timeline_box .timeline-ring-out {
-    width: 400px;
-    height: 500px;
+    /* v_02 */
+    width: 380px;
+    height: 430px;
     position: relative;
     overflow: hidden;
 }
@@ -878,7 +882,7 @@ body.grabbing .star_handle {
     width: var(--ring-size);
     height: var(--ring-size);
     /* 調整水平位置 */
-    left: calc(var(--ring-size) / -2 - 30px);
+    left: calc(var(--ring-size) / -2 - 0px);
     /* 調整垂直位置 */
     top: -230px;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -940,7 +944,8 @@ body.grabbing .star_handle {
     height: 40px;
     display: flex;
     align-items: center;
-    transform-origin: calc(-1 * (var(--ring-size) / 2 - 400px)) center;
+    /* v_02 */
+    transform-origin: calc(-1 * (var(--ring-size) / 2 - 380px)) center;
     transition: opacity 0.6s, filter 0.6s;
     opacity: 0.2;
     filter: blur(1px);
@@ -986,7 +991,7 @@ body.grabbing .star_handle {
     width: 100%;
     /* 項目寬度 */
     margin-left: 10px;
-    margin-right: 90px;
+    margin-right: 110px;
 }
 
 .timeline_box .node-title::before {
@@ -1029,7 +1034,7 @@ body.grabbing .star_handle {
 
 .timeline_box .ctrl_func_box {
     position: absolute;
-    top: 160px;
+    top: 110px;
     left: 20px;
     z-index: 1000;
 }
@@ -1114,7 +1119,7 @@ body.grabbing .star_handle {
 .body_epoch_1 .timeline_box .icon_epoch .item:nth-child(2) {
     width: 90px;
     height: 90px;
-    top: 380px;
+    top: 360px;
     left: 60px;
     background: url(images/icon_epoch_1_02.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1123,7 +1128,7 @@ body.grabbing .star_handle {
 .body_epoch_1 .timeline_box .icon_epoch .item:nth-child(3) {
     width: 100px;
     height: 100px;
-    top: 415px;
+    top: 320px;
     left: 275px;
     background: url(images/icon_epoch_1_03.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1141,7 +1146,7 @@ body.grabbing .star_handle {
 .body_epoch_2 .timeline_box .icon_epoch .item:nth-child(2) {
     width: 90px;
     height: 90px;
-    top: 380px;
+    top: 360px;
     left: 60px;
     background: url(images/icon_epoch_2_02.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1150,7 +1155,7 @@ body.grabbing .star_handle {
 .body_epoch_2 .timeline_box .icon_epoch .item:nth-child(3) {
     width: 100px;
     height: 100px;
-    top: 415px;
+    top: 320px;
     left: 275px;
     background: url(images/icon_epoch_2_03.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1168,7 +1173,7 @@ body.grabbing .star_handle {
 .body_epoch_3 .timeline_box .icon_epoch .item:nth-child(2) {
     width: 90px;
     height: 90px;
-    top: 380px;
+    top: 360px;
     left: 60px;
     background: url(images/icon_epoch_3_02.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1177,7 +1182,7 @@ body.grabbing .star_handle {
 .body_epoch_3 .timeline_box .icon_epoch .item:nth-child(3) {
     width: 100px;
     height: 100px;
-    top: 415px;
+    top: 320px;
     left: 275px;
     background: url(images/icon_epoch_3_03.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1195,7 +1200,7 @@ body.grabbing .star_handle {
 .body_epoch_4 .timeline_box .icon_epoch .item:nth-child(2) {
     width: 90px;
     height: 90px;
-    top: 380px;
+    top: 360px;
     left: 60px;
     background: url(images/icon_epoch_4_02.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1204,7 +1209,7 @@ body.grabbing .star_handle {
 .body_epoch_4 .timeline_box .icon_epoch .item:nth-child(3) {
     width: 100px;
     height: 100px;
-    top: 415px;
+    top: 320px;
     left: 275px;
     background: url(images/icon_epoch_4_03.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1222,7 +1227,7 @@ body.grabbing .star_handle {
 .body_epoch_5 .timeline_box .icon_epoch .item:nth-child(2) {
     width: 90px;
     height: 90px;
-    top: 380px;
+    top: 360px;
     left: 60px;
     background: url(images/icon_epoch_5_02.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1231,7 +1236,7 @@ body.grabbing .star_handle {
 .body_epoch_5 .timeline_box .icon_epoch .item:nth-child(3) {
     width: 100px;
     height: 100px;
-    top: 415px;
+    top: 320px;
     left: 275px;
     background: url(images/icon_epoch_5_03.svg) 50% 50% no-repeat;
     background-size: contain;
@@ -1458,3 +1463,14 @@ body.grabbing .star_handle {
 
 
 /* 頁尾 結束 */
+
+
+
+/* 感應點擊的區塊問題 開始 */
+.timeline-node, 
+.menu_item, 
+.c_btn, 
+.star_handle {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 感應點擊的區塊問題 結束 */
