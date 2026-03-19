@@ -1373,7 +1373,6 @@ body.grabbing .star_handle {
     overflow-y: scroll;
     min-height: 0;
     padding: 20px;
-    z-index: 1;
 }
 
 @media(max-width:1300px) {
@@ -1383,7 +1382,7 @@ body.grabbing .star_handle {
     }
 }
 
-@media(max-width:800px) {
+@media(max-width:900px) {
     .board {
         padding: 30px 30px 100px 30px;
         height: calc(100vh - (var(--footer-h_S) / 2));
@@ -1481,16 +1480,14 @@ body.grabbing .star_handle {
 
 @media(max-width:1300px) {
     .footer_box {
-        bottom: -50px;
+        bottom: -70px;
         height: var(--footer-h_M);
     }
 }
 
-@media(max-width:600px) {
+@media(max-width:900px) {
     .footer_box {
-        background-size: cover;
-        aspect-ratio: auto;
-        height: var(--footer-h_S);
+        display: none;
     }
 }
 
