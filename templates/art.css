@@ -15,9 +15,9 @@
     --active-bg: #ffffff;
     --inactive-bg: #d0d3df;
     --footer-height: 0;
-    --footer-h_L: 400px;
-    --footer-h_M: 350px;
-    --footer-h_S: 200px;
+    --footer-h_L: 300px;
+    --footer-h_M: 200px;
+    --footer-h_S: 100px;
 }
 
 ::selection {
@@ -47,7 +47,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    color: #ffff33;
+    color: #ff3333;
 }
 
 body.grabbing .star_handle {
