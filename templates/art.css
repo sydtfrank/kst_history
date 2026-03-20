@@ -47,7 +47,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    color: #3333ff;
+    color: #333;
 }
 
 body.grabbing .star_handle {
@@ -261,6 +261,7 @@ body.grabbing .star_handle {
     margin: 0 auto;
     /* v_01 */
     height: calc(100vh - 50px);
+    height: calc(100dvh - 50px);
 }
 
 .home_wrapper .box_L,
@@ -1299,9 +1300,8 @@ body.grabbing .star_handle {
     margin: 10px;
     padding: 30px 30px 100px 30px;
     position: relative;
-    /*height: calc((100vh - var(--footer-height)) + 50px);*/
-    /*height: calc(100vh - 120px);*/
     height: calc(100vh - (var(--footer-h_L) / 2));
+    height: calc(100dvh - (var(--footer-h_L) / 2));
     background: #fff;
     border-radius: 20px;
     display: flex;
