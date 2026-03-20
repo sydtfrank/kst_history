@@ -47,7 +47,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    color: #33ffff;
+    color: #ff33ff;
 }
 
 body.grabbing .star_handle {
@@ -1380,7 +1380,7 @@ body.grabbing .star_handle {
         --footer-h_test:350px;
         padding: 30px 30px 55px 30px;
         /*height: calc(100vh - (var(--footer-h_M) / 2));*/
-        height: calc(100vh - var(--footer-h_test));
+        height: calc(100vh - (var(--footer-h_test) / 2));
     }
 }
 
