@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>歷史時光機</title>
+    <link rel="stylesheet" href="templates/art_ckeditor.css">
+    <link rel="stylesheet" href="templates/art.css">
+</head>
+
+<body class="body_home">
+
+
+
+
+
+    <!-- 首頁-頁尾 開始 -->
+    <div class="home_footer_box">
+        <img src="templates/images/kst_logo.png">
+    </div>
+    <!-- 首頁-頁尾 結束 -->
+
+
+    <svg style="display: none;">
+        <defs>
+            <filter id="hand-drawn-filter">
+                <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+
+    <script src="templates/jquery-3.7.1.min.js"></script>
+    <script src="templates/gl_canvas.js"></script>
+    <script src="templates/art.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            /**/
+        });
+    </script>
+
+</body>
+
+</html>

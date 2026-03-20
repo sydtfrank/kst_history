@@ -37,7 +37,7 @@
 }
 
 html {
-    min-height: 800px;
+    /*min-height: 800px;*/
 }
 
 body {
@@ -47,7 +47,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    color: #33ffff;
+    color: #ff33ff;
 }
 
 body.grabbing .star_handle {
