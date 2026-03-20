@@ -15,9 +15,9 @@
     --active-bg: #ffffff;
     --inactive-bg: #d0d3df;
     --footer-height: 0;
-    --footer-h_L: 300px;
-    --footer-h_M: 200px;
-    --footer-h_S: 100px;
+    --footer-h_L: 400px;
+    --footer-h_M: 350px;
+    --footer-h_S: 200px;
 }
 
 ::selection {
@@ -47,7 +47,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    color: #ff33ff;
+    color: #ffff33;
 }
 
 body.grabbing .star_handle {
@@ -1377,10 +1377,8 @@ body.grabbing .star_handle {
 
 @media(max-width:1300px) {
     .board {
-        --footer-h_test:350px;
         padding: 30px 30px 55px 30px;
-        /*height: calc(100vh - (var(--footer-h_M) / 2));*/
-        height: calc(100vh - (var(--footer-h_test) / 2));
+        height: calc(100vh - (var(--footer-h_M) / 2));
     }
 }
 
