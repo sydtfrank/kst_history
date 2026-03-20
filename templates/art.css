@@ -47,7 +47,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    color: #ff33ff;
+    color: #ffff33;
 }
 
 body.grabbing .star_handle {
