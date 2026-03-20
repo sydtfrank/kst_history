@@ -1379,6 +1379,7 @@ body.grabbing .star_handle {
     .board {
         padding: 30px 30px 55px 30px;
         height: calc(100vh - (var(--footer-h_M) / 2));
+        height: calc(100vh - 400px);
     }
 }
 
