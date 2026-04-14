@@ -1465,11 +1465,11 @@ body.grabbing .star_handle {
 
 .footer_box {
     position: fixed;
-    bottom: -35px;
+    bottom: -80px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1600px;
+    max-width: 2000px;
     background: url(images/ctrl_box.svg) 50% 0 no-repeat;
     background-size: contain;
     pointer-events: none;
