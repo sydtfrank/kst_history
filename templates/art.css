@@ -1296,8 +1296,12 @@ body.grabbing .star_handle {
     margin: 10px;
     padding: 30px 30px 100px 30px;
     position: relative;
+    /*
     height: calc(100vh - (var(--footer-h_L) / 2));
     height: calc(100dvh - (var(--footer-h_L) / 2));
+    */
+    height: calc(100vh - (var(--footer-height) / 1.4));
+    height: calc(100dvh - (var(--footer-height) / 1.4));
     background: #fff;
     border-radius: 20px;
     display: flex;
@@ -1373,17 +1377,19 @@ body.grabbing .star_handle {
 
 @media(max-width:1300px) {
     .board {
-        padding: 30px 30px 55px 30px;
+        /*
         height: calc(100vh - (var(--footer-h_M) / 2));
         height: calc(100dvh - (var(--footer-h_M) / 2));
+        */
     }
 }
 
 @media(max-width:900px) {
     .board {
-        padding: 30px 30px 100px 30px;
+        /*
         height: calc(100vh - (var(--footer-h_S) / 2));
         height: calc(100dvh - (var(--footer-h_S) / 2));
+        */
     }
 }
 
@@ -1451,11 +1457,17 @@ body.grabbing .star_handle {
     right: 30px;
     bottom: 40px;
 }
-@media(max-width:1300px) {
-.func_box {
-    right: 20px;
-    bottom: 20px;
+
+.func_box #scroll_prev,
+.func_box #scroll_next {
+    display: none;
 }
+
+@media(max-width:1300px) {
+    .func_box {
+        right: 20px;
+        bottom: 20px;
+    }
 }
 
 /* 功能區 結束 */
@@ -1465,27 +1477,26 @@ body.grabbing .star_handle {
 
 .footer_box {
     position: fixed;
-    bottom: -80px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 2000px;
+    max-width: 1800px;
     background: url(images/ctrl_box.svg) 50% 0 no-repeat;
     background-size: contain;
     pointer-events: none;
-    height: var(--footer-h_L);
+    aspect-ratio: 6 / 1;
 }
 
 @media(max-width:1300px) {
     .footer_box {
-        bottom: -70px;
-        height: var(--footer-h_M);
+        /**/
     }
 }
 
 @media(max-width:900px) {
     .footer_box {
-        display: none;
+        /*display: none;*/
     }
 }
 
