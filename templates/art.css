@@ -1294,14 +1294,14 @@ body.grabbing .star_handle {
 
 .board {
     margin: 10px;
-    padding: 30px 30px 90px 30px;
+    padding: 30px 30px 30px 30px;
     position: relative;
     /*
     height: calc(100vh - (var(--footer-h_L) / 2));
     height: calc(100dvh - (var(--footer-h_L) / 2));
     */
-    height: calc(100vh - (var(--footer-height) / 1.4));
-    height: calc(100dvh - (var(--footer-height) / 1.4));
+    height: calc(100vh - (var(--footer-height) / 2));
+    height: calc(100dvh - (var(--footer-height) / 2));
     background: #fff;
     border-radius: 20px;
     display: flex;
@@ -1372,7 +1372,7 @@ body.grabbing .star_handle {
     flex: 1;
     overflow-y: scroll;
     min-height: 0;
-    padding: 20px;
+    padding: 20px 20px 100px 20px;
 }
 
 @media(max-width:1300px) {
@@ -1402,7 +1402,7 @@ body.grabbing .star_handle {
 /* 補充連結區 開始 */
 
 .links_box {
-    padding: 0 5px;
+    height: 50px;
 }
 
 .links_box a {
@@ -1410,8 +1410,10 @@ body.grabbing .star_handle {
     color: #333;
     font-size: 16px;
     font-weight: 700;
+    /*
     border: 2px solid #333;
     border-radius: 99px;
+    */
     margin: 0 10px 10px 0;
     padding: 8px 15px 8px 50px;
     display: inline-block;
@@ -1446,6 +1448,109 @@ body.grabbing .star_handle {
 
 /* 補充連結區 結束 */
 
+/* 手繪風下拉選單 開始 */
+.dropdown_group {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 10px 0;
+    vertical-align: top;
+}
+
+/* 按鈕本體：設定為透明背景，保持文字清晰 */
+.dropdown_btn {
+    position: relative;
+    width: 160px;
+    background: transparent;
+    color: #333;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: inherit;
+    font-weight: 700;
+    border: 2px solid transparent;
+    /* 用透明邊框保持原本的佔位大小 */
+    border-radius: 99px;
+    padding: 5px 15px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+    /* 確保文字在最上層 */
+}
+
+/* 按鈕的背景與手繪邊框 */
+.dropdown_btn::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    /* 補償原本的透明邊框位置 */
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    border: 3px solid #333;
+    border-radius: 99px;
+    filter: url(#hand-drawn-filter);
+    /* 濾鏡只套用在這個背景層 */
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.dropdown_btn:hover {
+    transform: translateY(-3px);
+}
+
+/* 下拉選單本體：設定為透明背景，保持內容文字清晰 */
+.dropdown_list {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    padding: 10px 5px;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 3px solid transparent;
+
+    /* 隱藏與動畫設定 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+/* 下拉選單的背景與手繪邊框 */
+.dropdown_list::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    /* 補償原本的透明邊框位置 */
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: #fff;
+    border: 3px solid #333;
+    border-radius: 10px;
+    filter: url(#hand-drawn-filter);
+    /* 濾鏡只套用在這個背景層 */
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.dropdown_group:hover .dropdown_list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown_group .dropdown_list a {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 手繪風下拉選單 結束 */
+
 
 /* 功能區 開始 */
 
@@ -1462,14 +1567,6 @@ body.grabbing .star_handle {
 .func_box #scroll_next {
     display: none;
 }
-
-@media(max-width:1300px) {
-    .func_box {
-        right: 20px;
-        bottom: 20px;
-    }
-}
-
 /* 功能區 結束 */
 
 
@@ -1481,7 +1578,7 @@ body.grabbing .star_handle {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1600px;
+    max-width: 2000px;
     background: url(images/ctrl_box.svg) 50% 0 no-repeat;
     background-size: contain;
     pointer-events: none;

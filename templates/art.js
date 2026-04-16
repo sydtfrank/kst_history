@@ -454,3 +454,13 @@ loadAsset('css', 'templates/art.css');
 loadAsset('js', 'templates/art.js');
 */
 /* 快取處理 結束 */
+
+/* 補充連結區，如果沒有項目就不要出現 開始 */
+$(document).ready(function () {
+    $('.links_box .dropdown_group').each(function () {
+        if ($(this).find('.dropdown_list a').length === 0) {
+            $(this).hide();
+        }
+    });
+});
+/* 補充連結區，如果沒有項目就不要出現 結束 */
