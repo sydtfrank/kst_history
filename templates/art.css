@@ -1415,7 +1415,7 @@ body.grabbing .star_handle {
     border-radius: 99px;
     */
     margin: 0 10px 10px 0;
-    padding: 8px 15px 8px 50px;
+    padding: 8px 5px 8px 35px;
     display: inline-block;
     transition: all 0.3s ease;
     position: relative;
@@ -1426,23 +1426,23 @@ body.grabbing .star_handle {
 }
 
 .links_box a.type_game {
-    background: url(images/icon_game.svg) 10px 50% no-repeat;
-    background-size: 30px;
+    background: url(images/icon_game.svg) 5px 50% no-repeat;
+    background-size: 26px;
 }
 
 .links_box a.type_mov {
-    background: url(images/icon_mov.svg) 10px 50% no-repeat;
-    background-size: 30px;
+    background: url(images/icon_mov.svg) 5px 50% no-repeat;
+    background-size: 26px;
 }
 
 .links_box a.type_mov_p {
-    background: url(images/icon_mov_p.svg) 10px 50% no-repeat;
-    background-size: 30px;
+    background: url(images/icon_mov_p.svg) 5px 50% no-repeat;
+    background-size: 26px;
 }
 
 .links_box a.type_ext {
-    background: url(images/icon_ext.svg) 10px 50% no-repeat;
-    background-size: 30px;
+    background: url(images/icon_ext.svg) 5px 50% no-repeat;
+    background-size: 26px;
 }
 
 
@@ -1456,7 +1456,6 @@ body.grabbing .star_handle {
     vertical-align: top;
 }
 
-/* 按鈕本體：設定為透明背景，保持文字清晰 */
 .dropdown_btn {
     position: relative;
     width: 160px;
@@ -1467,14 +1466,12 @@ body.grabbing .star_handle {
     font-family: inherit;
     font-weight: 700;
     border: 2px solid transparent;
-    /* 用透明邊框保持原本的佔位大小 */
     border-radius: 99px;
     padding: 5px 15px;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
     z-index: 1;
-    /* 確保文字在最上層 */
 }
 
 /* 按鈕的背景與手繪邊框 */
@@ -1482,7 +1479,6 @@ body.grabbing .star_handle {
     content: "";
     position: absolute;
     top: -2px;
-    /* 補償原本的透明邊框位置 */
     left: -2px;
     right: -2px;
     bottom: -2px;
@@ -1490,7 +1486,6 @@ body.grabbing .star_handle {
     border: 3px solid #333;
     border-radius: 99px;
     filter: url(#hand-drawn-filter);
-    /* 濾鏡只套用在這個背景層 */
     z-index: -1;
     transition: all 0.3s ease;
 }
@@ -1498,20 +1493,16 @@ body.grabbing .star_handle {
 .dropdown_btn:hover {
     transform: translateY(-3px);
 }
-
-/* 下拉選單本體：設定為透明背景，保持內容文字清晰 */
 .dropdown_list {
     position: absolute;
     bottom: calc(100% + 10px);
     left: 0;
     padding: 10px 5px;
-    min-width: 160px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     border: 3px solid transparent;
-
-    /* 隱藏與動畫設定 */
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -1524,7 +1515,6 @@ body.grabbing .star_handle {
     content: "";
     position: absolute;
     top: -3px;
-    /* 補償原本的透明邊框位置 */
     left: -3px;
     right: -3px;
     bottom: -3px;
@@ -1532,7 +1522,6 @@ body.grabbing .star_handle {
     border: 3px solid #333;
     border-radius: 10px;
     filter: url(#hand-drawn-filter);
-    /* 濾鏡只套用在這個背景層 */
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
     z-index: -1;
 }
@@ -1553,7 +1542,6 @@ body.grabbing .star_handle {
 
 
 /* 功能區 開始 */
-
 .func_box {
     display: flex;
     justify-content: right;
@@ -1571,7 +1559,6 @@ body.grabbing .star_handle {
 
 
 /* 頁尾 開始 */
-
 .footer_box {
     position: fixed;
     bottom: 0;
@@ -1584,19 +1571,6 @@ body.grabbing .star_handle {
     pointer-events: none;
     aspect-ratio: 6 / 1;
 }
-
-@media(max-width:1300px) {
-    .footer_box {
-        /**/
-    }
-}
-
-@media(max-width:900px) {
-    .footer_box {
-        /*display: none;*/
-    }
-}
-
 
 /* 頁尾 結束 */
 
