@@ -58,15 +58,15 @@ function updateBtnState($target) {
 $(document).ready(function () {
   const scrollDistance = 100;
   const scrollSpeed = 200;
-  let isUpdating = false; 
+  let isUpdating = false;
 
   // 優化 2: 使用 requestAnimationFrame 進行節流
   $(document).on('scroll', '.subhtml', function () {
     if (!isUpdating) {
       isUpdating = true;
       requestAnimationFrame(() => {
-          updateBtnState($(this));
-          isUpdating = false; // 記得在這裡重置狀態
+        updateBtnState($(this));
+        isUpdating = false; // 記得在這裡重置狀態
       });
     }
   });
@@ -212,7 +212,7 @@ function init_timelineRing(arg_data) {
   // --- 拖拉事件結束 ---
 
   updateUI(arg_data);
-  $("#prevBtn,#prev_btn").on("click", function (e) {
+  $("#prevBtn,#prev_btn,.title_prev_btn").on("click", function (e) {
     e.preventDefault();
     if (currentIndex > 0) {
       currentIndex--;
@@ -220,7 +220,7 @@ function init_timelineRing(arg_data) {
     }
   });
 
-  $("#nextBtn,#next_btn").on("click", function (e) {
+  $("#nextBtn,#next_btn,.title_next_btn").on("click", function (e) {
     e.preventDefault();
     if (currentIndex < total - 1) {
       currentIndex++;
@@ -278,12 +278,29 @@ function init_timelineRing(arg_data) {
     }, 10);
 
     // 按鈕狀態更新
-    $("#prevBtn,#prev_btn").prop("disabled", currentIndex === 0);
-    $("#nextBtn,#next_btn").prop("disabled", currentIndex === total - 1);
+    $("#prevBtn,#prev_btn,.title_prev_btn").prop("disabled", currentIndex === 0);
+    $("#nextBtn,#next_btn,.title_next_btn").prop("disabled", currentIndex === total - 1);
     updateBtnState();
   }
 }
 
+$(document).ready(function () {
+  const timeline_data = [];
+
+  $('.board section').each(function (index) {
+    const yearText = $(this).find('.c_year').text();
+    const titleText = $(this).find('.c_title>p').text();
+
+    timeline_data.push({
+      year: yearText,
+      title: titleText
+    });
+  });
+
+  if (timeline_data.length > 0) {
+    init_timelineRing(timeline_data);
+  }
+});
 /* 時間軸設計 結束 */
 
 /* 首頁-選單 開始 */
@@ -457,10 +474,10 @@ loadAsset('js', 'templates/art.js');
 
 /* 補充連結區，如果沒有項目就不要出現 開始 */
 $(document).ready(function () {
-    $('.links_box .dropdown_group').each(function () {
-        if ($(this).find('.dropdown_list a').length === 0) {
-            $(this).hide();
-        }
-    });
+  $('.links_box .dropdown_group').each(function () {
+    if ($(this).find('.dropdown_list a').length === 0) {
+      $(this).hide();
+    }
+  });
 });
 /* 補充連結區，如果沒有項目就不要出現 結束 */

@@ -1259,11 +1259,16 @@ body.grabbing .star_handle {
     filter: url(#hand-drawn-filter);
 }
 
+.c_btn.v2 {
+    width: 100%;
+    border-radius: 20px;
+    height: 30px;
+}
+
 .c_btn:hover:not(:disabled) {
     background: #000;
     color: #fff;
     border-color: #000;
-    transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -1337,12 +1342,15 @@ body.grabbing .star_handle {
     margin: 0 0 10px 0;
 }
 
-
 .board section .c_title {
+    position: relative;
+}
+
+.board section .c_title p {
     font-family: SweiMarkerSansCJKtc-Regular;
     font-size: 34px;
     font-weight: 600;
-    margin: 0 0 10px 0;
+    margin: 0 170px 10px 0;
 }
 
 .board section .c_view {
@@ -1402,7 +1410,8 @@ body.grabbing .star_handle {
 /* 補充連結區 開始 */
 
 .links_box {
-    height: 50px;
+    margin: 10px 0 0 0;
+    /*height: 50px;*/
 }
 
 .links_box a {
@@ -1410,19 +1419,11 @@ body.grabbing .star_handle {
     color: #333;
     font-size: 16px;
     font-weight: 700;
-    /*
-    border: 2px solid #333;
-    border-radius: 99px;
-    */
     margin: 0 10px 10px 0;
     padding: 8px 5px 8px 35px;
     display: inline-block;
     transition: all 0.3s ease;
     position: relative;
-}
-
-.links_box a:hover {
-    transform: translateY(-3px);
 }
 
 .links_box a.type_game {
@@ -1452,13 +1453,13 @@ body.grabbing .star_handle {
 .dropdown_group {
     display: inline-block;
     position: relative;
-    margin: 0 10px 10px 0;
+    width: 100%;
     vertical-align: top;
 }
 
 .dropdown_btn {
     position: relative;
-    width: 160px;
+    width: 100%;
     background: transparent;
     color: #333;
     font-size: 20px;
@@ -1467,7 +1468,7 @@ body.grabbing .star_handle {
     font-weight: 700;
     border: 2px solid transparent;
     border-radius: 99px;
-    padding: 5px 15px;
+    padding: 3px 15px;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
@@ -1484,19 +1485,16 @@ body.grabbing .star_handle {
     bottom: -2px;
     background: #fff;
     border: 3px solid #333;
-    border-radius: 99px;
+    border-radius: 20px;
     filter: url(#hand-drawn-filter);
     z-index: -1;
     transition: all 0.3s ease;
 }
 
-.dropdown_btn:hover {
-    transform: translateY(-3px);
-}
 .dropdown_list {
     position: absolute;
-    bottom: calc(100% + 10px);
-    left: 0;
+    top: calc(100% + 10px);
+    right: 0;
     padding: 10px 5px;
     min-width: 200px;
     display: flex;
@@ -1548,15 +1546,29 @@ body.grabbing .star_handle {
     gap: 15px;
     position: absolute;
     right: 30px;
-    bottom: 40px;
+    bottom: 10px;
+    display: none;
 }
 
 .func_box #scroll_prev,
 .func_box #scroll_next {
     display: none;
 }
+
 /* 功能區 結束 */
 
+/* 標題功能 開始 */
+.title_main {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+.title_func_box {
+    display: flex;
+    gap: 10px;
+    width: 160px;
+}
+/* 標題功能 結束 */
 
 /* 頁尾 開始 */
 .footer_box {
