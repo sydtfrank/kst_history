@@ -1350,7 +1350,7 @@ body.grabbing .star_handle {
     font-family: SweiMarkerSansCJKtc-Regular;
     font-size: 34px;
     font-weight: 600;
-    margin: 0 170px 10px 0;
+    margin: 0 170px 0 0;
 }
 
 .board section .c_view {
@@ -1359,7 +1359,7 @@ body.grabbing .star_handle {
     display: flex;
     flex-direction: column;
     min-height: 0;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
     padding: 10px;
 }
 
@@ -1392,12 +1392,9 @@ body.grabbing .star_handle {
     }
 }
 
-@media(max-width:900px) {
-    .board {
-        /*
-        height: calc(100vh - (var(--footer-h_S) / 2));
-        height: calc(100dvh - (var(--footer-h_S) / 2));
-        */
+@media(max-width:600px) {
+    .board section .c_title p {
+        margin: 0 0 0 0;
     }
 }
 
@@ -1560,14 +1557,28 @@ body.grabbing .star_handle {
 /* 標題功能 開始 */
 .title_main {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     right: 0;
 }
+
 .title_func_box {
     display: flex;
     gap: 10px;
     width: 160px;
 }
+
+@media(max-width:600px) {
+    .title_main {
+        position: static;
+    }
+
+    .title_func_box {
+        gap: 20px;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+}
+
 /* 標題功能 結束 */
 
 /* 頁尾 開始 */
