@@ -1394,6 +1394,8 @@ body.grabbing .star_handle {
 
 @media(max-width:600px) {
     .board section .c_title p {
+        font-size: 24px;
+        font-weight: 500;
         margin: 0 0 0 0;
     }
 }
