@@ -1359,7 +1359,7 @@ body.grabbing .star_handle {
     display: flex;
     flex-direction: column;
     min-height: 0;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 0 0;
     padding: 10px;
 }
 
