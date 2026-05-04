@@ -337,27 +337,6 @@
     <script src="templates/jquery-3.7.1.min.js"></script>
     <script src="templates/gl_canvas.js"></script>
     <script src="templates/art.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            const timeline_data = [];
-
-            $('.board section').each(function (index) {
-                const yearText = $(this).find('.c_year').text();
-                const titleText = $(this).find('.c_title').text();
-
-                timeline_data.push({
-                    year: yearText,
-                    title: titleText
-                });
-            });
-
-            if (timeline_data.length > 0) {
-                init_timelineRing(timeline_data);
-            }
-        });
-    </script>
-
 </body>
 
 </html>
