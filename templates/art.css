@@ -49,8 +49,7 @@ body.grabbing .star_handle {
     transition: none !important;
 }
 
-#glcanvas,
-#tunnelCanvas {
+#glcanvas {
     position: fixed;
     inset: 0;
     width: 100%;
@@ -1537,23 +1536,6 @@ body.grabbing .star_handle {
 /* 手繪風下拉選單 結束 */
 
 
-/* 功能區 開始 */
-.func_box {
-    display: flex;
-    justify-content: right;
-    gap: 15px;
-    position: absolute;
-    right: 30px;
-    bottom: 10px;
-    display: none;
-}
-
-.func_box #scroll_prev,
-.func_box #scroll_next {
-    display: none;
-}
-
-/* 功能區 結束 */
 
 /* 標題功能 開始 */
 .title_main {
