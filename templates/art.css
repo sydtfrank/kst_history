@@ -1396,6 +1396,12 @@ body.grabbing .star_handle {
     padding: 20px 20px 150px 20px;
 }
 
+@media(max-width:1100px) {
+    .board {
+        padding: 25px 30px 25px 30px;
+    }
+}
+
 @media(max-width:600px) {
     .board section .c_top {
         display: block;
