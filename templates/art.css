@@ -1339,6 +1339,7 @@ body.grabbing .star_handle {
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 10px 0;
+    min-height: 24px;
 }
 
 .board section .c_title {
