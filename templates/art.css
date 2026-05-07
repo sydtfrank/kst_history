@@ -1298,7 +1298,7 @@ body.grabbing .star_handle {
 
 .board {
     margin: 10px;
-    padding: 30px 30px 30px 30px;
+    padding: 25px;
     position: relative;
     /*
     height: calc(100vh - (var(--footer-h_L) / 2));
@@ -1334,6 +1334,20 @@ body.grabbing .star_handle {
     transition: opacity 0.3s;
 }
 
+.board section .c_top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.board section .c_top_L {
+    flex: 1;
+}
+
+.board section .c_top_R {
+    width: 160px;
+}
+
 .board section .c_year {
     font-family: SweiMarkerSansCJKtc-Regular;
     font-size: 20px;
@@ -1349,7 +1363,7 @@ body.grabbing .star_handle {
     font-family: SweiMarkerSansCJKtc-Regular;
     font-size: 34px;
     font-weight: 600;
-    margin: 0 170px 0 0;
+    margin: 0 10px 0 0;
 }
 
 .board section .c_view {
@@ -1379,19 +1393,18 @@ body.grabbing .star_handle {
     flex: 1;
     overflow-y: scroll;
     min-height: 0;
-    padding: 20px 20px 100px 20px;
-}
-
-@media(max-width:1300px) {
-    .board {
-        /*
-        height: calc(100vh - (var(--footer-h_M) / 2));
-        height: calc(100dvh - (var(--footer-h_M) / 2));
-        */
-    }
+    padding: 20px 20px 150px 20px;
 }
 
 @media(max-width:600px) {
+    .board section .c_top {
+        display: block;
+    }
+
+    .board section .c_top_R {
+        width: 100%;
+    }
+
     .board section .c_title p {
         font-size: 24px;
         margin: 0 0 0 0;
@@ -1407,7 +1420,7 @@ body.grabbing .star_handle {
 /* 補充連結區 開始 */
 
 .links_box {
-    margin: 10px 0 0 0;
+    margin: 8px 0 0 0;
     /*height: 50px;*/
 }
 
@@ -1459,13 +1472,13 @@ body.grabbing .star_handle {
     width: 100%;
     background: transparent;
     color: #333;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
     font-family: inherit;
     font-weight: 700;
     border: 2px solid transparent;
     border-radius: 99px;
-    padding: 3px 15px;
+    padding: 2px 15px;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
@@ -1538,23 +1551,12 @@ body.grabbing .star_handle {
 
 
 /* 標題功能 開始 */
-.title_main {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
 .title_func_box {
     display: flex;
     gap: 10px;
-    width: 160px;
 }
 
 @media(max-width:600px) {
-    .title_main {
-        position: static;
-    }
-
     .title_func_box {
         gap: 20px;
         width: 100%;
